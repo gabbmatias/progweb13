@@ -14,15 +14,6 @@ body {
   background-color: rgba(156, 234, 177, 100%);
 }
 
-.logo {
-  float: left;
-  color: blue;
-}
-
-.logo a {
-  color: blue;
-}
-
 .topnav a {
   font-size: 28px;
   padding: 14px 10px;
@@ -33,7 +24,18 @@ body {
   padding-top: 1ch;
 }
 
+.logo {
+  float: left;
+}
+
+.logo a {
+  font-size: 60px;
+  font-family: "Cookie", cursive;
+  margin-top: -10%;
+}
+
 .topnav a:hover {
+  font-size: 50px;
   color: #5cbf2a;
 }
 
