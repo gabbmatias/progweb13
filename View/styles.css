@@ -11,7 +11,7 @@ body {
 .topnav {
   height: 15vh;
   max-height: 75px;
-  background-color: #424242;
+  background-color: rgb(86, 102, 122);
 }
 
 .topnav a {
@@ -38,13 +38,13 @@ body {
   color: #A4A4A4;
 }
 
-.text-content {
+.body-text {
   height: 40vh;
   max-height: 400px;
   width: 100%;
   text-align: center;
   display: inline-block;
-  background-image: url("5.png");
+  background-color: rgb(135, 151, 175);
 }
 
 .text-about {
@@ -143,16 +143,16 @@ body {
 }
 
 .basic-plan {
-  background-color: #585858;
+background-color: rgb(167, 173, 198);
   width: 33%;
 }
 
 .premium-plan {
-  background-color: #2F0B3A;
+  background-color: rgb(95, 75, 102);
   width: 34%;
 }
 
 .exxxtra-plan {
-  background-color: #585858;
+  background-color: rgb(44, 19, 32);
   width: 33%;
 }
