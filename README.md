@@ -25,17 +25,17 @@ Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 
 Para fazer o deploy da aplicação siga os seguintes passos:
 
-Linux e/ou macOS:
-```
 <commando 1>
+```composer require laravel/ui
 <commando 2>
-....
-<commando n>
-```
+```php artisan migrate:fresh
+<commando 3>
+```php artisan serve
 
-Windows (opcional):
-```
-<commandos>
+```Para fins de teste, o banco de dados utilizado foi o mySQL.
+<commando sugerido>
+```(Feito em ambiente unix - Ubuntu)
+sudo apt-get install php-mysqlos>
 ```
 
 ## Usando PreservSign
