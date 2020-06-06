@@ -19,6 +19,11 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/topnav-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/home-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/plans-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/about-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/contact-styles.css') }}" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Cookie&display=swap" rel="stylesheet" />
