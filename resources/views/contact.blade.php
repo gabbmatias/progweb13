@@ -5,11 +5,13 @@
     <div class="boxes">
         <div class="left-box-blured">
             <div class="box-title">
-                <span>Contato</span>
+                <span>Nosso Contato</span>
             </div>
 
             <div class="box-message-contact">
-                <span>Telefone: 0800-SE-PRESERVE<br><br><br>E-mail: preserve@preserve.com</span>
+                <a>0800-PRESERVE-SE</a>
+                <br><br><br>
+                <a>preserve@preserve.com</a>
             </div>
 
         </div>

@@ -24,6 +24,7 @@
     <link href="{{ asset('css/plans-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/about-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact-styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Cookie&display=swap" rel="stylesheet" />
@@ -36,6 +37,9 @@
         <a href="{{ route('plans') }}">PLANOS</a>
         <a href="{{ route('about') }}">SOBRE</a>
         <a href="{{ route('contact') }}">CONTATO</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -51,19 +55,19 @@
                 @if (Route::has('register'))
                 @endif
                 @else
-                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                     {{ Auth::user()->name }} <span class="caret"></span>
                 </a>
 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('profile') }}">
+                <div aria-labelledby="navbarDropdown">
+                    <a href="{{ route('profile') }}">
                         {{ __('Perfil') }}
                     </a>
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                         {{ __('Minhas Assinaturas') }}
                     </a>
-                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
@@ -73,11 +77,22 @@
                     </form>
                 </div>
                 @endguest
-
             </li>
+
         </ul>
+
     </div>
 
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     <script src="js/bootstrap.min.js"></script>
 
     @yield('content')

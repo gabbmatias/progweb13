@@ -1,0 +1,13 @@
+.body {
+    display: flex;
+    color: gray;
+    max-height: 35vh;
+}
+
+.blurred-box {
+    text-align: center;
+    background: rgba(107, 107, 107, 0.15);
+    box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
+    backdrop-filter: blur(17px);
+    border-radius: 75px;
+}
