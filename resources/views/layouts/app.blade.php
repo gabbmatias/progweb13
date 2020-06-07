@@ -31,69 +31,55 @@
 
 <body>
 
-    <div class="top-nav-bar">
-        <div class="top-bar" >
-            <div class="logo-nav-bar">
-                <a  href="{{ route('home') }}">PreservSign</a>
-            </div>
-            <div class="logo-line"></div>
+    <div class="topnav" id="myTopnav">
+        <a class="navbar-logo" href="{{ route('home') }}">PreservSign</a>
+        <a href="{{ route('plans') }}">PLANOS</a>
+        <a href="{{ route('about') }}">SOBRE</a>
+        <a href="{{ route('contact') }}">CONTATO</a>
 
-            <div class="top-nav-plans">
-                <a class="top-nav-plans" href="{{ route('plans') }}">PLANOS</a>
-            </div>
-            <div class="top-nav-about">
-                <a class="top-nav-about" href="{{ route('about') }}">SOBRE</a>
-            </div>
-
-            <div class="top-nav-contact">
-                <a class="top-nav-contact" href="{{ route('contact') }}">CONTATO</a>
-            </div>
-
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-            @guest
-            <div class="top-nav-login">
-                <a class="top-nav-login" href="{{ route('login') }}">LOGIN</a>
-            </div>
-
-            <div class="sign-background">
-                <div class="top-nav-sign">
-                    <a class="top-nav-sign" href="{{ route('register') }}">ASSINE!</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                @guest
+                <div class="topnav-login">
+                    <a href="{{ route('login') }}">LOGIN</a>
                 </div>
-            </div>
 
-            @if (Route::has('register'))
-            @endif
-            @else
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                <div class="topnav-signUp">
+                    <a href="{{ route('register') }}">ASSINE!</a>
+                </div>
+
+                @if (Route::has('register'))
+                @endif
+                @else
+                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ route('profile') }}">
+                        {{ __('Perfil') }}
+                    </a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                        {{ __('Minhas Assinaturas') }}
+                    </a>
+                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('profile') }}">
-                            {{ __('Perfil') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                            {{ __('Minhas Assinaturas') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
                 @endguest
 
             </li>
-            </ul>
-        </div>
+        </ul>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
 
     @yield('content')
-    </html>
+
+</html>
