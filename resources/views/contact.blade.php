@@ -24,7 +24,7 @@
             </div>
 
             <div class="box-message-contact">
-                <span>Telefone: 0800-SE-PRESERVE<br><br><br>E-mail: preserve@preserve.com</span>
+                <span>Telefone:<br>0800-SE-PRESERVE<br><br><br>E-mail:<br>preserve@preserve.com</span>
             </div>
 
         </div>
