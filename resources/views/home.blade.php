@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PreservSign</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Cookie&display=swap" rel="stylesheet" />
-</head>
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD
 <div class="container-body">
     <div class="center-box-blured">
         <div class="box-title">
@@ -25,5 +17,17 @@
         </div>
     </div>
 
+=======
+<div class="subBar">
+  <div class="blurred-box">
+    <a class="text-title">PreservSign</a>
+    <a class="text-description">Você pode receber camisinhas exclusivas<br> e acessórios para apimentar sua relação na segurança e discrição da sua casa!</a>
+    <a href="#" class="btn-signUp">Eu Quero!</a>
+  </div>
 </div>
+<div class="middle-bar">
+  <a class="middle-bar-text" href="#">Conheça nossos planos!</a>
+>>>>>>> 904d513a4efded568a5d997fe2b7f30465599054
+</div>
+
 @endsection

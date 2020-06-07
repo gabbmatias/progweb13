@@ -15,6 +15,7 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Cookie&display=swap" rel="stylesheet" />
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -24,76 +25,75 @@
     <link href="{{ asset('css/plans-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/about-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact-styles.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&family=Cookie&display=swap" rel="stylesheet" />
 </head>
 
 <body>
 
-    <div class="top-nav-bar">
-        <div class="top-bar" >
-            <div class="logo-nav-bar">
-                <a  href="{{ route('home') }}">PreservSign</a>
-            </div>
-            <div class="logo-line"></div>
+    <div class="topnav" id="myTopnav">
+        <a class="navbar-logo" href="{{ route('home') }}">PreservSign</a>
+        <a href="{{ route('plans') }}">PLANOS</a>
+        <a href="{{ route('about') }}">SOBRE</a>
+        <a href="{{ route('contact') }}">CONTATO</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
 
-            <div class="top-nav-plans">
-                <a class="top-nav-plans" href="{{ route('plans') }}">PLANOS</a>
-            </div>
-            <div class="top-nav-about">
-                <a class="top-nav-about" href="{{ route('about') }}">SOBRE</a>
-            </div>
-
-            <div class="top-nav-contact">
-                <a class="top-nav-contact" href="{{ route('contact') }}">CONTATO</a>
-            </div>
-
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-            @guest
-            <div class="top-nav-login">
-                <a class="top-nav-login" href="{{ route('login') }}">LOGIN</a>
-            </div>
-
-            <div class="sign-background">
-                <div class="top-nav-sign">
-                    <a class="top-nav-sign" href="{{ route('register') }}">ASSINE!</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                @guest
+                <div class="topnav-login">
+                    <a href="{{ route('login') }}">LOGIN</a>
                 </div>
-            </div>
 
-            @if (Route::has('register'))
-            @endif
-            @else
-                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        {{ Auth::user()->name }} <span class="caret"></span>
+                <div class="topnav-signUp">
+                    <a href="{{ route('register') }}">ASSINE!</a>
+                </div>
+
+                @if (Route::has('register'))
+                @endif
+                @else
+                <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                    {{ Auth::user()->name }} <span class="caret"></span>
+                </a>
+
+                <div aria-labelledby="navbarDropdown">
+                    <a href="{{ route('profile') }}">
+                        {{ __('Perfil') }}
+                    </a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                        {{ __('Minhas Assinaturas') }}
+                    </a>
+                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
                     </a>
 
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('profile') }}">
-                            {{ __('Perfil') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                            {{ __('Minhas Assinaturas') }}
-                        </a>
-                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                        document.getElementById('logout-form').submit();">
-                            {{ __('Logout') }}
-                        </a>
-
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            @csrf
-                        </form>
-                    </div>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+                </div>
                 @endguest
-
             </li>
-            </ul>
-        </div>
+
+        </ul>
+
     </div>
 
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
     <script src="js/bootstrap.min.js"></script>
 
     @yield('content')
-    </html>
+
+</html>
