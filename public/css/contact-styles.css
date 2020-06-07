@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /*overflow: hidden;*/
+    overflow: hidden;
     display: flex;
   }
 
@@ -14,11 +14,21 @@ body {
     background-image: url("/img/body-img.jpg");
   }  
 
+@media screen and (min-width: 376px){
+    div.boxes{
+      vertical-align: middle;
+      flex-direction: row;
+    }
+}
+@media screen and (max-width:376px){
+    div.boxes{
+      flex-direction: column;
+    }
+}
+
 .boxes {
     height: 88.5vh;
     display: flex;
-    vertical-align: middle;
-    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     
@@ -56,11 +66,6 @@ input[type=submit]:hover {
   }
 
 .left-box-blured {
-    /*
-    position: absolute;
-    left: 8%;
-    top: 31%;
-    */
     text-align: center;
     width: 34%;
     height: 42%;
@@ -74,11 +79,6 @@ input[type=submit]:hover {
   }
     
 .right-box-blured {
-    /*
-    position: absolute;
-    left: 58%;
-    top: 31%;
-    */
     text-align: center;
     width: 34%;
     height: 42%;

@@ -3,16 +3,6 @@
 @section('content')
 <div class="container-body-all">
     <div class="boxes">
-        <div class="left-box-blured">
-            <div class="box-title">
-                <span>Contato</span>
-            </div>
-
-            <div class="box-message-contact">
-                <span>Telefone: 0800-SE-PRESERVE<br><br><br>E-mail: preserve@preserve.com</span>
-            </div>
-
-        </div>
         <div class="right-box-blured">
             <div class="box-title">
                 <span>Fale Conosco</span>
@@ -28,6 +18,17 @@
                 </form>
             </div>
         </div>
+        <div class="left-box-blured">
+            <div class="box-title">
+                <span>Contato</span>
+            </div>
+
+            <div class="box-message-contact">
+                <span>Telefone: 0800-SE-PRESERVE<br><br><br>E-mail: preserve@preserve.com</span>
+            </div>
+
+        </div>
+        
     </div>
 </div>
 @endsection

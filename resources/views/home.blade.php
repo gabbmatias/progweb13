@@ -16,7 +16,7 @@
             <span>PreservSign</span>
         </div>
         <div class="box-message">
-            <span>O cuidado com você e seu parceiro (a) nunca foi tão importante. Você pode receber camisinhas exclusivas e muita mais na segurança e descrição da sua casa!</span>
+            <span>O cuidado com você e seu parceiro(a) nunca foi tão importante. Você pode receber camisinhas exclusivas e muita mais na segurança e descrição da sua casa!</span>
         </div>
         <div class="join-button">
             <div class="text-button">
