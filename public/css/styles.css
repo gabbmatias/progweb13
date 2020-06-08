@@ -3,4 +3,56 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-  }
+}
+
+.top-nav-logged {
+    position: relative;
+    width: 15%;
+    left: 84% !important;
+    margin-top: 0% !important;
+    display: inline-block;
+}
+
+.top-nav-dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.top-nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.top-nav-dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: #e54161 !important;
+    z-index: 1;
+}
+
+.top-nav-dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: white !important;
+}
+
+.top-nav-dropdown:hover .top-nav-dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav-dropdown {
+        display: none;
+    }
+
+    .top-nav-logged {
+        display: none;
+    }
+}
