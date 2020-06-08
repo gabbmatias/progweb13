@@ -32,12 +32,7 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
     font-size: 150%;
-}
-
-@media screen and (max-width: 600px) {
-    .text-description {
-        font-size: 110%;
-    }
+    color: #6e6e6e !important;
 }
 
 .btn-signUp {
@@ -50,8 +45,8 @@
     display: inline-block;
     cursor: pointer;
     text-align: center;
-    line-height: 65px;
-    margin-top: 5%;
+    line-height: 70px;
+    margin-top: 20px;
     width: 40%;
     height: 20%;
     max-width: 130px;
@@ -64,22 +59,44 @@
     text-decoration: none;
 }
 
-.middle-bar {
-    background: rgba(22, 22, 22, 0.9);
-    height: 150px;
-    text-align: center;
-    line-height: 150px;
+.instrucoes {
+    display: flex;
+    flex-direction: row;
+    background-color: lightgray;
 }
 
-.middle-bar-text {
-    text-decoration: none;
-    color: #f2f2f2;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 60px;
+.assine {
+    background-color: rgba(229, 65, 97, 0.6);
+    width: 33vw;
+    height: 70vh;
+    align-self: flex-end;
+}
+.assinaturas {
+    background-color: rgba(229, 65, 97, 0.7);
+    width: 34vw;
+    height: 85vh;
+    align-self: flex-end;
+}
+.produtos {
+    background-color: rgba(229, 65, 97, 0.8);
+    width: 33vw;
+    height: 100vh;
+    bottom: 0;
 }
 
 @media screen and (max-width: 600px) {
-    .middle-bar-text {
-        font-size: 30px;
+    .text-description {
+        font-size: 110%;
+    }
+
+    .blurred-box {
+        height: 65%;
+    }
+
+    .assine {
+        height: 80vh;
+    }
+    .assinaturas {
+        height: 90vh;
     }
 }

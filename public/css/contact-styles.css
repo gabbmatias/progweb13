@@ -1,16 +1,7 @@
-body {
-  margin: 0px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  display: flex;
-}
-
 .container-body-all {
   width: 100%;
   text-align: center;
+  background-color: lightgray;
 }  
 
 .boxes {
@@ -23,46 +14,16 @@ body {
   
 }
 
-@media screen and (max-width:376px){
-  div.boxes{
-    flex-direction: column;
-  }
-}
-
-.left-box-blured {
+.box-blured {
   width: 34%;
   height: 42%;
+  max-height: 400px;
   text-align: center;
   background: rgba(107, 107, 107, 0.15);
   box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
   backdrop-filter: blur(17px);
   border-radius: 15px;
 }
-
-@media screen and (max-width:376px){
-  div.left-box-blured{
-    width: 85%;
-    height: 38%;
-  }
-}
-
-.right-box-blured {
-  text-align: center;
-  width: 34%;
-  height: 42%;
-  background: rgba(107, 107, 107, 0.15);
-  box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
-  backdrop-filter: blur(17px);
-  border-radius: 15px;
-}
-
-@media screen and (max-width:376px){
-  div.right-box-blured{
-    width: 85%;
-    height: 38%;
-  }
-}
-
 
 .box-title{
   margin-top: 5%;
@@ -87,9 +48,9 @@ body {
   font-weight: 500;
   font-size: 24px;
   line-height: 20px;
-  text-align: center;
+  text-align: left;
    
-  color: #FFF;
+  color: #6e6e6e;
 }      
 
 .container {
@@ -106,7 +67,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 3px; 
   box-sizing: border-box;
-  margin-top: 3px;
+  margin-top: 5%;
   margin-bottom: 5px;
 }
 
@@ -118,10 +79,27 @@ input[type=submit] {
   border-radius: 10px;
   cursor: pointer;
   font-size: 120%;
+  margin-top: 2%;
 }
 
 input[type=submit]:hover {
   background: #f2f2f2;
     color: #e54161;
     text-decoration: none;
+}
+
+@media screen and (max-width:600px){
+  div.boxes{
+    flex-direction: column;
+  }
+
+  div.box-blured{
+    width: 85%;
+    height: 38%;
+  }
+
+  input[type=submit] {
+    margin-top: -1%;
+  }
+
 }

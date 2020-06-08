@@ -42,40 +42,45 @@
 
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
+
                 @guest
-                <div class="topnav-login">
-                    <a href="{{ route('login') }}">LOGIN</a>
+                <div class="top-nav-opt">
+                    <a class="top-nav-login" href="{{ route('login') }}">LOGIN</a>
                 </div>
 
-                <div class="topnav-signUp">
-                    <a href="{{ route('register') }}">ASSINE!</a>
-                </div>
+                <a class="top-nav-opt" href="{{ route('register') }}">
+                    <div class="sign-background">
+                        <div class="top-nav-sign">
+                            ASSINE!
+                        </div>
+                    </div>
+                </a>
 
                 @if (Route::has('register'))
                 @endif
                 @else
-                <a href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                    {{ Auth::user()->name }} <span class="caret"></span>
-                </a>
-
-                <div aria-labelledby="navbarDropdown">
-                    <a href="{{ route('profile') }}">
-                        {{ __('Perfil') }}
-                    </a>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                <div class="top-nav-dropdown top-nav-logged test-class">
+                    <button class="top-nav-dropbtn">OLÁ, <?= strtoupper(explode(' ', Auth::user()->name)[0]) . " " . "<i class='fas fa-angle-down'></i>" ?></button>
+                    <div class="top-nav-dropdown-content">
+                        <a href="{{ route('profile') }}">
+                            {{ __('Perfil') }}
+                        </a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                        {{ __('Minhas Assinaturas') }}
-                    </a>
-                    <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                            {{ __('Minhas Assinaturas') }}
+                        </a>
+                        <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                            {{ __('Logout') }}
+                        </a>
 
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                        @csrf
-                    </form>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
                 </div>
                 @endguest
+
             </li>
 
         </ul>
