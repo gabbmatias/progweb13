@@ -67,7 +67,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 3px; 
   box-sizing: border-box;
-  margin-top: 5%;
+  margin-top: 1%;
   margin-bottom: 5px;
 }
 
@@ -96,10 +96,6 @@ input[type=submit]:hover {
   div.box-blured{
     width: 85%;
     height: 38%;
-  }
-
-  input[type=submit] {
-    margin-top: -1%;
   }
 
 }

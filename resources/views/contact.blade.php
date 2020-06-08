@@ -8,7 +8,7 @@
                 <span>Fale Conosco</span>
             </div>
             <div class="container">
-                <form>
+                <from>
                     <input type="text" id="email" name="email" placeholder="Seu E-mail">
                     <textarea id="subject" name="subject" placeholder="Sua Mensagem" style="height:100px"></textarea>
                     <input type="submit" value="Enviar">
