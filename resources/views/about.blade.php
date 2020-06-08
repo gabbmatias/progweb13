@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="about-background">
-    <div id="divContent" class="about-title">Um pouco sobre a nossa história!</div>
+    <div class="plans-subBar">
+        <a>Um Pouco Sobre Nossa História!</a>
+    </div>
         <div class="description-background">
             <div id="first-about" class="about-description">
             <p>
