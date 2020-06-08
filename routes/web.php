@@ -56,4 +56,10 @@ Route::get("/contact", function()
     return view('contact');
 })->name("contact");
 
+Route::get("/address", function()
+{
+    return view('address');
+})->name("address");
+
+
 // Route::get('/home', 'HomeController@index')->name('home');

@@ -9,7 +9,7 @@
             </div>
 
             <div class="container">
-                <from>
+                <form>
                     <input type="text" id="email" name="email" placeholder="Seu E-mail">
 
                     <textarea id="subject" name="subject" placeholder="Sua Mensagem" style="height:100px"></textarea>

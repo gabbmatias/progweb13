@@ -1,0 +1,15 @@
+.endereco-body {
+    width: 65vw;
+    height: 95%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.title-address{
+    font-size: 78px;
+}
+
+.endereco-form {
+    width: 65vw;
+}
