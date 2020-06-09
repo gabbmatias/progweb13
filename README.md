@@ -47,7 +47,7 @@ sudo apt-get install php-mysql
 
 ## Usando PreservSign
 
-Para usar Nome_da_Aplicação, siga os seguintes passos (exemplos):
+Para usar o PreservSign, siga os seguintes passos (exemplos):
 * Abra o navegador e digite o seguinte endereço: http://manancial.net/preservsign ou https://localhost .
 * Ao abrir a aplicação você poderá:
   * Navegar pelo conteúdo público
