@@ -43,6 +43,14 @@ body {
     color: white !important;
 }
 
+.top-nav-login {
+    float: right !important;
+}
+
+.top-nav-opt {
+    float: right !important;
+}
+
 .top-nav-dropdown:hover .top-nav-dropdown-content {
     display: block;
 }
@@ -54,5 +62,13 @@ body {
 
     .top-nav-logged {
         display: none;
+    }
+
+    .top-nav-login {
+        float: left !important;
+    }
+    
+    .top-nav-opt {
+        float: left !important;
     }
 }
