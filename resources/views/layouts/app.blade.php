@@ -28,6 +28,10 @@
     <link href="{{ asset('css/address-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subscription-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/registerplans-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/crud-address-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/payment-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/card-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/crud-card-styles.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
