@@ -1,0 +1,45 @@
+.cardBody {
+    height: 95%;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    
+}
+.cardFormTitle{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #E54161 !important;
+        
+}
+
+.cardForm{
+    width: 30vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+    margin-bottom: 2px;
+    
+}
+
+
+@media screen and (max-width: 600px){
+    .cardFormTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .cardForm{
+        width: 80vw;
+    }
+}

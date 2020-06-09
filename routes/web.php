@@ -56,6 +56,16 @@ Route::get("/contact", function()
     return view('contact');
 })->name("contact");
 
+Route::get("/add_address", function()
+{
+    return view('add_address');
+})->name("add_address");
+
+Route::get("/edit_address", function()
+{
+    return view('edit_address');
+})->name("edit_address");
+
 Route::get("/address", function()
 {
     return view('address');
@@ -70,5 +80,20 @@ Route::get("/registerplans", function()
 {
     return view('registerplans');
 })->name("registerplans");
+
+Route::get("/payment", function()
+{
+    return view('payment');
+})->name("payment");
+
+Route::get("/card", function()
+{
+    return view('card');
+})->name("card");
+
+Route::get("/add_card", function()
+{
+    return view('add_card');
+})->name("add_card");
 
 // Route::get('/home', 'HomeController@index')->name('home');

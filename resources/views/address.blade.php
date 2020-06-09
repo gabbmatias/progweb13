@@ -2,20 +2,23 @@
 
 @section('content')
 <div class="addressBody">
-    <a class="addressFormTitle">Novo Endereço</a>
-
-    <form class="addressForm" action="{{ route('address.store') }}">
-        <input type="text" name="client_id" id="client_id" value="1" hidden>
-        <input type="text" name="street" id="street" placeholder="Rua">
-        <input type="text" name="street_numeber" id="street_number" placeholder="Número">
-        <input type="text" name="complement" id="complement" placeholder="Complemento">
-        <input type="text" name="neighbohood" id="neighborhood" placeholder="Bairro">
-        <input type="text" name="cep" id="cep" placeholder="CEP">
-        <input type="text" name="city" id="city" placeholder="Cidade">
-        <input type="text" name="state" id="state" placeholder="Estado">
-        <input type="text" name="country" id="country" placeholder="País">
-        <input type="submit" value="Cadastrar Endereço">
-    <form>      
-
+    <a class="addressTitle">Informe seu endereço para entrega</a>
+    <div class="addressFields">
+        <div class="addAddress">
+            <input type="submit" value="+">
+            <a href="{{ route('add_address') }}">Adicionar Endereço</a>
+        </div>
+        
+        <form class="addressForm">
+            <!-- Checkbox para selecionar o endereço
+            <input type="checkbox" id="" name="">
+            -->
+            
+            <div class="navegacao">
+                <input type=submit class="voltar" value="Voltar">
+                <input type=submit value="Próximo" formaction="{{ route('payment') }}">
+            </div>
+        </form>
+    </div>
 </div>
 @endsection
