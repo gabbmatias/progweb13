@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="enderecoBody">
-    <a class="formTitle">Novo Endereço</a>
+<div class="addressBody">
+    <a class="addressFormTitle">Novo Endereço</a>
 
     <form class="addressForm" action="{{ route('address.store') }}">
         <input type="text" name="client_id" id="client_id" value="1" hidden>

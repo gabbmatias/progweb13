@@ -1,14 +1,14 @@
-.addressBody {
+.subscriptionBody {
     height: 95%;
     width: 100%;
     background-color: lightgray;
     display: flex;
     flex-direction: column;
+    align-items: center; 
     align-content: center;
-    align-items: center;
     
 }
-.addressFormTitle{
+.subscriptionFormTitle{
     padding-top: 4%;
     padding-bottom: 4%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -20,7 +20,7 @@
         
 }
 
-.addressForm{
+.subscriptionForm{
     width: 40%;
     text-align: center;
     display: flex;
@@ -33,12 +33,16 @@
     
 }
 
+label{
+    font-size: 24px;
+}
+
 @media screen and (max-width: 600px){
-    .addressFormTitle{
+    .subscriptionFormTitle{
         padding-top: 10%;
         padding-bottom: 10%;
     }
-    .addressForm{
+    .subscriptionForm{
         width: 80%;
     }
 }

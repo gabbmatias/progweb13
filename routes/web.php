@@ -61,5 +61,14 @@ Route::get("/address", function()
     return view('address');
 })->name("address");
 
+Route::get("/subscription", function()
+{
+    return view('subscription');
+})->name("subscription");
+
+Route::get("/registerplans", function()
+{
+    return view('registerplans');
+})->name("registerplans");
 
 // Route::get('/home', 'HomeController@index')->name('home');
