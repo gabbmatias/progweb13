@@ -96,4 +96,9 @@ Route::get("/add_card", function()
     return view('add_card');
 })->name("add_card");
 
+Route::get("/view_address", function()
+{
+    return view('view_address');
+})->name("view_address");
+
 // Route::get('/home', 'HomeController@index')->name('home');

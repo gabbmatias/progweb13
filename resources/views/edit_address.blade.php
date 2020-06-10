@@ -14,7 +14,7 @@
         <input type="text" name="city" id="city" placeholder="Cidade">
         <input type="text" name="state" id="state" placeholder="Estado">
         <input type="text" name="country" id="country" placeholder="País">
-        <input type="submit" value="Atualizar Endereço">
+        <input type="submit" value="Atualizar Endereço" formaction="{{ route('view_address') }}">
     <form>      
 
 </div>

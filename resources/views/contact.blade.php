@@ -20,7 +20,7 @@
                 <span>Contato</span>
             </div>
             <div class="box-message-contact">
-                <a>Telefone:<br><br>0800-SE-PRESERVE<br><br><br><br>E-mail:<br><br>preserve@preserve.com</a>
+                <a>Telefone:<br><br>0800-SE-PRESERVE<br><br><br>E-mail:<br><br>preserve@preserve.com</a>
             </div>
 
         </div>
