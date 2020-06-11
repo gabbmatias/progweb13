@@ -101,4 +101,19 @@ Route::get("/view_address", function()
     return view('view_address');
 })->name("view_address");
 
+Route::get("/select_plans", function()
+{
+    return view('select_plans');
+})->name("select_plans");
+
+Route::get("/view_plans", function()
+{
+    return view('view_plans');
+})->name("view_plans");
+
+Route::get("/edit_plans", function()
+{
+    return view('edit_plans');
+})->name("edit_plans");
+
 // Route::get('/home', 'HomeController@index')->name('home');
