@@ -1,10 +1,11 @@
 .subBar {
-    background-color: lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    height: 60vh;
+    background-image: url('public/img/background-image.jpg');
 }
+
 
 .blurred-box {
     width: 85%;
@@ -19,7 +20,6 @@
     box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
     backdrop-filter: blur(17px);
     border-radius: 75px;
-    margin-top: 80px;
 }
 
 .text-title {
@@ -34,12 +34,14 @@
         sans-serif;
     font-size: 150%;
     color: #6e6e6e !important;
+
 }
 
 .btn-signUp {
     border-radius: 20px;
     color: #ffffff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 140%;
     background-color: #e54161;
     text-decoration: none;
@@ -63,20 +65,17 @@
 .instrucoes {
     display: flex;
     flex-direction: row;
-    background-color: lightgray;
-    height: 42vh;
+    height: 36vh;
+    max-height: 350px;
+    margin-top: 0cm;
 }
 
 .assine {
-    background-color: rgba(229, 65, 97, 0.6);
-    width: 33vw;
-    height: 24vh;
-    align-self: flex-end;
-    margin-top: 3px;
-    text-align: center;
+    background-color: rgba(229, 65, 97, 0.5);
+    width: 34vw;
 }
 
-.assine-left{
+.assine-left {
     width: 31vh;
     height: 20vh;
     float: left;
@@ -84,24 +83,24 @@
     text-align: center;
 }
 
-.assine-left i{
+.assine-left i {
     margin-top: 20px;
     font-size: 300%;
 }
 
 .assine-left p {
     margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 100%;
 }
 
-.assine-right{
-    width: 32.5vh;
+.assine-right {
+    width: 31.5vh;
     height: 20vh;
     float: right;
     margin-top: 20px;
     text-align: center;
-
 }
 
 .assine-right i {
@@ -109,69 +108,22 @@
     font-size: 320%;
 }
 
-.assine-right p{
+.assine-right p {
     margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 100%;
 }
 
-.description-icon{
+.description-icon {
     margin-top: -4px;
 }
 
 .assinaturas {
-    background-color: rgba(229, 65, 97, 0.7);
+    background-color: rgba(229, 65, 97, 0.6);
     width: 34vw;
-    height: 24vh;
-    align-self: flex-end;
 }
-.assinaturas-left{
-    width: 33vh;
-    height: 20vh;
-    float: left;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.assinaturas-left i{
-    margin-top: 20px;
-    font-size: 300%;
-}
-
-.assinaturas-left p {
-    margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100%;
-}
-
-.assinaturas-right{
-    width: 32.5vh;
-    height: 20vh;
-    float: right;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.assinaturas-right i{
-    font-size: 300%;
-    margin-top: 20px;
-}
-
-.assinaturas-right p {
-    margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 100%;
-}
-
-.produtos {
-    background-color: rgba(229, 65, 97, 0.8);
-    width: 33vw;
-    height: 24vh;
-    bottom: 0;
-    margin-top: 171px;
-}
-
-.produtos-left{
+.assinaturas-left {
     width: 31.5vh;
     height: 20vh;
     float: left;
@@ -179,14 +131,60 @@
     text-align: center;
 }
 
-.produtos-left i{
+.assinaturas-left i {
+    margin-top: 20px;
+    font-size: 300%;
+}
+
+.assinaturas-left p {
+    margin-top: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 100%;
+}
+
+.assinaturas-right {
+    width: 31.5vh;
+    height: 20vh;
+    float: right;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.assinaturas-right i {
+    font-size: 300%;
+    margin-top: 20px;
+}
+
+.assinaturas-right p {
+    margin-top: 5px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-size: 100%;
+}
+
+.produtos {
+    background-color: rgba(229, 65, 97, 0.7);
+    width: 34vw;
+}
+
+.produtos-left {
+    width: 31.5vh;
+    height: 20vh;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.produtos-left i {
     margin-top: 20px;
     font-size: 320%;
 }
 
-.produtos-left p{
+.produtos-left p {
     margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 100%;
 }
 
@@ -198,14 +196,15 @@
     text-align: center;
 }
 
-.produtos-right i{
+.produtos-right i {
     margin-top: 20px;
     font-size: 320%;
 }
 
 .produtos-right p {
     margin-top: 5px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-size: 100%;
 }
 
@@ -214,7 +213,7 @@
         font-size: 110%;
     }
 
-    .instrucoes{
+    .instrucoes {
         height: 33vh;
     }
 
@@ -230,64 +229,62 @@
     .assine-box {
         display: none;
     }
-    
+
     .assinaturas {
         display: none;
     }
-    .assinaturas-left{
+    .assinaturas-left {
         display: none;
     }
-    .assinaturas-right{
+    .assinaturas-right {
         display: none;
     }
 
-    .description-icon{
+    .description-icon {
         margin-top: -4px;
     }
-    
+
     .produtos {
         background-color: rgba(229, 65, 97, 0.8);
         width: 100vw;
-        height: 95vh;
+        height: 35vh;
         bottom: 0;
         margin-top: -5px;
     }
-    
-    .produtos-left{
+
+    .produtos-left {
         width: 23vh;
         height: 25vh;
         margin-top: 10px;
     }
-    
-    .produtos-left i{
+
+    .produtos-left i {
         margin-top: 20px;
         font-size: 220%;
     }
-    
-    .produtos-left p{
+
+    .produtos-left p {
         margin-top: 5px;
         font-size: 80%;
     }
-    
+
     .produtos-right {
         width: 23vh;
         height: 25vh;
         margin-top: 10px;
     }
-    
-    .produtos-right i{
+
+    .produtos-right i {
         margin-top: 20px;
         font-size: 260%;
     }
-    
+
     .produtos-right p {
         margin-top: 5px;
         font-size: 70%;
     }
-    
-    .produtos-center{
+
+    .produtos-center {
         display: none;
     }
-    
-    
 }
