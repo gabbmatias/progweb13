@@ -59,7 +59,7 @@
         <div class="plan-title"><strong>Plano Exxxtra</strong></div>
         <div class="plan-description"> 
             Receba 20 camisinhas diretamente na sua residência! <br>
-            Quatro variadades! Contendo pelo cinco camisinhas <br> 
+            Quatro variadades! Contendo pelo menos cinco camisinhas <br> 
             de cada variedade!
         </div>
     </div>

@@ -3,10 +3,23 @@
     justify-content: center;
     align-items: center;
     height: 60vh;
-    background-image: url('/img/background-image.jpg');
-    background-size: 100% 130%;
+    background-color: #FCE4F0;
 }
 
+.image-left {
+    position: relative;
+    float: left;
+    margin-bottom: 0vh;
+    align-self: flex-end;
+    background-position: inherit;
+    margin-left: -8%;
+}
+
+.image-right {
+    position: relative;
+    float: right;
+    align-self: flex-end;
+}
 
 .blurred-box {
     width: 85%;
@@ -17,10 +30,11 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background: rgba(107, 107, 107, 0.15);
+    background: rgba(107, 107, 107, 0.5);
     box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
     backdrop-filter: blur(17px);
     border-radius: 75px;
+    margin-left: -2%;
 }
 
 .text-title {
@@ -34,8 +48,7 @@
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
     font-size: 150%;
-    color: #6e6e6e !important;
-
+    color: #f2f2f2 !important;
 }
 
 .btn-signUp {
@@ -218,9 +231,18 @@
         height: 33vh;
     }
 
+    .image-left {
+        display: none;
+    }
+
+    .image-right {
+        display: none;
+    }
+
     .blurred-box {
         height: 65%;
         margin-top: 2px;
+        margin-left: 0%;
     }
 
     .assine {

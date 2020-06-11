@@ -1,6 +1,8 @@
 .about-background {
     height: 100%;
     width: 100%;
+    background-color: #FCE4F0;
+    height: 100vh;
 }
 
 .about-title {
