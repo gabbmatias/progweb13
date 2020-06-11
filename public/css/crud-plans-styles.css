@@ -1,0 +1,42 @@
+.editPlansBody {
+    height: 95%;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    align-content: center;
+    
+}
+.editPlansFormTitle{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #E54161 !important;
+        
+}
+
+.editPlansForm{
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+}
+
+@media screen and (max-width: 600px){
+    .editPlansFormTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .editPlansForm{
+        width: 80%;
+    }
+}
