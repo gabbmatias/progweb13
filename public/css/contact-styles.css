@@ -1,7 +1,8 @@
 .container-body-all {
   width: 100%;
   text-align: center;
-  background-color: lightgray;
+  background-image: url('/img/background-image.jpg');
+  background-size: 100% 100%;
 }  
 
 .boxes {
