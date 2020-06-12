@@ -116,4 +116,9 @@ Route::get("/edit_plans", function()
     return view('edit_plans');
 })->name("edit_plans");
 
+Route::get("/view_subscriptions", function()
+{
+    return view('view_subscriptions');
+})->name("view_subscriptions");
+
 // Route::get('/home', 'HomeController@index')->name('home');
