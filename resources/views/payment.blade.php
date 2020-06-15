@@ -6,11 +6,18 @@
     <div class="paymentFields">
         <form>
            <button class="selectPayment">
-                <i class="fa fa-file-text-o"></i>
+               <div class="boleto-payment">
+                    <i class="fa fa-file-text-o"></i>
+                    <p>Boleto</p>
+               </div>
+                
            </button>
 
            <button class="selectPayment" formaction="{{ route('card') }}">
-                <i class="fa fa-credit-card"></i>
+                <div class="credit-card-payment">
+                    <i class="fa fa-credit-card"></i>
+                    <p>Cartão de Crédito</p>
+                </div>
            </button>
        
             <!-- <input type=button class="selectPayment" value="Cartão >" formaction="{{ route('card') }}"> -->
