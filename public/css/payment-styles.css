@@ -56,8 +56,8 @@
 .boleto-payment i{
     margin-top: 1.8%;
     float: left;
-    margin-left: 175px;
-    font-size: 55px;
+    margin-left: 178px;
+    font-size: 53px;
 }
 
 .boleto-payment p{
@@ -65,15 +65,15 @@
     width: 8vw;
     height: 6vh;
     float: right;
-    margin-right: 165px;
-    font-size: 40px;   
+    margin-right: 167px;
+    font-size: 35px;   
 }
 
 .credit-card-payment i{
     margin-top: 1.8%;
     float: left;
-    margin-left: 80px;
-    font-size: 55px;
+    margin-left: 88px;
+    font-size: 58px;
 }
 
 .credit-card-payment p{
@@ -81,8 +81,8 @@
     width: 18vw;
     height: 6vh;
     float: right;
-    margin-right: 55px;
-    font-size: 40px; 
+    margin-right: 58px;
+    font-size: 35px; 
 }
 @media screen and (max-width: 600px){
     .paymentTitle{
