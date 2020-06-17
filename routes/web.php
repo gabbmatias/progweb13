@@ -26,8 +26,9 @@ Route::get('/profile', function () {
 })->name("profile");
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
+Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');
-Route::resource('plan', 'PlansController', ['except' => ['destroy', 'update']]);
+Route::resource('plan', 'PlansController', ['except' => ['destroy', 'update', 'edit']]);
 
 Route::post('/credit_card/delete', 'Credit_cardController@destroy')->name('credit_card.destroy');
 Route::post('/credit_card/update', 'Credit_cardController@update')->name('credit_card.update');

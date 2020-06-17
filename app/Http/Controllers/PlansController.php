@@ -20,7 +20,7 @@ class PlansController extends Controller
                 return redirect()->route('profile');
             } else {
                 $plans = Plan::all();
-                return view('auth/testPlans')->with(['plans' => $plans]);
+                return view('view_plans')->with(['plans' => $plans]);
             }
         }
         return redirect()->route('login');
@@ -37,7 +37,7 @@ class PlansController extends Controller
             if (Auth::user()->groupid != 2) {
                 return redirect()->route('profile');
             } else {
-                return view('auth/create_plans');
+                return view('registerplans');
             }
         }
         return redirect()->route('login');
@@ -82,9 +82,20 @@ class PlansController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        if (Auth::check()) {
+            if (Auth::user()->groupid == 2) {
+                $data = $request->all();
+                $plans = Plan::where('plan_id', $data['plan_id'])->get();
+
+                return view('edit_plans')->with(["plans" => $plans]);
+
+            } else {
+                return redirect()->route('profile');
+            }
+        }
+        return redirect()->route('login');
     }
 
     /**
@@ -99,7 +110,7 @@ class PlansController extends Controller
         if (Auth::check()) {
             if (Auth::user()->groupid == 2) {
                 $data = $request->all();
-                $plan = Plan::where('plan_id', $data['plan_id'])->update(['name' => $data['name'], 'price' => $data['price'], 'description' => $data['description']]);
+                $plan = Plan::where('plan_id', $data['plan_id'])->update(['plan_name' => $data['plan_name'], 'price' => $data['price'], 'description' => $data['description']]);
 
                 return redirect()->route('plan.index');
             } else {

@@ -4,12 +4,18 @@
 <div class="editPlansBody">
     <a class="editPlansFormTitle">Editar Plano</a>
 
-    <form class="editPlansForm">
-        <input type="text" name="plan_name" id="plan_name" placeholder="Nome Plano">
-        <input type="text" name="price" id="price" placeholder="Preço">
-        <textarea type="text" name="description" id="Description" placeholder="Descrição" style="height:100px"></textarea>
-        <input type="submit" value="Atualizar Plano">
-    <form>      
+    @foreach ($plans as $plan)
+        <form class="editPlansForm" method="POST" action="{{ route('plan.update') }}">
+            @csrf
+            <input hidden name="plan_id" value="{{ $plan->plan_id}} ">
+            <input type="text" name="plan_name" id="plan_name" value="{{ $plan->plan_name }}">
+            <input type="text" name="price" id="price" value="{{ $plan->price }}">
+            <textarea type="text" name="description" id="Description"
+                style="height:100px">{{ $plan->description }}</textarea>
+            <input type="submit" value="Atualizar Plano">
+        <form>
+
+    @endforeach
 
 </div>
 @endsection

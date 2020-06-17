@@ -45,6 +45,17 @@
                             </div>
                         </div>
 
+                        @if(Auth::user()->groupid == 2)
+                        <div class="form-group row">
+
+                            <div class="col-md-12">
+                                <a href="{{ route('plan.create') }}">Adicionar plano</a>
+                            </div>
+
+                        </div>
+                        
+                    @endif
+
 
                         <div class="form-group row">
                             <div class="col-sm-auto">
