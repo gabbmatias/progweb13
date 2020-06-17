@@ -30,7 +30,10 @@ class AddressController extends Controller
      */
     public function create()
     {
-        return view('auth/create_address');
+        if (Auth::check()) {
+            return view('add_address');
+        }
+        return redirect()->route('login');
     }
 
     /**

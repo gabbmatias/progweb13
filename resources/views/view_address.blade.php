@@ -33,9 +33,9 @@
 
         @endforeach
     </div>
-    {{-- <div class="addPlan">
+    <div class="addPlan">
         <input type="submit" value="+">
-        <a href="{{ route('plan.create') }}">Adicionar Plano</a>
-    </div> --}}
+        <a href="{{ route('address.create') }}">Adicionar endereço</a>
+    </div>
 </div>
 @endsection
