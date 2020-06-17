@@ -58,7 +58,7 @@
 .action{
   background-color: rgba(107, 107, 107, 0)!important;
   color: #E54161!important;
-  padding: 8px 20px;
+  padding: 1px 2px !important;
   border: none;
   border-radius: 10px;
   cursor: pointer;
