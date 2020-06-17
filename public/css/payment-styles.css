@@ -99,7 +99,8 @@
     }
 
     .boleto-payment i{
-       margin-left: 48px;
+       margin-left: 51px;
+       font-size: 45px;
        
     }
 
@@ -108,7 +109,8 @@
     }
 
     .credit-card-payment i{
-        margin-left: 40px;
+        margin-left: 45px;
+        font-size: 45px;
      }
      
     .credit-card-payment p{
