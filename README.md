@@ -30,24 +30,23 @@ Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 Para fazer o deploy da aplicação siga os seguintes passos:
 
 Linux/macOS/Windows:
-```
-* Arquivos de configuração pessoal do projeto(.env)
+````Arquivos de configuração pessoal do projeto(.env)
 <commando 1>
-composer require laravel/ui
+````composer require laravel/ui
 <commando 2>
-php artisan migrate:fresh
+````php artisan migrate:fresh
 <commando 3>
-php artisan serve
+````php artisan serve
 
-* Para fins de teste, o banco de dados utilizado foi o mySQL.
+````Para fins de teste, o banco de dados utilizado foi o mySQL.
 <commando sugerido>
-* (Feito em ambiente unix - Ubuntu)
+````(Feito em ambiente unix - Ubuntu)
 sudo apt-get install php-mysql
-```
+
 
 ## Usando PreservSign
 
-Para usar o PreservSign, siga os seguintes passos (exemplos):
+Para usar Nome_da_Aplicação, siga os seguintes passos (exemplos):
 * Abra o navegador e digite o seguinte endereço: http://manancial.net/preservsign ou https://localhost .
 * Ao abrir a aplicação você poderá:
   * Navegar pelo conteúdo público

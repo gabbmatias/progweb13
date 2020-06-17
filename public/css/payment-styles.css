@@ -1,0 +1,119 @@
+.paymentBody {
+    height: 95%;
+    width: 100%;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: #E54161!important;
+    
+}
+
+.paymentTitle{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #E54161!important;
+    text-align: center;
+        
+}
+
+.paymentFields{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 30vw;
+}
+
+.selectPayment{
+    margin-top: 2%;
+    width: 30vw;
+    height: 12vh;
+    max-height: 400px;
+    background: #E54161;
+    border: 1px solid #E54161 !important;
+    border-radius: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    text-decoration: none;
+
+}
+
+.selectPayment:hover{
+    background: lightgray;
+    color: #E54161;
+    text-decoration: none;
+}
+
+.boleto-payment i{
+    margin-top: 1.8%;
+    float: left;
+    margin-left: 178px;
+    font-size: 53px;
+}
+
+.boleto-payment p{
+    margin-top: 2.5%;
+    width: 8vw;
+    height: 6vh;
+    float: right;
+    margin-right: 167px;
+    font-size: 35px;   
+}
+
+.credit-card-payment i{
+    margin-top: 1.8%;
+    float: left;
+    margin-left: 88px;
+    font-size: 58px;
+}
+
+.credit-card-payment p{
+    margin-top: 2.5%;
+    width: 18vw;
+    height: 6vh;
+    float: right;
+    margin-right: 58px;
+    font-size: 35px; 
+}
+@media screen and (max-width: 600px){
+    .paymentTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+        line-height: 90%;
+    }
+    .paymentFields{        
+        width: 80vw;
+    }
+    .selectPayment{
+        width: 40vw;
+        display: list-item;
+    }
+
+    .boleto-payment i{
+       margin-left: 51px;
+       font-size: 45px;
+       
+    }
+
+    .boleto-payment p{
+        display: none; 
+    }
+
+    .credit-card-payment i{
+        margin-left: 45px;
+        font-size: 45px;
+     }
+     
+    .credit-card-payment p{
+       display: none;
+    }
+}
