@@ -18,7 +18,7 @@ class AddressController extends Controller
         if (Auth::check()) {
             $addresses = Address::where('client_id', Auth::user()->id)->get();
 
-            return view('auth/testAddresses')->with(['addresses' => $addresses]);
+            return view('view_address')->with(['addresses' => $addresses]);
         }
         return redirect()->route('login');
     }
@@ -57,7 +57,7 @@ class AddressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request)
     {
         //
     }
@@ -68,9 +68,15 @@ class AddressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request)
     {
-        //
+        if (Auth::check()) {
+            $data = $request->all();
+            $addresses = Address::where('address_id', $data['address_id'])->get();
+
+            return view('edit_address')->with(['addresses' => $addresses]);
+    }
+    return redirect()->route('login');
     }
 
     /**
@@ -80,9 +86,15 @@ class AddressController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        if (Auth::check()) {
+            $data = $request->all();
+            unset($data['_token']);
+            $address = Address::where('address_id', $data['address_id'])->update($data);
+            return redirect()->route('address.index');
+        }
+        return redirect()->route('login');
     }
 
     /**

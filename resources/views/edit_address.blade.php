@@ -4,18 +4,22 @@
 <div class="addressBody">
     <a class="addressFormTitle">Editar Endereço</a>
 
-    <form class="addressForm" >
-        <input type="text" name="client_id" id="client_id" value="1" hidden>
-        <input type="text" name="street" id="street" placeholder="Rua">
-        <input type="text" name="street_numeber" id="street_number" placeholder="Número">
-        <input type="text" name="complement" id="complement" placeholder="Complemento">
-        <input type="text" name="neighbohood" id="neighborhood" placeholder="Bairro">
-        <input type="text" name="cep" id="cep" placeholder="CEP">
-        <input type="text" name="city" id="city" placeholder="Cidade">
-        <input type="text" name="state" id="state" placeholder="Estado">
-        <input type="text" name="country" id="country" placeholder="País">
-        <input type="submit" value="Atualizar Endereço" formaction="{{ route('view_address') }}">
-    <form>      
+@foreach ($addresses as $address)
+    
+        <form class="addressForm" method="POST" action="{{ route('address.update')}}">
+            @csrf
+            <input type="text" name="address_id" id="address_id" value="{{ $address->address_id }}" hidden>
+            <input type="text" name="street" id="street" value="{{ $address->street }}">
+            <input type="text" name="street_number" id="street_number" value="{{ $address->street_number }}">
+            <input type="text" name="complement" id="complement" value="{{ $address->complement }}">
+            <input type="text" name="neighborhood" id="neighborhood" value="{{ $address->neighborhood }}">
+            <input type="text" name="cep" id="cep" value="{{ $address->cep }}">
+            <input type="text" name="city" id="city" value="{{ $address->city }}">
+            <input type="text" name="state" id="state" value="{{ $address->state }}">
+            <input type="text" name="country" id="country" value="{{ $address->country }}">
+            <input type="submit" value="Atualizar Endereço">
+        <form>    
+@endforeach  
 
 </div>
 @endsection

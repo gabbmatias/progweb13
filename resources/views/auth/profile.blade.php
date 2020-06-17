@@ -49,12 +49,20 @@
                         <div class="form-group row">
 
                             <div class="col-md-12">
-                                <a href="{{ route('plan.create') }}">Adicionar plano</a>
+                                <a href="{{ route('plan.index') }}">Visualizar planos</a>
                             </div>
 
                         </div>
                         
                     @endif
+
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <a href="{{ route('address.index') }}">Visualizar endereços</a>
+                        </div>
+
+                    </div>
 
 
                         <div class="form-group row">

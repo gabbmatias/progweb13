@@ -34,8 +34,10 @@ Route::post('/credit_card/delete', 'Credit_cardController@destroy')->name('credi
 Route::post('/credit_card/update', 'Credit_cardController@update')->name('credit_card.update');
 Route::resource('credit_card', 'Credit_cardController', ['except' => ['destroy', 'update']]);
 
-Route::post('/addresses/delete', 'AddressController@destroy')->name('address.destroy');
-Route::resource('address', 'AddressController', ['except' => ['destroy']]);
+Route::post('/address/delete', 'AddressController@destroy')->name('address.destroy');
+Route::post('/address/edit', 'AddressController@edit')->name('address.edit');
+Route::post('/address/update', 'AddressController@update')->name('address.update');
+Route::resource('address', 'AddressController', ['except' => ['destroy', 'update', 'edit']]);
 
 Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('subscription.destroy');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');

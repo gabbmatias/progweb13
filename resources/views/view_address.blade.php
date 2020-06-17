@@ -5,55 +5,37 @@
     <a class="addressViewTitle">Endereços</a>
 
     <div class="enderecosBoxes">
-        <div class="boxEndereco">
-            <div class="box-endereco-text">
-                <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-            </div>
-            <div class="actions">
-                <a href="{{ route('edit_address') }}">Editar</a>
-                <a href="">Deletar</a>                
-            </div>
-        </div>
+        @foreach ($addresses as $address)
+            
         
         <div class="boxEndereco">
             <div class="box-endereco-text">
-                <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
+                <a>{{ $address->street }}<br>{{ $address->street_number }}<br>{{ $address->complement }}<br>{{ $address->neighborhood }}<br>
+                    {{ $address->city}}<br>{{ $address->state }}<br>{{ $address->country }}<br>{{ $address->cep }}</a>
             </div>
             <div class="actions">
-                <a href="{{ route('edit_address') }}">Editar</a>
-                <a href="">Deletar</a>                
+                
+                <form action="{{ route('address.edit') }}" method="POST">
+                    @csrf
+                    <input hidden name="address_id" value="{{ $address->address_id }}">
+                    <input type="submit" class="action" name="submit" value="Editar">
+                </form>
+                
+                
+                <form action="{{ route('address.destroy') }}" method="POST">
+                    @csrf
+                    <input hidden name="address_id" value="{{ $address->address_id }}">
+                    <input type="submit" class="action" name="submit" value="Deletar">
+                </form>
+
             </div>
         </div>
 
-        <div class="boxEndereco">
-            <div class="box-endereco-text">
-                <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-            </div>
-            <div class="actions">
-                <a href="{{ route('edit_address') }}">Editar</a>
-                <a href="">Deletar</a>                
-            </div>
-        </div>
-
-        <div class="boxEndereco">
-            <div class="box-endereco-text">
-                <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-            </div>
-            <div class="actions">
-                <a href="{{ route('edit_address') }}">Editar</a>
-                <a href="">Deletar</a>                
-            </div>
-        </div>
-
-        <div class="boxEndereco">
-            <div class="box-endereco-text">
-                <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-            </div>
-            <div class="actions">
-                <a href="{{ route('edit_address') }}">Editar</a>
-                <a href="">Deletar</a>                
-            </div>
-        </div>
+        @endforeach
     </div>
+    {{-- <div class="addPlan">
+        <input type="submit" value="+">
+        <a href="{{ route('plan.create') }}">Adicionar Plano</a>
+    </div> --}}
 </div>
 @endsection
