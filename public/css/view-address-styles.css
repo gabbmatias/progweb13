@@ -23,12 +23,12 @@
 
 .enderecosBoxes{
     width: 70vw;
-    height: 75vh;
+    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 
 }
@@ -36,7 +36,7 @@
 .boxEndereco{
     margin-top: 2%;
     width: 24%;
-    height: 34%;
+    height: 54%;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -47,6 +47,7 @@
 }
 
 .box-endereco-text{
+    margin-top: 4%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
@@ -67,13 +68,15 @@
     color: white!important;
 }
 
+
+
 @media screen and (max-width: 600px){
     .enderecosBoxes{
         width: 98vw;
-        height: 85vh;
+        height: 60vh;
     }
     .boxEndereco{
         width: 49%;
-        height: 30%;
+        height: 45%;
     }
 }

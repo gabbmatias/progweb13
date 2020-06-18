@@ -33,7 +33,7 @@
 
         @endforeach
     </div>
-    <div class="addPlan">
+    <div class="addAddress">
         <input type="submit" value="+">
         <a href="{{ route('address.create') }}">Adicionar endereço</a>
     </div>

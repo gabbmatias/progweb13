@@ -34,6 +34,8 @@
 }
 
 .topnav a:hover {
+    width: 100%;
+    text-align: left;
     background-color: #ddd;
     color: #e54161;
 }
