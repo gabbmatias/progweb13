@@ -25,7 +25,7 @@ class SubscriptionController extends Controller
                 ->where('subscriptions.client_id', '=',  Auth::user()->id)
                 ->get();
 
-            return view('auth/testSubscription')->with(['subscriptions' => $data]);
+            return view('view_subscriptions')->with(['subscriptions' => $data]);
         }
         return redirect()->route('login');
     }

@@ -40,8 +40,9 @@ Route::post('/address/update', 'AddressController@update')->name('address.update
 Route::resource('address', 'AddressController', ['except' => ['destroy', 'update', 'edit']]);
 
 Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('subscription.destroy');
+Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
-Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update']]);
+Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit']]);
 
 Route::get('/profile/password', 'ProfileController@index')->name("profile.password");
 
