@@ -34,8 +34,6 @@
 }
 
 .topnav a:hover {
-    width: 100%;
-    text-align: left;
     background-color: #ddd;
     color: #e54161;
 }
@@ -51,6 +49,14 @@
 
 .topnav .icon {
   display: none;
+}
+
+.top-nav-dropdown-content a{
+    text-align: left;
+}
+
+.top-nav-dropdown-content a:hover{
+    width: 100%;
 }
 
 @media screen and (max-width: 600px) {
