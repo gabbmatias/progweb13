@@ -17,6 +17,7 @@ class AddressController extends Controller
     public function index()
     {
         if (Auth::check()) {
+            session()->forget('back_url');
             $addresses = Address::where('client_id', Auth::user()->id)->get();
 
             return view('view_address')->with(['addresses' => $addresses]);
@@ -31,6 +32,7 @@ class AddressController extends Controller
      */
     public function create()
     {
+
         if (Auth::check()) {
             return view('add_address');
         }
@@ -49,7 +51,11 @@ class AddressController extends Controller
             $data = $request->all();
 
             Address::create($data);
-
+            if (session('back_url')){
+                $url= explode('/', session('back_url'));
+                session()->forget('back_url');
+                return redirect()->route('address.select', ['plan' => end($url)]);
+            }
             return redirect()->route('address.index');
         }
         return redirect()->route('login');
@@ -67,8 +73,11 @@ class AddressController extends Controller
 
     public function selectAddress($id)
     {
+        session()->put('back_url', "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
         if(Auth::check()){
-            return view('address')->with(['plan_id' => $id]);
+            $addresses = Address::where('client_id', Auth::user()->id)->get();
+            $plan = Plan::where('plan_id', $id)->get();
+            return view('address')->with(['plans' => $plan, 'addresses' => $addresses]);
         }
         else
             return redirect()->route('login');

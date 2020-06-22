@@ -9,47 +9,28 @@
             Aqui é apenas o exemplo de como eu quero que fique
             //////////////////////////////////////////////////
         -->
+        @foreach ($plans as $plan)
+        <div>
+            <span>Plano selecionado: {{$plan->plan_name}}</span>
+        </div>  
+        @endforeach
+
         <div class="enderecosBoxesExample">
-            <div class="boxEnderecoExample">
-                <div class="box-endereco-textExample">
-                    <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-                </div>
-                <div class="actionsAddress">
-                    <a href="{{ route('address.edit') }}">Editar</a>
-                    <a href="" class="selecionar">Selecionar</a>                
-                </div>
-            </div>
+        @foreach ($addresses as $address)
 
             <div class="boxEnderecoExample">
                 <div class="box-endereco-textExample">
-                    <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
+                <a>{{ $address->street}}, {{$address->street_number}}<br>{{$address->complement}}<br>{{ $address->city }}<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
                 </div>
                 <div class="actionsAddress">
-                    <a href="{{ route('address.edit') }}">Editar</a>
-                    <a href="" class="selecionar">Selecionar</a>                
-                </div>
-            </div>
 
-            <div class="boxEnderecoExample">
-                <div class="box-endereco-textExample">
-                    <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-                </div>
-                <div class="actionsAddress">
                     <a href="{{ route('address.edit') }}">Editar</a>
                     <a href="" class="selecionar">Selecionar</a>                
                 </div>
             </div>
-
-            <div class="boxEnderecoExample">
-                <div class="box-endereco-textExample">
-                    <a>Rua: Rua Um<br>Núm.: 32<br>Comp.: Apto 19<br>Bairro: Centro<br>Cid.:Campo Grande<br>UF: MS<br>País: Brasil<br>CEP: 79065-012</a>
-                </div>
-                <div class="actionsAddress">
-                    <a href="{{ route('address.edit') }}">Editar</a>
-                    <a href="" class="selecionar">Selecionar</a>                
-                </div>
-            </div>
+            @endforeach
         </div>
+    
         <!--
             ///////////////////////////////////////////////////////
             /////////////////////Fim do examplo////////////////////
