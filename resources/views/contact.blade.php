@@ -8,9 +8,11 @@
                 <span>Fale Conosco</span>
             </div>
             <div class="container">
-                <form>
+
+            <form method="POST" action="{{ route('contact.store') }}">
+                @csrf
                     <input type="text" id="email" name="email" placeholder="Seu E-mail">
-                    <textarea id="subject" name="subject" placeholder="Sua Mensagem" style="height:100px"></textarea>
+                    <textarea id="subject" name="message" placeholder="Sua Mensagem" style="height:100px"></textarea>
                     <input type="submit" value="Enviar">
                 </form>
             </div>

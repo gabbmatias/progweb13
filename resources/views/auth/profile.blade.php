@@ -56,6 +56,17 @@
                         
                     @endif
 
+                    @if(Auth::user()->groupid == 2)
+                    <div class="form-group row">
+
+                        <div class="col-md-12">
+                            <a href="{{ route('contact.index') }}">Visualizar mensagens</a>
+                        </div>
+
+                    </div>
+                    
+                @endif
+
                     <div class="form-group row">
 
                         <div class="col-md-12">

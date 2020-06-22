@@ -25,6 +25,7 @@ Route::get('/profile', function () {
     return view('auth/profile');
 })->name("profile");
 
+
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');
@@ -33,6 +34,7 @@ Route::resource('plan', 'PlansController', ['except' => ['destroy', 'update', 'e
 Route::post('/credit_card/delete', 'Credit_cardController@destroy')->name('credit_card.destroy');
 Route::post('/credit_card/update', 'Credit_cardController@update')->name('credit_card.update');
 Route::resource('credit_card', 'Credit_cardController', ['except' => ['destroy', 'update']]);
+
 
 Route::get('address/select/{plan}', 'AddressController@selectAddress')->name('address.select');
 Route::post('/address/delete', 'AddressController@destroy')->name('address.destroy');
@@ -44,6 +46,9 @@ Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('sub
 Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
 Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit']]);
+
+
+Route::resource('contact', 'ContactController');
 
 Route::get('/profile/password', 'ProfileController@index')->name("profile.password");
 
@@ -69,12 +74,5 @@ Route::get("/about", function()
 
 Route::resource('plans', 'PlansPageController');
 Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
-
-
-
-Route::get("/contact", function()
-{
-    return view('contact');
-})->name("contact");
 
 // Route::get('/home', 'HomeController@index')->name('home');
