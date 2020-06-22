@@ -4,13 +4,13 @@
 <div class="viewContactBody">
     <a class="contactViewTitle">Mensagens</a>
 
-    @foreach ($contacts as $contact)
+    
     <div class="contactBoxes">        
-        
+    @foreach ($contacts as $contact)    
         <div class="boxContact">
             <div class="box-contact-text">
-                <p>Email: {{ $contact->email }}</p>
-                <p>Mensagem: {{ $contact->message }} </p>
+                <p>{{ $contact->email }}</p>
+                <textarea disabled>{{ $contact->message }}</textarea>
             </div>
             <div class="actionsContact">
                 <form action="#" method="POST">
@@ -20,8 +20,7 @@
 
             </div>
         </div>
-
+    @endforeach
     </div>
-@endforeach
 </div>
 @endsection

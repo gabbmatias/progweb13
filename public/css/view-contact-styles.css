@@ -6,7 +6,10 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: #E54161!important;
+
 }
 
 .contactViewTitle{
@@ -23,31 +26,37 @@
 }
 
 .contactBoxes{
-    width: 80%;
-    height: 18vh;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: rowgit-pull;
-    align-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
 }
 
 .boxContact{
-    width: 183vh;
+    margin-top: 1%;
+    width: 50%;
     height: 17vh;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
-    margin-left: 3%;
     
 }
 
 .box-contact-text{
-    background-color: darkcyan;
     line-height: 120%;
-    width: 168vw;
+    width: 85%;
     height: 13vh;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-left: 2%;
     color: rgba(22, 22, 22, 0.9);
+}
+
+.box-contact-text textarea{
+    background-color: rgba(107, 107, 107, 0);
+    border-color: rgba(107, 107, 107, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(22, 22, 22, 0.9);
+    font-size: 110%;
 }
 
 .box-contact-text p{

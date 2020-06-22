@@ -5,7 +5,6 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-address.png">
     </div>
-    <a class="addressTitle">Informe seu endereço para entrega</a>
     <div class="addressFields">
         <!--
             //////////////////////////////////////////////////
@@ -13,16 +12,11 @@
             //////////////////////////////////////////////////
         -->
 
-        {{-- ======================================== mexer aquiiiiii ========================================--}}
         @foreach ($plans as $plan)
             <div>
-                <span>Plano selecionado:</span><br/>
-                <span>{{$plan->plan_name}}</span>
+                <span class="planoSelecionado">{{$plan->plan_name}}</span>
             </div>  
         @endforeach
-        
-        {{-- ======================================== @ ricardok ================================================ --}}
-
         <div class="enderecosBoxesExample">
         @foreach ($addresses as $address)
 
@@ -56,8 +50,8 @@
 
 
         <div class="addAddress">
-            <input type="submit" value="+">
-            <a href="{{ route('address.create') }}">Adicionar Endereço</a>
+            <a href="{{ route('address.create') }}"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+            <!--<a href="{{ route('address.create') }}">Adicionar Endereço</a>-->
         </div>
         
         <form class="addressForm">
@@ -66,7 +60,6 @@
             -->
             <div class="navegacao">
                 <input type=submit class="voltar" value="Voltar">
-                <input type=submit value="Próximo" formaction="#">
             </div>
         </form>
     </div>
