@@ -27,16 +27,6 @@ class LoginController extends Controller
      * @var string
      */
 
-
-        public function test() {
-            if(session('back_url'))
-            {
-                $this->redirectTo = RouteServiceProvider::ADDRESS;
-            }
-        }
-
-        protected $redirectTo = RouteServiceProvider::HOME;
-
     /**
      * Create a new controller instance.
      *
@@ -44,7 +34,6 @@ class LoginController extends Controller
      */
     public function __construct()
     {
-        $this->test();
         $this->middleware('guest')->except('logout');
     }
 }

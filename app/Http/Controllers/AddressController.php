@@ -73,7 +73,7 @@ class AddressController extends Controller
 
     public function selectAddress($id)
     {
-        session()->put('back_url', "{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
+        session()->put('back_url', "{$_SERVER['REQUEST_URI']}");
         if(Auth::check()){
             $addresses = Address::where('client_id', Auth::user()->id)->get();
             $plan = Plan::where('plan_id', $id)->get();
