@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Address;
+use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
 
 class AddressController extends Controller
@@ -62,7 +63,15 @@ class AddressController extends Controller
      */
     public function show(Request $request)
     {
-        //
+    }
+
+    public function selectAddress($id)
+    {
+        if(Auth::check()){
+            return view('address')->with(['plan_id' => $id]);
+        }
+        else
+            return redirect()->route('login');git
     }
 
     /**

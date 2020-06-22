@@ -48,7 +48,7 @@
 
     <div class="topnav" id="myTopnav">
         <a class="navbar-logo" href="{{ route('home') }}">PreservSign</a>
-        <a href="{{ route('plans') }}">PLANOS</a>
+        <a href="{{ route('plans.index') }}">PLANOS</a>
         <a href="{{ route('about') }}">SOBRE</a>
         <a href="{{ route('contact') }}">CONTATO</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">

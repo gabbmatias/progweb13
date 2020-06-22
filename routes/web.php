@@ -34,6 +34,7 @@ Route::post('/credit_card/delete', 'Credit_cardController@destroy')->name('credi
 Route::post('/credit_card/update', 'Credit_cardController@update')->name('credit_card.update');
 Route::resource('credit_card', 'Credit_cardController', ['except' => ['destroy', 'update']]);
 
+Route::get('address/select/{plan}', 'AddressController@selectAddress')->name('address.select');
 Route::post('/address/delete', 'AddressController@destroy')->name('address.destroy');
 Route::post('/address/edit', 'AddressController@edit')->name('address.edit');
 Route::post('/address/update', 'AddressController@update')->name('address.update');
@@ -66,10 +67,10 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
-Route::get("/plans", function()
-{
-    return view('plans');
-})->name('plans');
+Route::resource('plans', 'PlansPageController');
+Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
+
+
 
 Route::get("/contact", function()
 {
