@@ -12,6 +12,18 @@
     
 }
 
+
+.imagemFluxo{
+    width: auto;
+    text-align: center;  
+}
+
+.imagemFluxo img{
+    width: 45%;
+    height: auto;
+}
+
+
 .addressTitle{
     padding-top: 2%;
     padding-bottom: 2%;
@@ -141,8 +153,13 @@
     }
     .boxEnderecoExample{
         width: 60%;
-        height: 28vh;
+        height: 22vh;
     }
+    .imagemFluxo img{
+        width: 100%;
+        height: auto;
+    }
+    
 }
 
 /*//////////////////////////////

@@ -2,6 +2,9 @@
 
 @section('content')
 <div class="addressBody">
+    <div class="imagemFluxo">
+        <img src="/img/routeBar-address.png">
+    </div>
     <a class="addressTitle">Informe seu endereço para entrega</a>
     <div class="addressFields">
         <!--
