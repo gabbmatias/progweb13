@@ -71,7 +71,7 @@ class AddressController extends Controller
             return view('address')->with(['plan_id' => $id]);
         }
         else
-            return redirect()->route('login');git
+            return redirect()->route('login');
     }
 
     /**
