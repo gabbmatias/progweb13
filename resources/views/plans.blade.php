@@ -50,11 +50,11 @@
         </div>
     
         <div class="right-division">
-            <a href="#" class="btn-assinar">É esse!</a>
+            <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="btn-assinar">É esse!</a>
         </div>
         
     </div>
-@else
+@elseif($plan->plan_name == 'Exxxtra')
 <div class="plans-extra">
     <div class="first-division">
     <div class="plan-title"><strong>Plano {{ $plan->plan_name }}</strong></div>
@@ -72,7 +72,7 @@
     </div>
 
     <div class="right-division">
-        <a href="#" class="btn-assinar">É esse!</a>
+        <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="btn-assinar">É esse!</a>
     </div>
     
 </div>

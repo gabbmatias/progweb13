@@ -113,6 +113,11 @@ class AddressController extends Controller
             $data = $request->all();
             unset($data['_token']);
             $address = Address::where('address_id', $data['address_id'])->update($data);
+            if (session('back_url')){
+                $url= explode('/', session('back_url'));
+                session()->forget('back_url');
+                return redirect()->route('address.select', ['plan' => end($url)]);
+            }
             return redirect()->route('address.index');
         }
         return redirect()->route('login');
