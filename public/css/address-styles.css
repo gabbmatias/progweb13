@@ -91,19 +91,18 @@
 //////////////////////////////*/
 .enderecosBoxesExample{
     width: 70vw;
-    height: 35vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
 
 }
 
 .boxEnderecoExample{
-    margin-top: 1%;
+    margin-top: 3%;
     width: 24%;
-    height: 75%;
+    height: 80%;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -113,18 +112,36 @@
     align-items: center;
 }
 
+.actionsAddress{
+    display: flex;
+    flex-direction: column;
+}
+
+.actionsAddress a{
+    color: #E54161!important;
+    text-decoration: none;
+}
+
+.actionsAddress a:hover{
+    color: white!important;
+}
+
+.selecionar{
+    font-size: 140%;
+}
+
 .box-endereco-textExample{
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
+
 @media screen and (max-width: 600px){
     .enderecosBoxesExample{
         width: 98vw;
-        height: 53vh;
     }
     .boxEnderecoExample{
-        width: 49%;
-        height: 25vh;
+        width: 60%;
+        height: 28vh;
     }
 }
 
