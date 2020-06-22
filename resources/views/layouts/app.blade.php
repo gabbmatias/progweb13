@@ -25,6 +25,7 @@
     <link href="{{ asset('css/plans-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/about-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/contact-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/view-contact-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/address-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/subscription-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/registerplans-styles.css') }}" rel="stylesheet">

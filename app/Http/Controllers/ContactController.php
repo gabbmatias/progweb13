@@ -20,7 +20,7 @@ class ContactController extends Controller
                 return redirect()->route('profile');
             } else {
                 $contacts = Contact::all();
-                return view('view_plans')->with(['contacts' => $contacts]);
+                return view('view_contact')->with(['contacts' => $contacts]);
             }
         }
         return redirect()->route('login');
