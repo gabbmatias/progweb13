@@ -23,7 +23,7 @@ class ProfileController extends Controller
 
     public function index()
     {
-        return view('auth/profile');
+        return view('auth/passwords/reset');
     }
 
     public function destroy_account()
