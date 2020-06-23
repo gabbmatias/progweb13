@@ -54,14 +54,8 @@
             <!--<a href="{{ route('address.create') }}">Adicionar Endereço</a>-->
         </div>
         
-        <form class="addressForm">
-            <!-- Checkbox para selecionar o endereço
-            <input type="checkbox" id="" name="">
-            -->
-            <div class="navegacao">
-                <input type=submit class="voltar" value="Voltar">
-            </div>
-        </form>
+
+        <a href="{{ route('plan.select')}}">Voltar</a>
     </div>
 </div>
 @endsection
