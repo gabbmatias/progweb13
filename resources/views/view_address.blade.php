@@ -4,12 +4,12 @@
 <div class="viewAddressBody">
     <a class="addressViewTitle">Endereços</a>
 
-    <div class="enderecosBoxes">
+    <div class="enderecosBoxesView">
         @foreach ($addresses as $address)
             
         
-        <div class="boxEndereco">
-            <div class="box-endereco-text">
+        <div class="boxEnderecoView">
+            <div class="box-endereco-text-view">
                 <a>{{ $address->street }}<br>{{ $address->street_number }}<br>{{ $address->complement }}<br>{{ $address->neighborhood }}<br>
                     {{ $address->city}}<br>{{ $address->state }}<br>{{ $address->country }}<br>{{ $address->cep }}</a>
             </div>
@@ -33,9 +33,9 @@
 
         @endforeach
     </div>
-    <div class="addAddress">
-        <input type="submit" value="+">
-        <a href="{{ route('address.create') }}">Adicionar endereço</a>
+    <div class="addAddressView">
+        <a href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+        <!-- <a href="{{ route('address.create') }}">Adicionar endereço</a> -->
     </div>
 </div>
 @endsection
