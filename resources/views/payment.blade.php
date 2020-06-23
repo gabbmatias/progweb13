@@ -24,6 +24,7 @@
             <div class="navegacao">
                 <input type=submit class="voltar" value="Voltar" formaction="{{ route('address.select', ['plan' =>  $plan_id]) }}">
             </div>
+
         </form>
     </div>
 </div>
