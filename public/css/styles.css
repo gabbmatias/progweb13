@@ -3,7 +3,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden !important;
+    margin: 0;
 }
 
 .top-nav-logged {
