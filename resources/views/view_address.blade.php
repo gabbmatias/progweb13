@@ -34,8 +34,8 @@
         @endforeach
     </div>
     <div class="addAddress">
-        <input type="submit" value="+">
-        <a href="{{ route('address.create') }}">Adicionar endereço</a>
+        <a href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+        <!-- <a href="{{ route('address.create') }}">Adicionar endereço</a> -->
     </div>
 </div>
 @endsection
