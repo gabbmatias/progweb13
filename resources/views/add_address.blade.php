@@ -15,9 +15,8 @@
         <input type="text" name="city" id="city" placeholder="Cidade">
         <input type="text" name="state" id="state" placeholder="Estado">
         <input type="text" name="country" id="country" placeholder="País">
-        
-        <input type="submit" value="Cadastrar Endereço">
-    <form>      
 
+        <input type="submit" value="Cadastrar Endereço">
+    </form>
 </div>
 @endsection
