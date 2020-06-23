@@ -6,7 +6,7 @@
   <div class="blurred-box">
     <a class="text-title">PreservSign</a>
     <a class="text-description">Você pode receber camisinhas exclusivas<br> e acessórios para apimentar sua relação<br> na segurança e discrição da sua casa!</a>
-    <a href="#" class="btn-signUp">Eu Quero!</a>
+  <a href="{{ route('plan.select') }}" class="btn-signUp">Eu Quero!</a>
   </div>
   <img class="image-right" src="/img/background-img2.png">
 </div>

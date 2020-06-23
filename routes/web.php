@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlansPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,15 +67,19 @@ Route::get("/about", function()
 })->name("about");
 
 
+Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
+
 Route::resource('plans', 'PlansPageController');
 Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
 
 Route::get('/home', function () {
     session()->forget('back_url');
+    session()->forget('back_url_plan');
     return view('home');
 })->name('home');
 Route::get('/', function () {
     session()->forget('back_url');
+    session()->forget('back_url_plan');
     return view('home');
 })->name('home');
 

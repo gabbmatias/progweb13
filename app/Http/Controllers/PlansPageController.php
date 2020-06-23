@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Plan;
+use Illuminate\Support\Facades\Auth;
 
 class PlansPageController extends Controller
 {
@@ -29,6 +30,17 @@ class PlansPageController extends Controller
         //
     }
 
+    public function indexPlans()
+    {
+        session()->put('back_url_plan', "{$_SERVER['REQUEST_URI']}");
+        if(Auth::check())
+        {
+            $plans = Plan::all();
+            session()->forget('back_url_plan');
+            return view('select_plans')->with(['plans' => $plans]);
+        }
+        return redirect()->route("login");
+    }
     /**
      * Store a newly created resource in storage.
      *

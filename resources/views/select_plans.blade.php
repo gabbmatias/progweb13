@@ -2,40 +2,32 @@
 
 @section('content')
 <div class="selectPlansBody">
+    <div class="imagemFluxo">
+        <img src="/img/routeBar-plans.png">
+    </div>
     <a class="selectPlansTitle">Selecione um plano</a>
 
     <div class="plansBoxes">
-        <div class="boxPlano">
-            <div class="box-plano-titulo">
-                <a>Plano Básico</a>
-            </div>
-            <div class="box-plano-text">
-                <a>- 5 camisinhas de sabor +<br>- 5 camisinhas de textura +<br>- 5 camisinhas regulares <br><strong>Apenas 14,99!</strong></a>
-            </div>
-        </div>
+        @foreach ($plans as $plan)
+            
+            <div class="boxPlano">
+                <div class="box-plano-titulo">
+                    <a>{{ $plan->plan_name}}</a>
+                </div>
+                <div class="box-plano-text">
+                    <a> {{ $plan->description }} <br><strong>Apenas {{ $plan->price}}!</strong></a>
+                </div>
 
-        <div class="boxPlano">
-            <div class="box-plano-titulo">
-                <a>Plano Premium</a>
+                <div class="actionsAddress">
+                    <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="selecionar">Selecionar</a>                
+                </div>
             </div>
-            <div class="box-plano-text">
-                <a>- 5 camisinhas de sabor +<br>- 5 camisinhas de textura +<br>- 5 camisinhas regulares +<br>- 5 camisinhas especiais<br><strong>Apenas 24,99!</strong></a>
-            </div>
-        </div>
-
-        <div class="boxPlano">
-            <div class="box-plano-titulo">
-                <a>Plano Exxxtra</a>
-            </div>
-            <div class="box-plano-text">
-                <a>- Escolha 20 camisinhas de sua preferência +<br>- Lubrificante<br><strong>Apenas 59,99!</strong></a>
-            </div>
-        </div>
+        @endforeach
+        
     </div>
-    <form class="plansForm">
+    <form class="plansForm" action="/">
         <div class="navegacao">
             <input type=submit class="cancelar" value="Cancelar">
-            <input type=submit value="Próximo" formaction="{{ route('address') }}">
         </div>
     </form>
 </div>
