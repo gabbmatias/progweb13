@@ -13,16 +13,16 @@
                 
            </button>
 
-           <button class="selectPayment" formaction="{{ route('card') }}">
+           <button class="selectPayment" formaction="#lula">
                 <div class="credit-card-payment">
                     <i class="fa fa-credit-card"></i>
                     <p>Cartão de Crédito</p>
                 </div>
            </button>
        
-            <!-- <input type=button class="selectPayment" value="Cartão >" formaction="{{ route('card') }}"> -->
+            <!-- <input type=button class="selectPayment" value="Cartão >" formaction="#lula"> -->
             <div class="navegacao">
-                <input type=submit class="voltar" value="Voltar" formaction="{{ route('address') }}">
+                <input type=submit class="voltar" value="Voltar" formaction="{{ route('address.select', ['plan' =>  $plan_id]) }}">
             </div>
         </form>
     </div>

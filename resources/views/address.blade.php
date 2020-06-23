@@ -15,6 +15,9 @@
         @foreach ($plans as $plan)
             <div>
                 <span class="planoSelecionado">{{$plan->plan_name}}</span>
+                <?php 
+                    $flag= $plan->plan_id;
+                ?>
             </div>  
         @endforeach
         <div class="enderecosBoxesExample">
@@ -33,7 +36,12 @@
                         <input type="submit" class="action" name="submit" value="Editar">
                     </form>
 
-                    <a href="" class="selecionar">Selecionar</a>                
+                    <form action="{{ route('payment.select') }}" method="POST">
+                        @csrf
+                        <input hidden name="address_id" value="{{ $address->address_id }}">
+                        <input hidden name="plan_id" value="<?= $flag ?>">
+                        <input type="submit" class="selecionar" name="submit" value="Selecionar">
+                    </form>                
                 </div>
             </div>
             @endforeach

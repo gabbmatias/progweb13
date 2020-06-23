@@ -19,6 +19,8 @@ Route::get('/', 'HomeController@index')->name("home");
 Route::get('/profile', 'ProfileController@index')->name("profile");
 
 
+Route::post('/payment/select', 'PaymentController@index')->name('payment.select');
+
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');
