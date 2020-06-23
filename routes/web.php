@@ -17,6 +17,8 @@ Route::get('/', 'HomeController@index')->name("home");
 
 Route::get('/profile', 'ProfileController@index')->name("profile");
 
+Route::post('payment/select', 'PaymentController@index')->name('payment.select');
+
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');
@@ -64,6 +66,7 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
 
 Route::resource('plans', 'PlansPageController');
 Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
