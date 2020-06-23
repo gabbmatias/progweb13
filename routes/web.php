@@ -43,7 +43,7 @@ Route::post('/contact/delete', 'ContactController@destroy')->name('contact.destr
 Route::resource('contact', 'ContactController', ['except' => ['destroy']]);
 
 
-Route::get('/profile/password', 'ProfileController@index')->name("profile.password");
+Route::get('/profile/password', 'ProfileController@indexPassword')->name("profile.password");
 
 Route::get('/profile/destroy', 'ProfileController@destroy_account')->name("profile.destroy");
 
