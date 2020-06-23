@@ -58,6 +58,33 @@
     
 }
 
+.cardBoxes{
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+.boxCard{
+    width: 35%;
+    height: 28vh;
+    text-align: center;
+    background: rgba(107, 107, 107, 0.15);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.box-card-text{
+    margin-top: 7%;
+    width: 100%;
+    color: rgba(22, 22, 22, 0.9);
+}
+
 .voltar {
     background-color: lightgrey!important;
     border: 1px solid #e54161!important;
@@ -73,4 +100,12 @@
     .cardFields{
         width: 80vw;
     }
+    .cardBoxes{
+        width: 98vw;
+    }
+    .boxCard{
+        width: 90%;
+        height: 23vh;
+    }
+
 }
