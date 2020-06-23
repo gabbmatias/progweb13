@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="subBar">
-  <img class="image-left" src="/img/background-img1.png">
+  <img class="image-left" src="/img/home-left-hand.png">
   <div class="blurred-box">
     <a class="text-title">PreservSign</a>
-    <a class="text-description">Você pode receber camisinhas exclusivas<br> e acessórios para apimentar sua relação<br> na segurança e discrição da sua casa!</a>
+    <a class="text-description">Você pode recebers camisinhas exclusivas<br> e acessórios para apimentar sua relação<br> na segurança e discrição da sua casa!</a>
   <a href="{{ route('plan.select') }}" class="btn-signUp">Eu Quero!</a>
   </div>
-  <img class="image-right" src="/img/background-img2.png">
+  <img class="image-right" src="/img/home-right-hand.png">
 </div>
 <div class="instrucoes">
   <div class="assine">
