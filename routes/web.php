@@ -13,17 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name("home");
+Route::get('/', 'HomeController@index')->name("home");
 
-Route::get('/home', function () {
-    return view('home');
-})->name("home");
-
-Route::get('/profile', function () {
-    return view('auth/profile');
-})->name("profile");
+Route::get('/profile', 'ProfileController@index')->name("profile");
 
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
@@ -72,7 +64,12 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+
 Route::resource('plans', 'PlansPageController');
 Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
 
-// Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    session()->forget('back_url');
+    return view('home');
+});
+

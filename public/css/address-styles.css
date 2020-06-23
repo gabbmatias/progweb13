@@ -20,14 +20,14 @@
 }
 
 .imagemFluxo img{
-    width: 60%;
+    width: 70%;
     height: auto;
 }
 
 .planoSelecionado{
     margin-top: 10%;
     color: rgba(22, 22, 22, 0.9);
-    font-size: 160%;
+    font-size: 200%;
 }
 
 .addressTitle{

@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        session()->forget('back_url');
         return view('home');
     }
 }
