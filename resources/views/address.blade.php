@@ -50,7 +50,7 @@
 
 
         <div class="addAddress">
-            <a href="{{ route('address.create') }}"><i class="fa fa-plus-square" aria-hidden="true"></i></a>
+            <a href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
             <!--<a href="{{ route('address.create') }}">Adicionar Endereço</a>-->
         </div>
         
