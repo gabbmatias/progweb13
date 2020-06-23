@@ -39,8 +39,9 @@ Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscrip
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
 Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit']]);
 
+Route::post('/contact/delete', 'ContactController@destroy')->name('contact.destroy');
+Route::resource('contact', 'ContactController', ['except' => ['destroy']]);
 
-Route::resource('contact', 'ContactController');
 
 Route::get('/profile/password', 'ProfileController@index')->name("profile.password");
 
