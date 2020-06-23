@@ -2,20 +2,23 @@
 
 @section('content')
 <div class="cardBody">
-    <a class="cardTitle">Informe seu cartão para pagamento</a>
+    <div class="imagemFluxo">
+        <img src="/img/routeBar-payment.png">
+    </div>
+    <a class="cardTitle">Escolha ou adicione um cartão</a>
     <div class="cardFields">
         <div class="addCard">
             <input type="submit" value="+">
-            <a href="{{ route('add_card') }}">Adicionar Cartão</a>
+            <a href="{{ route('credit_card.create') }}">Adicionar Cartão</a>
         </div>
         
-        <form class="cardForm">
+        <form class="cardForm" method="POST">
             <!-- Checkbox para selecionar o cartão
             <input type="checkbox" id="" name="">
             -->
             
             <div class="navegacao">
-                <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment') }}">
+                <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
                 <input type=submit value="Finalizar Pagamento" formaction="{{ route('home') }}">
             </div>
         </form>
