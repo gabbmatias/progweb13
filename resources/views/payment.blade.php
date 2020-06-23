@@ -13,7 +13,7 @@
                 
            </button>
 
-           <button class="selectPayment" formaction="#lula">
+           <button class="selectPayment" formaction="{{ route('credit_card.create') }}">
                 <div class="credit-card-payment">
                     <i class="fa fa-credit-card"></i>
                     <p>Cartão de Crédito</p>

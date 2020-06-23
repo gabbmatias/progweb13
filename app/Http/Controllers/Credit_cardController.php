@@ -37,7 +37,7 @@ class Credit_cardController extends Controller
         $data = DB::table('payments')
         ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
         ->where('subscriptions.client_id', '=', Auth::user()->id)->get();
-        return view('auth/create_credit_card')->with(['payments' => $data]);
+        return view('add_card')->with(['payments' => $data]);
     }
 
     /**
