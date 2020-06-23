@@ -53,6 +53,14 @@ class Credit_cardController extends Controller
         return redirect()->route('credit_card.index');
     }
 
+    public function selectCredit_card(Request $request)
+    {
+        $data = $request->all();
+        $plan_id = $data['plan_id'];
+        $address_id = $data['address_id'];
+        return view('card')->with(['plan_id' => $plan_id, 'address_id' => $address_id]);
+    }
+
     /**
      * Display the specified resource.
      *

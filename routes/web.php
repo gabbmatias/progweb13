@@ -24,6 +24,7 @@ Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');
 Route::resource('plan', 'PlansController', ['except' => ['destroy', 'update', 'edit']]);
 
+Route::post('/credit_card/select', 'Credit_cardController@selectCredit_card')->name('credit_card.select');
 Route::post('/credit_card/delete', 'Credit_cardController@destroy')->name('credit_card.destroy');
 Route::post('/credit_card/update', 'Credit_cardController@update')->name('credit_card.update');
 Route::resource('credit_card', 'Credit_cardController', ['except' => ['destroy', 'update']]);
