@@ -9,10 +9,9 @@
 .image-left {
     position: relative;
     float: left;
-    margin-bottom: 0vh;
     align-self: flex-end;
-    background-position: inherit;
-    margin-left: -8%;
+    margin-right: 5%;
+    max-height: 400px;
 }
 
 .image-right {
