@@ -1,8 +1,9 @@
 .container-body-all {
   width: 100%;
   text-align: center;
-  background-image: url('/img/contact-background.jpg');
+  background-image: url('/img/contact-background.png');
   background-size: 100% 100%;
+  background-color: #FCE4F0;
 }  
 
 .boxes {
