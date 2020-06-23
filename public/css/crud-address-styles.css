@@ -1,26 +1,34 @@
 .addressBody {
-    height: 95%;
+    height: 94.2vh;
     width: 100%;
-    background-color: lightgray;
+    background-color: #fce4f0;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    
 }
-.addressFormTitle{
+
+.generic-background-image {
+    max-height: 400px;
+    position: relative;
+    margin-right: 15%;
+    align-self: flex-end;
+    float: right;
+}
+
+.addressFormTitle {
     padding-top: 4%;
     padding-bottom: 4%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     font-style: normal;
     font-size: 42px;
     line-height: 22px;
     font-weight: 600;
-    color: #E54161 !important;
-        
+    color: #e54161 !important;
 }
 
-.addressForm{
+.addressForm {
     width: 30vw;
     text-align: center;
     display: flex;
@@ -28,18 +36,16 @@
     align-content: center;
     align-items: center;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif !important;
+        sans-serif !important;
     margin-bottom: 2px;
-    
 }
 
-
-@media screen and (max-width: 600px){
-    .addressFormTitle{
+@media screen and (max-width: 600px) {
+    .addressFormTitle {
         padding-top: 10%;
         padding-bottom: 10%;
     }
-    .addressForm{
+    .addressForm {
         width: 80vw;
     }
 }

@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\PlansPageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name("home");
 
 Route::get('/profile', 'ProfileController@index')->name("profile");
-
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
@@ -67,19 +65,15 @@ Route::get("/about", function()
 })->name("about");
 
 
-Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
-
 Route::resource('plans', 'PlansPageController');
 Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select');
 
 Route::get('/home', function () {
     session()->forget('back_url');
-    session()->forget('back_url_plan');
     return view('home');
 })->name('home');
 Route::get('/', function () {
     session()->forget('back_url');
-    session()->forget('back_url_plan');
     return view('home');
 })->name('home');
 
