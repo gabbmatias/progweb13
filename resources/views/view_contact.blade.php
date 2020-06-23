@@ -13,7 +13,8 @@
                 <textarea disabled>{{ $contact->message }}</textarea>
             </div>
             <div class="actionsContact">
-                <form action="#" method="POST">
+                <form action="{{ route('contact.destroy') }}" method="POST">
+                    @csrf
                     <input hidden name="contact_id" value="{{ $contact->contact_id }}">
                     <input type="submit" class="actionContact" name="submit" value="Deletar">
                 </form>

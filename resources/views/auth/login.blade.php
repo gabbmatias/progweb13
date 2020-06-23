@@ -2,6 +2,12 @@
 
 @section('content')
 <div class="container">
+
+    @if(session('back_url'))
+        <div class="imagemFluxo">
+            <img src="/img/routeBar-login.png">
+        </div>
+    @endif
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
