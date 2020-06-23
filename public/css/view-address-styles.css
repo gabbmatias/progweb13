@@ -21,9 +21,9 @@
     
 }
 
-.enderecosBoxes{
+.enderecosBoxesView{
+    margin-top: 5%;
     width: 70vw;
-    height: 50vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -33,10 +33,10 @@
 
 }
 
-.boxEndereco{
+.boxEnderecoView{
     margin-top: 2%;
     width: 24%;
-    height: 70%;
+    height: 28vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -46,8 +46,8 @@
     align-items: center;
 }
 
-.box-endereco-text{
-    margin-top: 8%;
+.box-endereco-text-view{
+    margin-top: 2%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
@@ -68,7 +68,8 @@
     color: white!important;
 }
 
-.addAddress{
+.addAddressView{
+    margin-top: 10%;
     width: 100%;
     height: 80%;
     display: flex;
@@ -78,13 +79,13 @@
    
 }
 
-.addAddress a{
+.addAddressView a{
     color: #e54161;
     font-size: 55px;
     text-decoration: none;
 }
 
-.addAddress a:hover{
+.addAddressView a:hover{
     color: #ffffff!important;
     text-decoration: none;
 }
@@ -92,11 +93,11 @@
 
 
 @media screen and (max-width: 600px){
-    .enderecosBoxes{
+    .enderecosBoxesView{
         width: 98vw;
         height: 60vh;
     }
-    .boxEndereco{
+    .boxEnderecoView{
         width: 49%;
         height: 45%;
     }
