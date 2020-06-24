@@ -76,13 +76,18 @@
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
 .box-card-text{
-    margin-top: 7%;
     font-size: 28px;
+    color: rgba(22, 22, 22, 0.9);
+}
+
+.box-card-icone{
+    font-size: 32px;
     color: rgba(22, 22, 22, 0.9);
 }
 

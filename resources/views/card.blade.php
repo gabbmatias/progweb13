@@ -8,7 +8,11 @@
     <div class="cardBoxes">
         @if ( $credit_cards != null )
             <div class="boxCard">
+                <div class="box-card-icone">
+                    <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                </div>
                 <div class="box-card-text">
+
                     <a><?= $credit_cards->card_number . "<br/>" . strtoupper($credit_cards->card_name) .  "<br/>". 
                     date('m', strtotime($credit_cards->expires_date)). '/'. date('y', strtotime($credit_cards->expires_date)) ?></a>
                 </div>
