@@ -14,9 +14,6 @@
                 </div>
             </div>    
     </div>  
-    <div class="confirmacaoCartao">
-        <input type="text" name="security_number-typed" id="security_number" placeholder="Digite o código de segurança">
-    </div>
     <div class="cardFields">
         <form method="POST" action="{{ route('credit_card.create') }}">
             @csrf
@@ -51,6 +48,10 @@
                         <input hidden type="text" name="expires_date" id="expires_date" value="<?= date('m', strtotime($credit_cards->expires_date)). '/'. date('y', strtotime($credit_cards->expires_date)) ?>">
                         <input hidden type="text" name="card_name" id="card_name" value="{{ $credit_cards->card_name }}">
                         <input hidden name="type" value="2">
+                        <div class="confirmacaoCartao">
+                            <input type="text" name="security_number-typed" id="security_number" placeholder="Digite o código de segurança">
+                        </div>
+    
                     @endif
                     <input hidden name="plan_id" value="{{ $plan_id }}">
                     <input hidden name="address_id" value="{{ $address_id }}">
