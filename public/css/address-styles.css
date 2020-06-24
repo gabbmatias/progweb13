@@ -1,5 +1,6 @@
 .addressBody {
     width: 100%;
+    flex: 1 1 auto;
     background-color: lightgray;
     display: flex;
     flex-direction: column;

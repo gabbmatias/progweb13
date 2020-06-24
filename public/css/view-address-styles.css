@@ -1,5 +1,6 @@
 .viewAddressBody{
     width: 100%;
+    flex: 1 1 auto;
     background-color: #fce4f0;
     display: flex;
     flex-direction: column;
