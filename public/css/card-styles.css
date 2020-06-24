@@ -30,11 +30,12 @@
 }
 
 .addCard{
+    margin-top: 2vh;
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 .addCard a{
@@ -60,6 +61,7 @@
 
 .cardBoxes{
     width: 70vw;
+    margin-top: 8vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -68,21 +70,24 @@
 }
 
 .boxCard{
-    width: 35%;
-    height: 28vh;
+    width: 40%;
+    height: 25vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
     display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .box-card-text{
     margin-top: 7%;
-    width: 100%;
     color: rgba(22, 22, 22, 0.9);
+}
+
+.confirmacaoCartao{
+    margin-top: 2vh;
+    align-content: center;
 }
 
 .voltar {
