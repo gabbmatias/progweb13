@@ -1,12 +1,13 @@
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 .topnav {
     background: rgba(22, 22, 22, 0.9);
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
 }
 
 .navbar-logo {
@@ -15,6 +16,7 @@ body {
     padding: 0px 0px !important;
     margin-left: 2%;
     margin-right: 2%;
+    height: 53px;
 }
 
 .navbar-logo:hover {
@@ -22,6 +24,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     background: none !important;
+    padding: 0%;
 }
 
 .topnav a {
@@ -37,6 +40,7 @@ body {
 .topnav a:hover {
     background-color: #ddd;
     color: #e54161;
+    height: 56px;
 }
 
 .topnav-login {

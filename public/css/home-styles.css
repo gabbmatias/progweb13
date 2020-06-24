@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    flex: 1 1 auto;
     background-color: #FCE4F0;
 }
 
@@ -86,10 +86,11 @@
 .assine {
     background-color: rgba(229, 65, 97, 0.5);
     width: 34vw;
+    height: 41vh;
 }
 
 .assine-left {
-    width: 31vh;
+    width: 30vh;
     height: 20vh;
     float: left;
     margin-top: 20px;
@@ -109,7 +110,7 @@
 }
 
 .assine-right {
-    width: 31.5vh;
+    width: 30vh;
     height: 20vh;
     float: right;
     margin-top: 20px;
@@ -135,9 +136,10 @@
 .assinaturas {
     background-color: rgba(229, 65, 97, 0.6);
     width: 34vw;
+    height: 41vh;
 }
 .assinaturas-left {
-    width: 31.5vh;
+    width: 30vh;
     height: 20vh;
     float: left;
     margin-top: 20px;
@@ -179,10 +181,11 @@
 .produtos {
     background-color: rgba(229, 65, 97, 0.7);
     width: 34vw;
+    height: 43vh;
 }
 
 .produtos-left {
-    width: 31.5vh;
+    width: 30vh;
     height: 20vh;
     float: left;
     margin-top: 20px;

@@ -1,13 +1,3 @@
-.cardBody {
-    height: 95%;
-    width: 100%;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    
-}
 .cardFormTitle{
     padding-top: 4%;
     padding-bottom: 4%;
