@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     flex: 1 1 auto;
-    background-color: #FCE4F0;
+    background-color: #fce4f0;
 }
 
 .image-left {
@@ -87,6 +87,8 @@
     background-color: rgba(229, 65, 97, 0.5);
     width: 34vw;
     height: 41vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .assine-left {
@@ -137,7 +139,10 @@
     background-color: rgba(229, 65, 97, 0.6);
     width: 34vw;
     height: 41vh;
+    display: flex;
+    flex-direction: row;
 }
+
 .assinaturas-left {
     width: 30vh;
     height: 20vh;
@@ -182,6 +187,8 @@
     background-color: rgba(229, 65, 97, 0.7);
     width: 34vw;
     height: 43vh;
+    display: flex;
+    flex-direction: row;
 }
 
 .produtos-left {
