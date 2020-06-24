@@ -24,6 +24,9 @@ class SubscriptionController extends Controller
             $data = DB::table('subscriptions')
                 ->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')
                 ->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')
+                ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
+                ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
+                ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id')
                 ->where('subscriptions.client_id', '=',  Auth::user()->id)
                 ->get();
 

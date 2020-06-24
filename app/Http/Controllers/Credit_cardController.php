@@ -53,11 +53,18 @@ class Credit_cardController extends Controller
 
     public function selectCredit_card(Request $request)
     {
-        $data = $request->all();
-        $plan_id = $data['plan_id'];
-        $address_id = $data['address_id'];
-        $credit_cards = Credit_card::all()->last();
-        return view('card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
+        if(Auth::check()){
+            $data = $request->all();
+            $plan_id = $data['plan_id'];
+            $address_id = $data['address_id'];
+            $credit_cards =DB::table('credit_cards')
+            ->join('payments', 'credit_cards.payment_id', '=', 'payments.payment_id')
+            ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
+            ->where('subscriptions.client_id', '=', Auth::user()->id)->latest('credit_cards.created_at')->first();
+            return view('card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
+        }
+
+        return redirect()->route('login');
 
     }
 

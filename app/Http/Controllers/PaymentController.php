@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Auth;
 
 class PaymentController extends Controller
 {
-    public function index(Request $request)
-    {
+    public function index(Request $request){
+        
         if (Auth::check()) {
             $data= $request->all();
             return view("payment")->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]); 
