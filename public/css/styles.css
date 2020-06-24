@@ -45,6 +45,10 @@ body {
     color: white !important;
 }
 
+.top-nav-dropdown-content a:hover {
+    color: #e54161 !important;
+}
+
 .top-nav-login {
     float: right !important;
 }

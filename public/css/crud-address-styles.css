@@ -8,6 +8,11 @@
     align-items: center;
 }
 
+.generic-background {
+    max-height: 400px;
+    margin-left: 75%;
+}
+
 .generic-background-image {
     max-height: 400px;
     position: relative;
@@ -47,5 +52,8 @@
     }
     .addressForm {
         width: 80vw;
+    }
+    .generic-background {
+        display: none;
     }
 }
