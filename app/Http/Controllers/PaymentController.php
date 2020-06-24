@@ -16,6 +16,13 @@ class PaymentController extends Controller
         return redirect()->route('login');
     }
 
+    public function boleto(){
+        return view("boleto");
+    }
+
+    public function finaliar(){
+        return view('compra_finalizada');
+    }
     // /**
     //  * Show the form for creating a new resource.
     //  *

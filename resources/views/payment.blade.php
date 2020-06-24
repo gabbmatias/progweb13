@@ -9,7 +9,7 @@
     <div class="paymentFields">
         <form method="POST">
             @csrf
-            <button class="selectPayment">
+            <button class="selectPayment" formaction="{{ route('boleto.select') }}">
                 <div class="boleto-payment">
                     <i class="fa fa-file-text-o"></i>
                     <p>Boleto</p>
