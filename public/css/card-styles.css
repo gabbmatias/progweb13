@@ -70,7 +70,7 @@
 }
 
 .boxCard{
-    width: 40%;
+    width: 28%;
     height: 25vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
@@ -82,12 +82,12 @@
 }
 
 .box-card-text{
-    font-size: 28px;
+    font-size: 26px;
     color: rgba(22, 22, 22, 0.9);
 }
 
 .box-card-icone{
-    font-size: 32px;
+    font-size: 52px;
     color: rgba(22, 22, 22, 0.9);
 }
 
