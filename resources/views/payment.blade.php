@@ -12,6 +12,9 @@
             <button class="selectPayment">
                 <div class="boleto-payment">
                     <i class="fa fa-file-text-o"></i>
+                    <input hidden name="plan_id" value="{{ $plan_id }}">
+                    <input hidden name="address_id" value="{{ $address_id }}">
+                    
                     <p>Boleto</p>
                 </div>
 

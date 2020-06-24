@@ -1,5 +1,9 @@
 .viewContactBody{
+<<<<<<< HEAD
     height: 100%;
+=======
+    flex: 1 1 auto;
+>>>>>>> abc98501f27936a1dc4d85ba91d0bbc16583a30d
     width: 100%;
     background-color: #fce4f0;
     display: flex;

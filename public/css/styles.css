@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+<<<<<<< HEAD
     overflow: hidden;
 }
 
@@ -11,6 +12,9 @@ body {
     max-height: 400px;
     margin-right: 10%;
     align-self: flex-end !important;
+=======
+    overflow: auto;
+>>>>>>> abc98501f27936a1dc4d85ba91d0bbc16583a30d
 }
 
 .top-nav-logged {
