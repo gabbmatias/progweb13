@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 60vh;
+    height: 58vh;
     background-color: #FCE4F0;
 }
 
@@ -86,6 +86,7 @@
 .assine {
     background-color: rgba(229, 65, 97, 0.5);
     width: 34vw;
+    height: 41vh;
 }
 
 .assine-left {
@@ -135,6 +136,7 @@
 .assinaturas {
     background-color: rgba(229, 65, 97, 0.6);
     width: 34vw;
+    height: 41vh;
 }
 .assinaturas-left {
     width: 30vh;
@@ -179,6 +181,7 @@
 .produtos {
     background-color: rgba(229, 65, 97, 0.7);
     width: 34vw;
+    height: 43vh;
 }
 
 .produtos-left {
