@@ -18,6 +18,9 @@ Route::get('/', 'HomeController@index')->name("home");
 Route::get('/profile', 'ProfileController@index')->name("profile");
 
 Route::post('payment/select', 'PaymentController@index')->name('payment.select');
+Route::post('boleto/select', 'PaymentController@boleto')->name('boleto.select');
+
+Route::post('compra/finalizada', 'PaymentController@finalizar')->name('finalizar');
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');

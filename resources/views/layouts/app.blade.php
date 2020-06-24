@@ -33,8 +33,10 @@
     <link href="{{ asset('css/registerplans-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/crud-address-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/payment-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/boleto-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/card-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/crud-card-styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/compra-finalizada-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/view-address-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select-plans-styles.css') }}" rel="stylesheet">
     <link href="{{ asset('css/view-plans-styles.css') }}" rel="stylesheet">
