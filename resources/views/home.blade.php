@@ -45,14 +45,9 @@
     </div>
     <div class="produtos-right">
       <i class="fa fa-home"></i>
-      <p><strong>RECEBA SEU PRODUTO EM CASA</strong></p>
-      <div class="description-icon">Receba seu produto com segurança <br> no conforto de sua residência</div>
+      <p><strong>RECEBA EM CASA</strong></p>
+      <div class="description-icon">Receba na segurança <br> no conforto de sua residência</div>
     </div>
-    <!-- <div class="produtos-center">
-          <i class="fa fa-truck"></i>
-          <p><strong>FRETE GRÁTIS</strong></p>
-          <div class="description-icon">Entregamos para qualquer região do Brasil</div>
-      </div> -->
   </div>
 </div>
 @endsection
