@@ -1,3 +1,5 @@
+
+
 @extends('layouts.app')
 
 @section('content')
@@ -14,11 +16,22 @@
                     <a><strong>Preço:</strong><br>{{ $subscription->price }}<br>
                         <br><strong>Endereço:</strong><?= "<br>" .strtoupper( $subscription->street). ", " . strtoupper($subscription->street_number) . "<br>" .
                         strtoupper($subscription->complement) ."<br>". strtoupper($subscription->city) . ', ' .  strtoupper($subscription->state) .  "<br>" .
-                        strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) . '<br><strong> Pagamento:</strong><br>' . end(explode(' ', $subscription->card_number ))?></a>
+                        strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) . '<br><strong> Pagamento:</strong><br>'?> 
+                        @if ($subscription->type == 'cartao_credito')
+                        <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br>"; ?></a>
+                        @else
+                            Boleto Bancário</a>
+                        @endif
                 </div>
                 <div class="actions">
                     <a href="{{ route('subscription.edit') }}">Editar</a>
-                    <a href="">Deletar</a>                
+
+                    <form method="POST" action="{{ route('subscription.destroy')}}">
+                        @csrf
+                        <input hidden name="subscription_id" value="{{ $subscription->subscription_id }}">
+                        <input type="submit" onclick="confirm('Tem certeza de que deseja apagar está assinatura?')" value="Deletar"> 
+                    </form>
+                                 
                 </div>
             </div>
         @endforeach
