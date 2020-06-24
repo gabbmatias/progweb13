@@ -1,5 +1,5 @@
 .editPlansBody {
-    height: 95%;
+    flex: 1 1 auto;
     width: 100%;
     background-color: lightgray;
     display: flex;

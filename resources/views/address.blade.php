@@ -6,12 +6,6 @@
         <img src="/img/routeBar-address.png">
     </div>
     <div class="addressFields">
-        <!--
-            //////////////////////////////////////////////////
-            Aqui é apenas o exemplo de como eu quero que fique
-            //////////////////////////////////////////////////
-        -->
-
         @foreach ($plans as $plan)
             <div>
                 <span class="planoSelecionado">{{$plan->plan_name}}</span>
@@ -46,17 +40,6 @@
             </div>
             @endforeach
         </div>
-    
-        <!--
-            ///////////////////////////////////////////////////////
-            /////////////////////Fim do examplo////////////////////
-            ///////////////////////////////////////////////////////
-        -->
-
-
-
-
-
         <div class="addAddress">
             <a href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
             <!--<a href="{{ route('address.create') }}">Adicionar Endereço</a>-->
