@@ -10,6 +10,7 @@ use App\Models\Credit_card;
 use App\Models\Payment;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Stmt\Break_;
 
 class SubscriptionController extends Controller
 {
@@ -61,36 +62,55 @@ class SubscriptionController extends Controller
     {
         if (Auth::check()) {
             $data = $request->all();
+            if($this->checkPlan($data['plan_id'])){
+                
+                $date = $data['expires_date'];
+                $date = explode('/', $date);
+                $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
 
-            $date = $data['expires_date'];
-            $date = explode('/', $date);
-            $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
+                if($data['security_number-typed'] != $data['security_number'])
+                {
+                   echo 'CVV invalido';
+                   return;
+                }
 
+                Subscription::create([
+                    'plan_id' => $data['plan_id'],
+                    'address_id' => $data['address_id'],
+                    'client_id' => Auth::user()->id
+                ]);
 
-            Subscription::create([
-                'plan_id' => $data['plan_id'],
-                'address_id' => $data['address_id'],
-                'client_id' => Auth::user()->id
-            ]);
+                Payment::create([
+                    'subscription_id' => DB::getPdo()->lastInsertId(),
+                    'type' => $data['type']
+                ]);
 
-            Payment::create([
-                'subscription_id' => DB::getPdo()->lastInsertId(),
-                'type' => $data['type']
-            ]);
+                Credit_card::create([
+                    'payment_id' => DB::getPdo()->lastInsertId(),
+                    'card_number' => $data['card_number'],
+                    'card_name' => $data['card_name'],
+                    'expires_date' => $date,
+                    'security_number' => $data['security_number']
+                ]);
 
-            Credit_card::create([
-                'payment_id' => DB::getPdo()->lastInsertId(),
-                'card_number' => $data['card_number'],
-                'card_name' => $data['card_name'],
-                'expires_date' => $date,
-                'security_number' => $data['security_number']
-            ]);
-                       
+                echo 'plano criado';   
+                return; 
+            }
 
-
-            // var_dump($data);
+            echo 'plano existente';
+            return;
         }
-        // return redirect()->route('login');
+        return redirect()->route('login');
+    }
+
+    public function checkPlan($plan_id)
+    {
+       $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
+       
+       foreach ($check as $subs)
+        if($subs->plan_id == $plan_id)
+            return false;
+        return true;
     }
 
     /**

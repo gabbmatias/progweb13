@@ -53,7 +53,7 @@
                         <input hidden type="text" name="card_name" id="card_name" value="{{ $credit_cards->card_name }}">
                         <input hidden name="type" value="2">
                         <div class="confirmacaoCartao">
-                            <input type="text" name="security_number-typed" id="security_number" placeholder="Digite o código de segurança">
+                            <input required type="text" name="security_number-typed" maxlength="3" id="security_number-typed" placeholder="Digite o código de segurança">
                         </div>
     
                     @endif
@@ -68,4 +68,5 @@
                 
             </form>
 </div>
+
 @endsection

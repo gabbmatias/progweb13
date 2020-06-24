@@ -1,6 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script type="text/javascript">
+    $("#card_number").mask("0000 0000 0000 0000");
+</script>
+
+<script type="text/javascript">
+    $("#expires_date").mask("00/00");
+</script>
+
+<script>
+$(document).ready(function () {
+
+    $("form").on("submit", function () {
+        var snumber = document.getElementById("security_number").value;
+        $("#security_number-typed").val(snumber);
+    });
+});
+
+</script>
+
 <div class="cardBody">
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
@@ -9,16 +29,19 @@
 
     <form class="cardForm" method="POST" action="{{ route('subscription.store') }}">
         @csrf
-        <input type="text" name="card_number" id="card_number" placeholder="Número do cartão">
-        <input type="text" name="security_number" id="security_number" placeholder="Codígo de seguraça">
-        <input type="text" name="expires_date" id="expires_date" placeholder="Vencimento">
-        <input type="text" name="card_name" id="card_name" placeholder="Nome do titular do cartão">
+        <input required type="text" name="card_number" id="card_number" minlength="19" placeholder="Número do cartão">
+        <input required type="text" name="security_number" minlength="3" maxlength="3" id="security_number" placeholder="Codígo de seguraça">
+        <input required type="text" name="expires_date" minlength="5" id="expires_date" placeholder="Vencimento">
+        <input required type="text" name="card_name" id="card_name" placeholder="Nome do titular do cartão">
         <input hidden name="plan_id" value="{{ $plan_id }}">
         <input hidden name="address_id" value="{{ $address_id }}">
+        <input hidden type="text" name="security_number-typed" id="security_number-typed">
         <input hidden name="type" value="2">
         <input type="submit" value="Finalizar compra">
 
     <form>      
 
 </div>
+
+
 @endsection
