@@ -27,8 +27,7 @@ class SubscriptionController extends Controller
                 ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
                 ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
                 ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id')
-                ->where('subscriptions.client_id', '=',  Auth::user()->id)
-                ->get();
+                ->where('subscriptions.client_id', '=',  Auth::user()->id)->get();
 
             return view('view_subscriptions')->with(['subscriptions' => $data]);
         }

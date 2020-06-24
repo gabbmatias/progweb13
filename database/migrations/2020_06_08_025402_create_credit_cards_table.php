@@ -14,6 +14,7 @@ class CreateCreditCardsTable extends Migration
     public function up()
     {
         Schema::create('credit_cards', function (Blueprint $table) {
+            $table->bigIncrements('credit_card_id');
             $table->string('card_number');
             $table->bigInteger('payment_id')->unsigned();
             $table->integer('security_number');
@@ -21,7 +22,6 @@ class CreateCreditCardsTable extends Migration
             $table->string('card_name', 255);
             $table->timestamps();
 
-            $table->primary('card_number');
             $table->foreign('payment_id')->references('payment_id')->on('payments')->onDelete('cascade');
         });
     }
