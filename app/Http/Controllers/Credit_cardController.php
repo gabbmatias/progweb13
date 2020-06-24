@@ -32,12 +32,10 @@ class Credit_cardController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        $data = DB::table('payments')
-        ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
-        ->where('subscriptions.client_id', '=', Auth::user()->id)->get();
-        return view('add_card')->with(['payments' => $data]);
+        $data = $request->all();
+        return view('add_card')->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]);
     }
 
     /**
@@ -58,7 +56,9 @@ class Credit_cardController extends Controller
         $data = $request->all();
         $plan_id = $data['plan_id'];
         $address_id = $data['address_id'];
-        return view('card')->with(['plan_id' => $plan_id, 'address_id' => $address_id]);
+        $credit_cards = Credit_card::all()->last();
+        return view('card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
+
     }
 
     /**

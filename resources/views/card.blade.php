@@ -5,19 +5,31 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
     </div>
-    <a class="cardTitle">Escolha ou adicione um cartão</a>
     <div class="cardBoxes">
-        <div class="boxCard">
-                <div class="box-card-text">
-                    
+        @if ( $credit_cards != null )
+            @foreach ($credit_cards as $credit_card)
+                <div class="boxCard">
+                    <div class="imagemFluxo">
+                        <img src="/img/logo-mastercard-mobile.svg">
+                    </div>
+                        <div class="box-card-text">
+                            <a><?=strtoupper( $credit_card->card_number). "<br/>" . strtoupper($credit_card->card_name) .  "<br/>". 
+                            date('m', strtotime($credit_card->expires_date)). '/'. date('y', strtotime($credit_card->expires_date)) ?></a>
+                        </div>
                 </div>
-        </div>
+            @endforeach
+        @endif
     </div>
     <div class="cardFields">
-        <div class="addCard">
-            <input type="submit" value="+">
-            <a href="{{ route('credit_card.create') }}">Adicionar Cartão</a>
-        </div>
+
+        <form method="POST" action="{{ route('credit_card.create') }}">
+            @csrf
+            <div class="addCard">
+                <input hidden name="plan_id" value="{{ $plan_id }}">
+                <input hidden name="address_id" value="{{ $address_id }}">
+                <input type="submit" value="Adicionar Cartão">
+            </div>
+        </form>
         
         <form class="cardForm" method="POST">
             <!-- Checkbox para selecionar o cartão

@@ -16,17 +16,17 @@ class PaymentController extends Controller
         return redirect()->route('login');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        if (Auth::check()) {
+    // /**
+    //  * Show the form for creating a new resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function create()
+    // {
+    //     if (Auth::check()) {
             
-        }
-        return redirect()->route('login');
-    }
+    //     }
+    //     return redirect()->route('login');
+    // }
 
 }

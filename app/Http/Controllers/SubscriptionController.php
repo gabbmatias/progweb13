@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Subscription;
 use App\Models\Plan;
 use App\Models\Address;
+use App\Models\Credit_card;
+use App\Models\Payment;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -58,11 +60,35 @@ class SubscriptionController extends Controller
         if (Auth::check()) {
             $data = $request->all();
 
-            Subscription::create($data);
+            $date = $data['expires_date'];
+            $date = explode('/', $date);
+            $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
 
-            return redirect()->route("subscription.index");
+
+            Subscription::create([
+                'plan_id' => $data['plan_id'],
+                'address_id' => $data['address_id'],
+                'client_id' => Auth::user()->id
+            ]);
+
+            Payment::create([
+                'subscription_id' => DB::getPdo()->lastInsertId(),
+                'type' => $data['type']
+            ]);
+
+            Credit_card::create([
+                'payment_id' => DB::getPdo()->lastInsertId(),
+                'card_number' => $data['card_number'],
+                'card_name' => $data['card_name'],
+                'expires_date' => $date,
+                'security_number' => $data['security_number']
+            ]);
+                       
+
+
+            // var_dump($data);
         }
-        return redirect()->route('login');
+        // return redirect()->route('login');
     }
 
     /**
