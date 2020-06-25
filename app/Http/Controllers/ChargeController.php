@@ -29,6 +29,14 @@ class ChargeController extends Controller
         fclose($out);
     }
 
+    public function selectCharge(Request $request)
+    {
+        if(Auth::check())
+        {
+            
+        }
+    }
+
     /**
      * Store a newly created resource in storage.
      *

@@ -8,6 +8,7 @@ use App\Models\Plan;
 use App\Models\Address;
 use App\Models\Credit_card;
 use App\Models\Payment;
+use App\Models\Charge;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use PhpParser\Node\Stmt\Break_;
@@ -109,6 +110,41 @@ class SubscriptionController extends Controller
         }
         return redirect()->route('login');
     }
+
+    public function storeCharge(Request $request)
+    {
+        if (Auth::check()) {
+            $data = $request->all();
+            if($this->checkPlan($data['plan_id'])){
+
+                Subscription::create([
+                    'plan_id' => $data['plan_id'],
+                    'address_id' => $data['address_id'],
+                    'client_id' => Auth::user()->id
+                ]);
+
+                Payment::create([
+                    'subscription_id' => DB::getPdo()->lastInsertId(),
+                    'type' => $data['type']
+                ]);
+
+                Charge::create([
+                    'payment_id' => DB::getPdo()->lastInsertId(),
+                    'charge_code' => $data['charge_code'],
+                    'payer_name' => $data['payer_name']
+                ]);
+
+                echo 'plano criado';   
+                return; 
+            }
+
+            echo 'plano existente';
+            return;
+        }
+        return redirect()->route('login');
+    }
+
+
 
     public function checkPlan($plan_id)
     {
