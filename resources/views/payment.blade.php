@@ -9,7 +9,7 @@
     <div class="paymentFields">
         <form method="POST">
             @csrf
-            <button class="selectPayment" formaction="#">
+            <button class="selectPayment" formaction="{{ route('charge.select')}} ">
                 <div class="boleto-payment">
                     <i class="fa fa-file-text-o"></i>
                     <input hidden name="plan_id" value="{{ $plan_id }}">

@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Illuminate\Support\Facades\Auth;
+
+use App\Models\Plan;
+
+use Illuminate\Support\Facades\DB;
+
 class ChargeController extends Controller
 {
     /**
@@ -34,7 +40,16 @@ class ChargeController extends Controller
         if(Auth::check())
         {
             
+            $data = $request->all();
+            $date = strtotime(date('d-m-Y'));
+            $date = date('d/m/Y', strtotime('+ 2 days', $date));
+            $plan = Plan::where('plan_id', $data['plan_id'])->get();
+
+            return view ('charge')-> with(['plans' => $plan, 'address_id' => $data['address_id'],
+            'payer_name' => Auth::user()->name, 'expires_date' => $date ] );  
         }
+
+       return redirect()->route('login');
     }
 
     /**

@@ -20,7 +20,7 @@ Route::get('/profile', 'ProfileController@index')->name("profile");
 Route::post('payment/select', 'PaymentController@index')->name('payment.select');
 Route::post('charge/select', 'ChargeController@selectCharge')->name('charge.select');
 
-Route::post('compra/finalizada', 'PaymentController@finalizar')->name('finalizar');
+
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
@@ -44,7 +44,9 @@ Route::resource('address', 'AddressController', ['except' => ['destroy', 'update
 Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('subscription.destroy');
 Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
-Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit']]);
+Route::post('subscription/create', 'SubscriptionController@storeCharge')->name('subscription.charge');
+Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit', 'create']]);
+
 
 Route::post('/contact/delete', 'ContactController@destroy')->name('contact.destroy');
 Route::resource('contact', 'ContactController', ['except' => ['destroy']]);
