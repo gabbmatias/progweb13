@@ -140,8 +140,7 @@ class SubscriptionController extends Controller
                 return; 
             }
 
-            echo 'plano existente';
-            return;
+            return view("compra_finalizada");
         }
         return redirect()->route('login');
     }
@@ -177,7 +176,7 @@ class SubscriptionController extends Controller
      */
     public function edit()
     {
-        return view('edit_subscription');
+        
     }
 
     /**

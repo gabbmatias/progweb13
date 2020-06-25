@@ -89,6 +89,10 @@
     
 }
 
+.voltar:hover{
+    color: white!important;
+}
+
 .backPayment{
     margin-top: -7.8%;
     margin-left: 20%;

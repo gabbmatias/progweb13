@@ -30,7 +30,7 @@
                     <form method="POST" action="{{ route('subscription.destroy')}}">
                         @csrf
                         <input hidden name="subscription_id" value="{{ $subscription->subscription_id }}">
-                        <input type="submit" onclick="confirm('Tem certeza de que deseja apagar está assinatura?')" value="Deletar"> 
+                        <input class="action" type="submit" onclick="confirm('Tem certeza de que deseja apagar está assinatura?')" value="Deletar"> 
                     </form>
                                  
                 </div>

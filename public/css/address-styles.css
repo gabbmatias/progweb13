@@ -51,7 +51,7 @@
 }
 
 .addAddress i{
-    font-size: 60px;
+    font-size: 45px;
 }
 
 .addAddress a:hover{
@@ -99,21 +99,22 @@
 }
 
 .boxEnderecoExample{
-    margin-top: 3%;
+    margin-top: 2%;
     width: 24%;
-    height: 26vh;
+    height: 23vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-content: center;
-    align-items: center;
+    
 }
 
 .actionsAddress{
+    margin-top: 10%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .actionsAddress a{
@@ -122,6 +123,10 @@
 }
 
 .actionsAddress a:hover{
+    color: white!important;
+}
+
+.actionsAddress input:hover{
     color: white!important;
 }
 
@@ -137,17 +142,27 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 120%;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .voltarAddress:hover{
-    text-decoration: none;
+    color: white!important;
 }
 
 .box-endereco-textExample{
-    margin-top: 4%;
+    margin-top: 9%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
+}
+
+.left-button{
+    width: 100%;
+    margin-right: 4%;
+}
+
+.right-button{
+    width: 100%;
+    margin-left: 4%;
 }
 
 @media screen and (max-width: 600px){

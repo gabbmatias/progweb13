@@ -6,8 +6,7 @@
         <img src="/img/routeBar-confirmation.png">
     </div>
     <div class="confirmationTitle">
-
-
+        <p>Pedido Confirmado!</p>
     </div>
 </div>
 @endsection
