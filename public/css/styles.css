@@ -69,11 +69,13 @@ body {
 
 @media screen and (max-width: 600px) {
     .top-nav-dropdown {
-        display: none;
+        display: inline-block;
     }
 
     .top-nav-logged {
-        display: none;
+        position: relative;
+        width: auto;
+        left: 0% !important;
     }
 
     .top-nav-login {

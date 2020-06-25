@@ -41,6 +41,19 @@ class PlansPageController extends Controller
         }
         return redirect()->route("login");
     }
+
+
+    public function editPlan(Request $request)
+    {
+        if (Auth::check()) {
+            $plans = Plan::all();
+            $data = $request->all();
+            return view('edit_subscription_plan')->with(['subscription_id' => $data['subscription_id'], 'plans' => $plans]);   
+        }
+        return redirect()->route('login');
+    }
+
+    
     /**
      * Store a newly created resource in storage.
      *

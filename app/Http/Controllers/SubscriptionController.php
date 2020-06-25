@@ -80,12 +80,6 @@ class SubscriptionController extends Controller
                     $date = explode('/', $date);
                     $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
 
-                    if($data['security_number-typed'] != $data['security_number'])
-                    {
-                    echo 'CVV invalido';
-                    return;
-                    }
-
                     Subscription::create([
                         'plan_id' => $data['plan_id'],
                         'address_id' => $data['address_id'],
@@ -208,6 +202,19 @@ class SubscriptionController extends Controller
     {
         //
     }
+
+    public function updatePlan(Request $request)
+    {
+        if (Auth::check()) {
+
+                $data = $request->all();
+                $plan = Subscription::where('subscription_id', $data['subscription_id'])->update(['plan_id' => $data['plan_id']]);
+
+                return redirect()->route('subscription.index');
+        }
+        return redirect()->route('login');
+    }
+
 
     /**
      * Remove the specified resource from storage.

@@ -18,7 +18,11 @@
                 </div>
 
                 <div class="actionsAddress">
-                    <a href="{{ route('subscription.edit.plan') }}" class="selecionar">Fazer upgrade ou downgrade</a>
+                    <form method="POST" action="{{ route('subscription.edit.plan')}}">
+                        @csrf
+                        <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
+                        <input type="submit" class="selecionar" value="Fazer upgrade ou downgrade">
+                    </form>
                 </div>
             </div>
         </div>
@@ -60,16 +64,16 @@
                     @endif
                 </div>
                 <div class="actionsAddress">
-                    <a href="#" class="selecionar">Editar</a>
+                    <form method="POST" action="{{ route('subscription.edit.plan')}}">
+                        <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
+                        <input type="submit" class="selecionar" value="Editar">
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
     <form class="subscriptionForm">
-        <div class="navegacaoSuncription">
-            <input type=submit class="confirmar" formaction="#" value="Atualizar plano">
-        </div>
         <div class="navegacaoSuncription">
         <input type=submit class="cancelar" formaction="{{ route('subscription.index') }}"" value="Cancelar">
         </div>

@@ -45,6 +45,8 @@ Route::post('/address/update', 'AddressController@update')->name('address.update
 Route::resource('address', 'AddressController', ['except' => ['destroy', 'update', 'edit']]);
 
 
+Route::post('subscription/edit/plan', 'PlansPageController@editPlan')->name('subscription.edit.plan');
+Route::post('subscription/edit/update', 'SubscriptionController@updatePlan')->name('subscription.plan.update');
 Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('subscription.destroy');
 Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
@@ -78,10 +80,6 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
-Route::get("/editsubscription/plan", function()
-{
-    return view('edit_subscription_plan');
-})->name("subscription.edit.plan");
 
 
 

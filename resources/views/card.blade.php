@@ -1,3 +1,11 @@
+<?php 
+
+if($data['security_number-typed'] != $data['security_number'])
+{
+    return redirect('credit_card/select')->with('error', 'CVV inválido!');
+}
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -72,7 +80,7 @@ $("form").on("click", "#doit", function () {
                         <div class="confirmacaoCartao">
                             <input type="text" name="security_number-typed" maxlength="3" id="security_number-typed" placeholder="Digite o CVV do cartão">
                         </div>
-                            <span id="error_cvv"></span>
+                    <span id="error_cvv">{{ session('error') }}</span>
     
                     @endif
                     <input hidden name="plan_id" value="{{ $plan_id }}">
