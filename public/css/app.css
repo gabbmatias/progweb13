@@ -3000,14 +3000,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-    color: #3490dc;
-    border-color: #3490dc
+    color: #fff;
+    background-color: #e54161;
+    border-color: #e54161
 }
 
 .btn-outline-primary:hover {
-    color: #fff;
-    background-color: #3490dc;
-    border-color: #3490dc
+    color: #e54161;
+    background-color: #fff;
+    border-color: #e54161
 }
 
 .btn-outline-primary.focus,
@@ -3036,14 +3037,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-secondary {
-    color: #6c757d;
-    border-color: #6c757d
+    color: #fff;
+    background-color: #e54161;
+    border-color: #e54161;
 }
 
 .btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
+    color: #e54161;
+    background-color: #fff;
+    border-color: #e54161
 }
 
 .btn-outline-secondary.focus,
@@ -4950,6 +4952,8 @@ input[type=submit].btn-block {
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
+    background-color: #e54162b2;
+    color: #fff;
     padding: 1.25rem
 }
 
@@ -4977,7 +4981,9 @@ input[type=submit].btn-block {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: rgba(0, 0, 0, .03);
+    background-color: #e54161;
+    color: #fff;
+    font-size: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, .125)
 }
 

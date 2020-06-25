@@ -1,5 +1,5 @@
 body {
-    background-color: lightgray;
+    background-color: #fce4f0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -69,15 +69,11 @@ body {
 
 @media screen and (max-width: 600px) {
     .top-nav-dropdown {
-        display: inline-block;
+        display: none;
     }
 
     .top-nav-logged {
-        position: relative;
-        width: auto;
-        left: 0% !important;
-        margin-top: 0% !important;
-        display: inline-block;
+        display: none;
     }
 
     .top-nav-login {
