@@ -22,8 +22,7 @@
 }
 
 .viewSubscriptionsBoxes{
-    width: 50vw;
-    height: 38vh;
+    width: 80vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -35,8 +34,8 @@
 
 .boxViewSubscriptions{
     margin-top: 2%;
-    width: 32%;
-    height: 100%;
+    width: 24%;
+    height: 48vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -46,15 +45,35 @@
     align-items: center;
 }
 .box-subscriptions-title{
+    margin-top: 2%;
     color: #E54161!important;
     font-size: 22px;
 }
 
 .box-subscriptions-text{
+    margin-top: 2%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
 
+.actionsSubscription{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5%;
+    align-items: baseline;
+}
+
+.actionsSubscription a{
+    color: #E54161!important;
+    text-decoration: none;
+}
+
+.actionsSubscription a:hover{
+    color: white!important;
+
+}
 
 @media screen and (max-width: 600px){
     .viewSubscriptionsBoxes{

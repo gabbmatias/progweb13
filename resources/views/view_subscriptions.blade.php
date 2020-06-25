@@ -18,13 +18,13 @@
                         strtoupper($subscription->complement) ."<br>". strtoupper($subscription->city) . ', ' .  strtoupper($subscription->state) .  "<br>" .
                         strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) . '<br><strong> Pagamento:</strong><br>'?> 
                         @if ($subscription->type == 'cartao_credito')
-                        <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br>Pagamento será todo dia <strong>" . $subscription->created_at . "</strong>"?></a>
+                        <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br><br>Pagamento será todo dia <strong>" . $subscription->created_at . "</strong>"?></a>
                         
                         @else
                             Boleto Bancário</a>
                         @endif
                 </div>
-                <div class="actions">
+                <div class="actionsSubscription">
                     <a href="{{ route('subscription.edit') }}">Editar</a>
 
                     <form method="POST" action="{{ route('subscription.destroy')}}">
