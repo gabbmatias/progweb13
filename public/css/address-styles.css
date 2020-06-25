@@ -148,14 +148,6 @@
     color: rgba(22, 22, 22, 0.9);
 }
 
-.left-button{
-    width: 100%;
-}
-
-.right-button{
-    width: 100%;
-}
-
 @media screen and (max-width: 600px){
     .addressTitle{
         padding-top: 10%;

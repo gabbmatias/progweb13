@@ -6,13 +6,6 @@
         <img src="/img/routeBar-payment.png">
     </div>
     <div class="boletoFields">
-        <!--
-            //////////////////////////////////////////////////
-            Aqui é apenas o exemplo de como eu quero que fique
-            //////////////////////////////////////////////////
-        -->
-
-       
         <div class="boletoBoxesExample">
         
 
@@ -28,13 +21,6 @@
             
         </div>
     
-        <!--
-            ///////////////////////////////////////////////////////
-            /////////////////////Fim do examplo////////////////////
-            ///////////////////////////////////////////////////////
-        -->
-
-
         <div class="actionsBoleto">
             
             <form action="#" method="POST">
