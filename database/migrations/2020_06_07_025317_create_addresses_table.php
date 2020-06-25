@@ -21,7 +21,7 @@ class CreateAddressesTable extends Migration
             $table->string('city', 255);
             $table->string('state', 255);
             $table->string('street_number', 255);
-            $table->string('complement', 255);
+            $table->string('complement', 255)->nullable();
             $table->string('neighborhood', 255);
             $table->string('cep', 9);
             $table->timestamps();

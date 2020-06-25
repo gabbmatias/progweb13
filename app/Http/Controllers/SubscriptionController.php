@@ -136,11 +136,9 @@ class SubscriptionController extends Controller
                     'payer_name' => $data['payer_name']
                 ]);
 
-                echo 'plano criado';   
-                return; 
+                return view('');
             }
 
-            return view("compra_finalizada");
         }
         return redirect()->route('login');
     }
