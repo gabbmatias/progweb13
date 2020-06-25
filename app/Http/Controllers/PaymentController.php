@@ -17,10 +17,10 @@ class PaymentController extends Controller
     }
 
     public function boleto(){
-        return view("boleto");
+        return view("charge");
     }
 
-    public function finaliar(){
+    public function finalizar(){
         return view('compra_finalizada');
     }
     // /**

@@ -24,18 +24,22 @@
                     strtoupper($address->country) ."<br>".  strtoupper($address->cep) ?></a>
                 </div>
                 <div class="actionsAddress">
-                    <form action="{{ route('address.edit') }}" method="POST">
-                        @csrf
-                        <input hidden name="address_id" value="{{ $address->address_id }}">
-                        <input type="submit" class="action" name="submit" value="Editar">
-                    </form>
+                    <div class="left-button">
+                        <form action="{{ route('address.edit') }}" method="POST">
+                            @csrf
+                            <input hidden name="address_id" value="{{ $address->address_id }}">
+                            <input type="submit" class="action" name="submit" value="Editar">
+                        </form>
+                    </div>
 
-                    <form action="{{ route('payment.select') }}" method="POST">
-                        @csrf
-                        <input hidden name="address_id" value="{{ $address->address_id }}">
-                        <input hidden name="plan_id" value="<?= $flag ?>">
-                        <input type="submit" class="selecionar" name="submit" value="Selecionar">
-                    </form>                
+                    <div class="right-button">
+                        <form action="{{ route('payment.select') }}" method="POST">
+                            @csrf
+                            <input hidden name="address_id" value="{{ $address->address_id }}">
+                            <input hidden name="plan_id" value="<?= $flag ?>">
+                            <input type="submit" class="action" name="submit" value="Selecionar">
+                        </form>  
+                    </div>              
                 </div>
             </div>
             @endforeach
@@ -45,7 +49,7 @@
             <!--<a href="{{ route('address.create') }}">Adicionar Endereço</a>-->
         </div>
         
-
+        
         <a class="voltarAddress" href="{{ route('plan.select')}}">Voltar</a>
     </div>
 </div>

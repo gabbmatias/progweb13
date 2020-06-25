@@ -1,7 +1,7 @@
 .viewSubscriptionsBody{
     flex: 1 1 auto;
     width: 100%;
-    background-color: lightgray;
+    background-color: #fce4f0;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -35,7 +35,7 @@
 .boxViewSubscriptions{
     margin-top: 2%;
     width: 24%;
-    height: 48vh;
+    height: 44vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -45,7 +45,7 @@
     align-items: center;
 }
 .box-subscriptions-title{
-    margin-top: 2%;
+    margin-top: 8%;
     color: #E54161!important;
     font-size: 22px;
 }
@@ -68,12 +68,26 @@
 .actionsSubscription a{
     color: #E54161!important;
     text-decoration: none;
+    font-size: 120%;
+    margin-left: 10%;
 }
 
 .actionsSubscription a:hover{
     color: white!important;
 
 }
+
+.actionsSubscription form{
+    margin-right: 10%;
+
+}
+
+.actionsSubscription input:hover{
+    color: white!important;
+
+}
+
+
 
 @media screen and (max-width: 600px){
     .viewSubscriptionsBoxes{
