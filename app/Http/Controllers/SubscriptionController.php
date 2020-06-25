@@ -26,13 +26,20 @@ class SubscriptionController extends Controller
                 ->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')
                 ->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')
                 ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
+                ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id') 
                 ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
-                ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id')
-                ->where('subscriptions.client_id', '=',  Auth::user()->id)->get();
+                ->where('subscriptions.client_id', '=',  Auth::user()->id)->select('name', 'email as user_email')->get();
 
-            return view('view_subscriptions')->with(['subscriptions' => $data]);
+
+            foreach ($data as $subscription)
+            {
+                var_dump($subscription);
+                echo '<br> <br>';
+            }
+
+            // return view('view_subscriptions')->with(['subscriptions' => $data]);
         }
-        return redirect()->route('login');
+        // return redirect()->route('login');
     }
 
     /**

@@ -14,11 +14,12 @@
                 </div>
                 <div class="box-subscriptions-text">
                     <a><strong>Preço:</strong><br>{{ $subscription->price }}<br>
-                        <br><strong>Endereço:</strong><?= "<br>" .strtoupper( $subscription->street). ", " . strtoupper($subscription->street_number) . "<br>" .
+                        <strong>Endereço:</strong><?= "<br>" .strtoupper( $subscription->street). ", " . strtoupper($subscription->street_number) . "<br>" .
                         strtoupper($subscription->complement) ."<br>". strtoupper($subscription->city) . ', ' .  strtoupper($subscription->state) .  "<br>" .
                         strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) . '<br><strong> Pagamento:</strong><br>'?> 
                         @if ($subscription->type == 'cartao_credito')
-                        <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br>"; ?></a>
+                        <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br>pagamento será em" . date('d/m/y', $subscription->created_at); ?></a>
+                        
                         @else
                             Boleto Bancário</a>
                         @endif

@@ -14,12 +14,12 @@ class CreateChargesTable extends Migration
     public function up()
     {
         Schema::create('charges', function (Blueprint $table) {
+            $table->bigIncrements('charges_id');
             $table->string('charge_code');
             $table->bigInteger('payment_id')->unsigned();
             $table->string('payer_name', 255);
             $table->timestamps();
 
-            $table->primary('charge_code');
             $table->foreign('payment_id')->references('payment_id')->on('payments')->onDelete('cascade');
         });
     }
