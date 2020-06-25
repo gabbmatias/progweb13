@@ -97,8 +97,14 @@
 }
 
 .voltar {
-    background-color: lightgrey!important;
-    border: 1px solid #e54161!important;
+    background-color: #e54161 !important;
+    border: 1px solid #e54161 !important;
+    color: #fce4f0!important;
+}
+
+.voltar:hover {
+    background-color: #fce4f0 !important;
+    border: 1px solid #e54161 !important;
     color: #e54161!important;
 }
 
