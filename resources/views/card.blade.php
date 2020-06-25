@@ -1,6 +1,23 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script type="text/javascript">
+
+$(document).ready(function () {
+
+$("form").on("click", "#doit", function () {
+    var snumber = document.getElementById("security_number-typed").value;
+    if(snumber == "")
+    {
+        document.getElementById('error_cvv').innerHTML = "Por favor, preecha o CVV!";
+        event.preventDefault();
+        return false;
+    }
+});
+});
+</script>
+
 <div class="cardBody">
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
@@ -42,7 +59,7 @@
         </div>
         @endif
             
-            <form class="cardForm" method="POST">
+            <form name="confirm_form" id="confirm_form" class="cardForm" method="POST">
                 @csrf                
                     @if ( $credit_cards != null )
                         <input hidden name="plan_id" value="{{ $plan_id }}">
@@ -53,8 +70,9 @@
                         <input hidden type="text" name="card_name" id="card_name" value="{{ $credit_cards->card_name }}">
                         <input hidden name="type" value="2">
                         <div class="confirmacaoCartao">
-                            <input required type="text" name="security_number-typed" maxlength="3" id="security_number-typed" placeholder="Digite o CVV do cartão">
+                            <input type="text" name="security_number-typed" maxlength="3" id="security_number-typed" placeholder="Digite o CVV do cartão">
                         </div>
+                            <span id="error_cvv"></span>
     
                     @endif
                     <input hidden name="plan_id" value="{{ $plan_id }}">
@@ -62,7 +80,7 @@
                     <div class="navegacao">
                         <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
                         @if ( $credit_cards != null )
-                            <input type=submit value="Finalizar Pagamento" onclick="confirm('Tem certeza de que deseja finalizar pagamento?')" formaction="{{ route('subscription.store') }}">
+                            <input type=submit id="doit" value="Finalizar Pagamento" onclick="confirmForm()" formaction="{{ route('subscription.store') }}">
                         @endif
                     </div>
                 

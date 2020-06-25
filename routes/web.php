@@ -63,7 +63,7 @@ Route::post('/profile/edit/update', 'ProfileController@editProfile')->name("prof
 Route::get('/profile/edit', 'ProfileController@indexEditProfile')->name("profile.edit");
 
 
-Route::post('/profile/password/update', 'ProfileController@changePcompraassword')->name("profile.pass.update");
+Route::post('/profile/password/update', 'ProfileController@changePassword')->name("profile.pass.update");
 
 Auth::routes();
 
