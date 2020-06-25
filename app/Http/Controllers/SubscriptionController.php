@@ -29,18 +29,17 @@ class SubscriptionController extends Controller
                 ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
                 ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id') 
                 ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
-                ->where('subscriptions.client_id', '=',  Auth::user()->id)->select('name', 'email as user_email')->get();
+                ->where('subscriptions.client_id', '=',  Auth::user()->id)->get();
 
 
             foreach ($data as $subscription)
             {
-                var_dump($subscription);
-                echo '<br> <br>';
+                $subscription->created_at = date('d', strtotime($subscription->created_at));
             }
 
-            // return view('view_subscriptions')->with(['subscriptions' => $data]);
+            return view('view_subscriptions')->with(['subscriptions' => $data]);
         }
-        // return redirect()->route('login');
+        return redirect()->route('login');
     }
 
     /**
