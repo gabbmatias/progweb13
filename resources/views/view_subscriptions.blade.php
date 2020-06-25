@@ -21,11 +21,16 @@
                         <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br><br>Pagamento será todo dia <strong>" . $subscription->created_at . "</strong>"?></a>
                         
                         @else
-                            Boleto Bancário</a>
+                            Boleto Bancário<br><br>A geração do boleto será todo dia <strong> {{ $subscription->created_at }} </strong></a>
                         @endif
                 </div>
                 <div class="actionsSubscription">
-                    <a href="{{ route('subscription.edit') }}">Editar</a>
+
+                    <form method="POST" action="{{ route('subscription.edit') }}">
+                        @csrf
+                        <input hidden name="subscription_id" value="{{ $subscription->subscription_id }}">
+                        <input class="action" type="submit" value="Editar"> 
+                    </form>
 
                     <form method="POST" action="{{ route('subscription.destroy')}}">
                         @csrf

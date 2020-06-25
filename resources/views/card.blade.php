@@ -80,7 +80,7 @@ $("form").on("click", "#doit", function () {
                     <div class="navegacao">
                         <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
                         @if ( $credit_cards != null )
-                            <input type=submit id="doit" value="Finalizar Pagamento" onclick="confirmForm()" formaction="{{ route('subscription.store') }}">
+                            <input type=submit name="submit" id="doit" value="Finalizar Pagamento" onclick="confirmForm()" formaction="{{ route('subscription.store') }}">
                         @endif
                     </div>
                 
