@@ -71,7 +71,7 @@
 
 
 .voltar {
-    background-color: lightgrey!important;
+    background-color: #fce4f0!important;
     border: 1px solid #e54161!important;
     color: #e54161!important;
 }
@@ -135,9 +135,9 @@
 }
 
 .voltarAddress{
-    background-color: #fce4f0!important;
+    background-color: #e54161!important;
     border: 1px solid #e54161!important;
-    color: #e54161!important;
+    color: #fce4f0!important;
     padding: 8px 20px;
     border-radius: 10px;
     cursor: pointer;
@@ -146,7 +146,8 @@
 }
 
 .voltarAddress:hover{
-    color: white!important;
+    color: #e54161!important;
+    background-color: #fce4f0 !important;
 }
 
 .box-endereco-textExample{

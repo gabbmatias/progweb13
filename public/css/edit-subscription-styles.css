@@ -126,13 +126,14 @@
 }
 
 .cancelar {
-    background-color: #fce4f0!important;
+    background-color: #e54161!important;
     border: 1px solid #e54161!important;
-    color: #e54161!important;
+    color: #fce4f0!important;
 }
 
 .cancelar:hover{
-    color: white!important;
+    color: #e54161!important;
+    background-color: #fce4f0 !important;
 }
 
 
