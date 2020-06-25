@@ -19,7 +19,7 @@
 
             <div class="actionsAddress">
 
-                <form class="plansForm" onsubmit="if(confirm('Você tem certeza que deseja alterar seu plano para {{ $plan->plan_name }}?')) return true; else event.preventDefault()" method="POST" action="{{ route('subscription.plan.update') }}">
+                <form class="plansForm" onsubmit="confirmation()" method="POST" action="{{ route('subscription.plan.update') }}">
                     @csrf
                     <div class="navegacao">
                         <input hidden type="text" name="plan_id" value="{{ $plan->plan_id }}">
@@ -29,6 +29,17 @@
                 </form>             
             </div>
         </div>
+
+        <script>
+            function confirmation(){
+                if(confirm('Você tem certeza que deseja alterar seu plano para {{ $plan->plan_name }}?'))
+                return true; 
+                else 
+                event.preventDefault()
+                return false
+            }
+        </script>
+
     @endforeach
         
         

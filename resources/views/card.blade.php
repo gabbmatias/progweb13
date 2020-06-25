@@ -1,11 +1,3 @@
-<?php 
-
-if($data['security_number-typed'] != $data['security_number'])
-{
-    return redirect('credit_card/select')->with('error', 'CVV inválido!');
-}
-?>
-
 @extends('layouts.app')
 
 @section('content')
@@ -16,14 +8,31 @@ $(document).ready(function () {
 
 $("form").on("click", "#doit", function () {
     var snumber = document.getElementById("security_number-typed").value;
+    var sreal = document.getElementById("security_number").value;
     if(snumber == "")
     {
         document.getElementById('error_cvv').innerHTML = "Por favor, preecha o CVV!";
         event.preventDefault();
         return false;
     }
+    if(snumber != sreal){
+        document.getElementById('error_cvv').innerHTML = "CVV inválido!";
+        event.preventDefault();
+        return false;
+    }
+    return true;
 });
 });
+</script>
+
+<script>
+    function confirmation(){
+        if(confirm('Tem certeza de que deseja finalizar pagamento?'))
+        return true; 
+        else 
+        event.preventDefault()
+        return false
+    }
 </script>
 
 <div class="cardBody">
@@ -88,7 +97,7 @@ $("form").on("click", "#doit", function () {
                     <div class="navegacao">
                         <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
                         @if ( $credit_cards != null )
-                            <input type=submit name="submit" id="doit" value="Finalizar Pagamento" onclick="confirmForm()" formaction="{{ route('subscription.store') }}">
+                            <input type=submit name="submit" id="doit" value="Finalizar Pagamento" onclick="confirmation()" formaction="{{ route('subscription.store') }}">
                         @endif
                     </div>
                 

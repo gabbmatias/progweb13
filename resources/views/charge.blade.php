@@ -36,7 +36,7 @@
                     <input hidden name="payer_name" value="{{ $payer_name }}">
 
                     <input hidden name="type" value="1">
-                    <input name="submit" type=submit class="finalizarPagamento" value="Finalizar Pagamento" onclick="confirm('Tem certeza de que deseja finalizar pagamento?')" 
+                    <input name="submit" type=submit class="finalizarPagamento" value="Finalizar Pagamento" onclick="confirmation()" 
                     formaction="{{ route('subscription.charge') }}">
                     
                 </form> 
@@ -45,7 +45,15 @@
         </div>
 
 
-        
+        <script>
+            function confirmation(){
+                if(confirm('Tem certeza de que deseja finalizar pagamento?'))
+                return true; 
+                else 
+                event.preventDefault()
+                return false
+            }
+        </script>
         
 
         
