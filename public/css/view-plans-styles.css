@@ -54,11 +54,11 @@
 }
 
 .action{
-  /* background-color: rgba(107, 107, 107, 0)!important;
-  color: #E54161!important; */
-  padding: 1px 2px !important;
-  border: none;
+  background-color: rgba(107, 107, 107, 0)!important;
+  color: #E54161!important;
+  padding: 0px 0px !important;
   cursor: pointer;
+  border: hidden!important;
   font-size: 120%;
   margin-top: 2%;
 }
