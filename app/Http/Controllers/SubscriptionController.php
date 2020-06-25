@@ -99,6 +99,7 @@ class SubscriptionController extends Controller
                     'expires_date' => $date,
                     'security_number' => $data['security_number']
                 ]);
+                
 
                 echo 'plano criado';   
                 return; 
@@ -116,6 +117,8 @@ class SubscriptionController extends Controller
             $data = $request->all();
             if($this->checkPlan($data['plan_id'])){
 
+                $charge_code = '23790.50400 42000.624231 07008.109204 4 82990000019900';
+
                 Subscription::create([
                     'plan_id' => $data['plan_id'],
                     'address_id' => $data['address_id'],
@@ -129,7 +132,7 @@ class SubscriptionController extends Controller
 
                 Charge::create([
                     'payment_id' => DB::getPdo()->lastInsertId(),
-                    'charge_code' => $data['charge_code'],
+                    'charge_code' => $charge_code,
                     'payer_name' => $data['payer_name']
                 ]);
 

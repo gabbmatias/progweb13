@@ -46,7 +46,7 @@
         </div>
         
 
-        <a href="{{ route('plan.select')}}">Voltar</a>
+        <a class="voltarAddress" href="{{ route('plan.select')}}">Voltar</a>
     </div>
 </div>
 @endsection

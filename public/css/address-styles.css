@@ -47,6 +47,7 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
+    color: #e54161;
 }
 
 .addAddress i{
@@ -54,7 +55,7 @@
 }
 
 .addAddress a:hover{
-    color: #e54161;
+    color: white;
     text-decoration: none;
 }
 
@@ -100,7 +101,7 @@
 .boxEnderecoExample{
     margin-top: 3%;
     width: 24%;
-    height: 80%;
+    height: 26vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -128,7 +129,23 @@
     font-size: 140%;
 }
 
+.voltarAddress{
+    background-color: #fce4f0!important;
+    border: 1px solid #e54161!important;
+    color: #e54161!important;
+    padding: 8px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.voltarAddress:hover{
+    text-decoration: none;
+}
+
 .box-endereco-textExample{
+    margin-top: 4%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
@@ -139,7 +156,7 @@
     }
     .boxEnderecoExample{
         width: 60%;
-        height: 24vh;
+        height: 26vh;
     }
     .imagemFluxo img{
         width: 100%;
