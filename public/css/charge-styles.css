@@ -110,6 +110,22 @@
     color: rgba(22, 22, 22, 0.9);
 }
 
+.finalizarPagamento{
+    background-color: #e54161;
+    color: #fce4f0;
+    border: 1px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.finalizarPagamento:hover{
+    background-color: #fce4f0!important;
+}
+
 @media screen and (max-width: 600px){
     .boletoBoxesExample{
         width: 98vw;
