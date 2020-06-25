@@ -48,7 +48,7 @@
 }
 
 .selectPayment:hover{
-    background: lightgray;
+    background: #fce4f0;
     color: #E54161;
     text-decoration: none;
 }
