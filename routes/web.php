@@ -21,6 +21,9 @@ Route::post('payment/select', 'PaymentController@index')->name('payment.select')
 Route::post('charge/select', 'ChargeController@selectCharge')->name('charge.select');
 Route::get('charge/create', 'ChargeController@create')->name('charge.create');
 
+Route::get('subscription/charge/signed', 'SubscriptionController@indexSignedCharge')->name('completed_transaction');
+Route::get('subscription/card/signed', 'SubscriptionController@indexSignedCard')->name('completed_transaction');
+
 
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
@@ -43,7 +46,7 @@ Route::resource('address', 'AddressController', ['except' => ['destroy', 'update
 
 
 Route::post('/subscription/delete', 'SubscriptionController@destroy')->name('subscription.destroy');
-// Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
+Route::post('/subscription/edit', 'SubscriptionController@edit')->name('subscription.edit');
 Route::post('/subscription/update', 'SubscriptionController@update')->name('subscription.update');
 Route::post('subscription/create', 'SubscriptionController@storeCharge')->name('subscription.charge');
 Route::resource('subscription', 'SubscriptionController', ['except' => ['destroy', 'update', 'edit', 'create']]);
@@ -74,11 +77,6 @@ Route::get("/about", function()
 {
     return view('about');
 })->name("about");
-
-Route::get("/editsubscription", function()
-{
-    return view('edit_subscription');
-})->name("subscription.edit");
 
 Route::get("/editsubscription/plan", function()
 {

@@ -11,6 +11,7 @@ use App\Models\Payment;
 use App\Models\Charge;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use PhpParser\Node\Stmt\Break_;
 
 class SubscriptionController extends Controller
@@ -29,7 +30,11 @@ class SubscriptionController extends Controller
                 ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
                 ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id') 
                 ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
-                ->where('subscriptions.client_id', '=',  Auth::user()->id)->get();
+                ->where('subscriptions.client_id', '=',  Auth::user()->id)->select('subscriptions.subscription_id', 'subscriptions.client_id', 'subscriptions.plan_id'
+                , 'subscriptions.address_id', 'subscriptions.created_at', 'subscriptions.updated_at', 'plans.plan_name', 'plans.price', 'plans.description', 
+                'addresses.street', 'addresses.street_number', 'addresses.cep','addresses.city', 'addresses.country', 'addresses.state', 'addresses.complement', 
+                'addresses.neighborhood', 'payments.payment_id', 'payments.type', 'charges.charge_code', 'charges.payer_name',
+                'credit_cards.card_number', 'credit_cards.security_number', 'credit_cards.expires_date', 'credit_cards.card_name')->get();
 
 
             foreach ($data as $subscription)
@@ -69,38 +74,41 @@ class SubscriptionController extends Controller
     {
         if (Auth::check()) {
             $data = $request->all();
-                
-                $date = $data['expires_date'];
-                $date = explode('/', $date);
-                $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
+                if(isset($data['submit'])){
+                                      
+                    $date = $data['expires_date'];
+                    $date = explode('/', $date);
+                    $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
 
-                if($data['security_number-typed'] != $data['security_number'])
-                {
-                   echo 'CVV invalido';
-                   return;
+                    if($data['security_number-typed'] != $data['security_number'])
+                    {
+                    echo 'CVV invalido';
+                    return;
+                    }
+
+                    Subscription::create([
+                        'plan_id' => $data['plan_id'],
+                        'address_id' => $data['address_id'],
+                        'client_id' => Auth::user()->id
+                    ]);
+
+                    Payment::create([
+                        'subscription_id' => DB::getPdo()->lastInsertId(),
+                        'type' => $data['type']
+                    ]);
+
+                    Credit_card::create([
+                        'payment_id' => DB::getPdo()->lastInsertId(),
+                        'card_number' => $data['card_number'],
+                        'card_name' => $data['card_name'],
+                        'expires_date' => $date,
+                        'security_number' => $data['security_number']
+                    ]);
+                    
+                    unset($data['submit']);
+                    return Redirect::to('subscription/card/signed'); 
                 }
-
-                Subscription::create([
-                    'plan_id' => $data['plan_id'],
-                    'address_id' => $data['address_id'],
-                    'client_id' => Auth::user()->id
-                ]);
-
-                Payment::create([
-                    'subscription_id' => DB::getPdo()->lastInsertId(),
-                    'type' => $data['type']
-                ]);
-
-                Credit_card::create([
-                    'payment_id' => DB::getPdo()->lastInsertId(),
-                    'card_number' => $data['card_number'],
-                    'card_name' => $data['card_name'],
-                    'expires_date' => $date,
-                    'security_number' => $data['security_number']
-                ]);
-                
-
-                return view('completed_transaction')->with(['charge_code' => NULL]);        
+                return view('completed_transaction')->with(['charge_code' => NULL]); 
             }
             return redirect()->route('login');   
     }
@@ -109,6 +117,8 @@ class SubscriptionController extends Controller
     {
         if (Auth::check()) {
             $data = $request->all();
+            if(isset($data['submit'])){
+                unset($data['submit']);
             $charge_code = '23790.50400 42000.624231 07008.109204 4 82990000019900';
 
             Subscription::create([
@@ -128,10 +138,13 @@ class SubscriptionController extends Controller
                 'payer_name' => $data['payer_name']
             ]);
 
-            return view('completed_transaction')->with(['charge_code' => '23790.50400 42000.624231 07008.109204 4 82990000019900']);
+            unset($data['submit']);
+            return Redirect::to('subscription/charge/signed');
         }
-        return redirect()->route('login');
+        return view('completed_transaction')->with(['charge_code' => NULL]); 
     }
+    return redirect()->route('login');   
+}
 
 
 
@@ -146,15 +159,42 @@ class SubscriptionController extends Controller
         //
     }
 
+    public function indexSignedCharge()
+    {
+        return view("completed_transaction")->with(['charge_code' => '23790.50400 42000.624231 07008.109204 4 82990000019900']);;
+    }
+
+    public function indexSignedCard()
+    {
+        return view("completed_transaction")->with(['charge_code' => null]);;
+    }
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Request $request)
     {
-        
+        $data =  $request->all();
+        if (Auth::check()) {
+            $data = DB::table('subscriptions')
+                ->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')
+                ->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')
+                ->join('payments', 'payments.subscription_id', '=', 'subscriptions.subscription_id')
+                ->leftjoin('charges', 'payments.payment_id', '=', 'charges.payment_id') 
+                ->leftjoin('credit_cards', 'payments.payment_id', '=', 'credit_cards.payment_id')
+                ->where('subscriptions.client_id', '=',  Auth::user()->id)->where('subscriptions.subscription_id', '=', $data['subscription_id'])->get();
+
+
+                foreach ($data as $subscription)
+                {
+                    $subscription->created_at = date('d', strtotime($subscription->created_at));
+                }
+
+            return view('edit_subscription')->with(['subscriptions' => $data]);
+        }
+        return redirect()->route('login');
     }
 
     /**

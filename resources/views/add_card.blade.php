@@ -37,7 +37,7 @@ $(document).ready(function () {
         <input hidden name="address_id" value="{{ $address_id }}">
         <input hidden type="text" name="security_number-typed" id="security_number-typed">
         <input hidden name="type" value="2">
-        <input type="submit" value="Finalizar compra">
+        <input type="submit" name="submit" value="Finalizar compra">
 
     <form>      
 
