@@ -1,7 +1,7 @@
 .paymentBody {
     flex: 1 1 auto;
     width: 100%;
-    background-color: lightgray;
+    background-color: #FCE4F0;
     display: flex;
     flex-direction: column;
     align-content: center;
