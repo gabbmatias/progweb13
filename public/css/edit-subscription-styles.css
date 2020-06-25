@@ -128,12 +128,12 @@
 .cancelar {
     background-color: #e54161!important;
     border: 1px solid #e54161!important;
-    color: #fce4f0!important;
+    color: #fce4fff0!important;
 }
 
 .cancelar:hover{
     color: #e54161!important;
-    background-color: #fce4f0 !important;
+    background-color: #fff !important;
 }
 
 
