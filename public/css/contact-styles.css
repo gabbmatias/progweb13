@@ -1,85 +1,101 @@
 .body {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .container-body-all {
-  width: 100%;
-  text-align: center;
-  background-image: url('/img/contact-background.png');
-  background-size: 100% 100%;
-  background-color: #FCE4F0;
-}  
+    width: 100%;
+    text-align: center;
+    background-image: url("/img/contact-background.png");
+    background-size: 100% 100%;
+    background-color: #fce4f0;
+}
 
 .boxes {
-  height: 95vh;
-  display: flex;
-  vertical-align: middle;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  
+    height: 95vh;
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .box-blured {
-  width: 34%;
-  height: 42%;
-  max-height: 400px;
-  text-align: center;
-  background: rgba(107, 107, 107, 0.15);
-  box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
-  backdrop-filter: blur(17px);
-  border-radius: 15px;
+    width: 34%;
+    height: 42%;
+    max-height: 400px;
+    text-align: center;
+    background: rgba(107, 107, 107, 0.15);
+    box-shadow: 0px 4px 4px rgba(122, 119, 255, 0.05);
+    backdrop-filter: blur(17px);
+    border-radius: 15px;
 }
 
-.box-title{
-  margin-top: 5%;
-    
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: normal;
-  font-size: 42px;
-  line-height: 22px;
-  font-weight: 600;
-  text-align: center;
-  
-  color: #E54161;
+.box-title {
+    margin-top: 5%;
+
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
+    text-align: center;
+
+    color: #e54161;
 }
-    
-.box-message-contact{
-  margin-top: 12%;
-  margin-left: 10%;
-  width: 80%;
-   
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 20px;
-  text-align: left;
-   
-  color: #ffffff;
-}      
+
+.box-message-contact {
+    margin-top: 12%;
+    margin-left: 10%;
+    width: 80%;
+
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: left;
+
+    color: #ffffff;
+}
 
 .container {
-  margin-top: 5%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  
+    margin-top: 5%;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    font-style: normal;
+    font-weight: normal;
 }
 
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px; 
-  box-sizing: border-box;
-  margin-top: 1%;
-  margin-bottom: 5px;
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 5px;
 }
 
-input[type=submit] {
+input[type="submit"] {
+    background-color: #e54161;
+    color: #fce4f0;
+    border: 1px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+input[type="submit"] action {
   background-color: #e54161;
-  color: #ffffff;
+  color: #fce4f0;
+  border: 1px solid #e54161 !important;
   padding: 8px 20px;
   border: none;
   border-radius: 10px;
@@ -88,20 +104,18 @@ input[type=submit] {
   margin-top: 2%;
 }
 
-input[type=submit]:hover {
-    background: #f2f2f2;
-    color: #e54161;
-    text-decoration: none;
+input[type="submit"]:hover {
+    color: #e54161 !important;
+    background-color: #fff;
 }
 
-@media screen and (max-width:600px){
-  div.boxes{
-    flex-direction: column;
-  }
+@media screen and (max-width: 600px) {
+    div.boxes {
+        flex-direction: column;
+    }
 
-  div.box-blured{
-    width: 85%;
-    height: 38%;
-  }
-
+    div.box-blured {
+        width: 85%;
+        height: 38%;
+    }
 }

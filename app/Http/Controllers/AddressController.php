@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Address;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AddressController extends Controller
 {
@@ -71,8 +72,24 @@ class AddressController extends Controller
     {
     }
 
+    public function checkPlan($plan_id)
+    {
+       $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
+       
+       foreach ($check as $subs)
+        if($subs->plan_id == $plan_id)
+            return true;
+        return false;
+    }
+
     public function selectAddress($id)
     {
+        if($this->checkPlan($id)){
+            $plan = Plan::all();
+            $error = 'Olá, você ja possui este plano. Por favor, selecione outro.';
+            return view('select_plans')->with(['error' => $error, 'plans' => $plan]);
+        }
+
         session()->put('back_url', "{$_SERVER['REQUEST_URI']}");
         if(Auth::check()){
             $addresses = Address::where('client_id', Auth::user()->id)->get();

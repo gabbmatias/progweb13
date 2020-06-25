@@ -69,7 +69,6 @@ class SubscriptionController extends Controller
     {
         if (Auth::check()) {
             $data = $request->all();
-            if($this->checkPlan($data['plan_id'])){
                 
                 $date = $data['expires_date'];
                 $date = explode('/', $date);
@@ -101,61 +100,40 @@ class SubscriptionController extends Controller
                 ]);
                 
 
-                echo 'plano criado';   
-                return; 
+                return view('completed_transaction')->with(['charge_code' => NULL]);        
             }
-
-            echo 'plano existente';
-            return;
-        }
-        return redirect()->route('login');
+            return redirect()->route('login');   
     }
 
     public function storeCharge(Request $request)
     {
         if (Auth::check()) {
             $data = $request->all();
-            if($this->checkPlan($data['plan_id'])){
+            $charge_code = '23790.50400 42000.624231 07008.109204 4 82990000019900';
 
-                $charge_code = '23790.50400 42000.624231 07008.109204 4 82990000019900';
+            Subscription::create([
+                'plan_id' => $data['plan_id'],
+                'address_id' => $data['address_id'],
+                'client_id' => Auth::user()->id
+            ]);
 
-                Subscription::create([
-                    'plan_id' => $data['plan_id'],
-                    'address_id' => $data['address_id'],
-                    'client_id' => Auth::user()->id
-                ]);
+            Payment::create([
+                'subscription_id' => DB::getPdo()->lastInsertId(),
+                'type' => $data['type']
+            ]);
 
-                Payment::create([
-                    'subscription_id' => DB::getPdo()->lastInsertId(),
-                    'type' => $data['type']
-                ]);
+            Charge::create([
+                'payment_id' => DB::getPdo()->lastInsertId(),
+                'charge_code' => $charge_code,
+                'payer_name' => $data['payer_name']
+            ]);
 
-                Charge::create([
-                    'payment_id' => DB::getPdo()->lastInsertId(),
-                    'charge_code' => $charge_code,
-                    'payer_name' => $data['payer_name']
-                ]);
-
-                echo 'plano criado';   
-                return; 
-            }
-
-            return view("compra_finalizada");
+            return view('completed_transaction')->with(['charge_code' => '23790.50400 42000.624231 07008.109204 4 82990000019900']);
         }
         return redirect()->route('login');
     }
 
 
-
-    public function checkPlan($plan_id)
-    {
-       $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
-       
-       foreach ($check as $subs)
-        if($subs->plan_id == $plan_id)
-            return false;
-        return true;
-    }
 
     /**
      * Display the specified resource.
