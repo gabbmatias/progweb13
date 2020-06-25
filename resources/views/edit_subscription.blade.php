@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="actionsAddress">
-                    <a href="{{ route('subscription.edit.plan') }}" class="selecionar">Editar</a>                
+                    <a href="{{ route('subscription.edit.plan') }}" class="selecionar">Fazer upgrade ou downgrade</a>                
                 </div>
             </div>
         </div>
@@ -55,9 +55,12 @@
         </div>
     </div>
     
-    <form class="subscriptionForm" action="/">
+    <form class="subscriptionForm">
         <div class="navegacaoSuncription">
-            <input type=submit class="cancelar" value="Cancelar">
+            <input type=submit class="confirmar" formaction="#" value="Atualizar plano.">
+        </div>
+        <div class="navegacaoSuncription">
+            <input type=submit class="cancelar" formaction="#" value="Cancelar">
         </div>
     </form>
 </div>

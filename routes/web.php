@@ -19,6 +19,7 @@ Route::get('/profile', 'ProfileController@index')->name("profile");
 
 Route::post('payment/select', 'PaymentController@index')->name('payment.select');
 Route::post('charge/select', 'ChargeController@selectCharge')->name('charge.select');
+Route::get('charge/create', 'ChargeController@create')->name('charge.create');
 
 
 

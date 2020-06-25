@@ -37,7 +37,7 @@ class PlansPageController extends Controller
         {
             $plans = Plan::all();
             session()->forget('back_url_plan');
-            return view('select_plans')->with(['plans' => $plans]);
+            return view('select_plans')->with(['plans' => $plans, 'error' => null]);
         }
         return redirect()->route("login");
     }

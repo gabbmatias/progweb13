@@ -28,6 +28,7 @@ class ChargeController extends Controller
      */
     public function create()
     {
+        sleep(2);
         header("Content-type: application/pdf");
         header("Content-Disposition: attachment; filename=boleto.pdf");
     

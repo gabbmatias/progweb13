@@ -7,12 +7,16 @@
     </div>
     <a class="selectPlansTitle">Selecione um plano</a>
 
+    @if ($error != null)
+        <a>{{ $error }}</a>
+    @endif
+
     <div class="plansBoxes">
         @foreach ($plans as $plan)
             
             <div class="boxPlano">
                 <div class="box-plano-titulo">
-                    <a>{{ $plan->plan_name}}</a>
+                    <a>{{ $plan->plan_name }}</a>
                 </div>
                 <div class="box-plano-text">
                     <a> {{ $plan->description }} <br><strong>Apenas {{ $plan->price}}!</strong></a>
