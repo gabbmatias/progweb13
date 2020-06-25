@@ -2,7 +2,7 @@
     background: rgba(22, 22, 22, 0.9);
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-        flex: 0 1 auto;
+    flex: 0 1 auto;
 }
 
 .navbar-logo {
@@ -11,7 +11,7 @@
     padding: 0px 0px !important;
     margin-left: 2%;
     margin-right: 2%;
-    height: 53px;
+    height: 56px;
 }
 
 .navbar-logo:hover {
@@ -48,15 +48,16 @@
 }
 
 .topnav .icon {
-  display: none;
+    display: none;
 }
 
-.top-nav-dropdown-content a{
+.top-nav-dropdown-content a {
     text-align: left;
 }
 
-.top-nav-dropdown-content a:hover{
+.top-nav-dropdown-content a:hover {
     width: 100%;
+    height: 53px !important;
 }
 
 @media screen and (max-width: 600px) {
