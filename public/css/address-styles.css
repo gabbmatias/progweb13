@@ -76,24 +76,12 @@
     color: #e54161!important;
 }
 
-@media screen and (max-width: 600px){
-    .addressTitle{
-        padding-top: 10%;
-        padding-bottom: 10%;
-        line-height: 90%;
-    }
-    .addressFields{
-        width: 80vw;
-    }
-}
-
 .enderecosBoxesExample{
     margin-top: 12%;
     width: 70vw;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    align-content: flex-start;
+    align-content: center;
     justify-content: space-around;
 
 }
@@ -151,8 +139,19 @@
 }
 
 @media screen and (max-width: 600px){
+    .addressTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+        line-height: 90%;
+    }
+    .addressFields{
+        width: 80vw;
+    }
     .enderecosBoxesExample{
         width: 98vw;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
     }
     .boxEnderecoExample{
         width: 60%;
