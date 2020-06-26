@@ -53,7 +53,28 @@
     font-size: 80px;
     margin-top: 2%;
     font-family: Cookie;
-ericc}
+}
+.retornarHome {
+    margin-top: -2%;
+    font-size: 15px;
+    color: #e54161;
+}
+
+.retornarHome:hover {
+    text-decoration: none;
+    color: #f66d9b;
+
+}
+.retornarHome {
+    margin-top: -2%;
+    font-size: 15px;
+    color: #e54161;
+}
+
+.retornarHome:hover {
+    text-decoration: none;
+    color: #f66d9b;
+}
 
 @media screen and (max-width: 600px){
     .compraFinalizdaBody p{
@@ -67,6 +88,10 @@ ericc}
 
     .confirmationTitle h6{
         font-size: 20%;
+    }
+
+    .retornarHome{
+        margin-top: -10%;
     }
 
 }
