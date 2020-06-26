@@ -13,18 +13,18 @@
             <div class="box-plano-text">
                 <a> {{ $plan->description}}<br><strong>Apenas R$ {{ $plan->price }}!</strong></a>
             </div>
-            <div class="actions">
+            <div class="actionsPlans">
 
                 <form id="update-form" action="{{ route('plan.edit') }}" method="POST">
                     @csrf
                     <input hidden name="plan_id" value="{{ $plan->plan_id }}">
-                    <input type="submit" class="action" name="submit" value="Editar">
+                    <input type="submit" class="actionViewPlan" name="submit" value="Editar">
                 </form>
                     
                 <form id="update-form" action="{{ route('plan.destroy') }}" method="POST">
                     @csrf
                     <input hidden name="plan_id" value="{{ $plan->plan_id }}">
-                    <input type="submit" class="action" name="submit" value="Remover">
+                    <input type="submit" class="actionViewPlan" name="submit" value="Remover">
                 </form>
             </div>
         </div>

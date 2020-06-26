@@ -12,7 +12,7 @@
 }
 
 .confirmationTitle{
-    width: 40vw;
+    width: 100vw;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -31,20 +31,21 @@
     font-size: 45px;
 }
 
-.compraFinalizdaBody a {
-    font-size: 40px;
-    margin-top: 2%;
-    background-color: #E54161;
-    border: 3px solid #E54161;
+.downloadBoleto a{
+    background-color: #e54161 !important;
     color: #fff;
-    border-radius: 20px;
-    padding: 1px 2px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px!important;
+    cursor: pointer;
+    font-size: 30%;
+    margin-top: 2%;
 }
 
-.compraFinalizdaBody a:hover {
-    background-color: #fff;
-    color: #E54161;
+.downloadBoleto a:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
     text-decoration: none;
 }
 

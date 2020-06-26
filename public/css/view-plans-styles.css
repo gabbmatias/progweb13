@@ -27,7 +27,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .boxViewPlano{
@@ -53,7 +53,16 @@
     color: rgba(22, 22, 22, 0.9);
 }
 
-.action{
+.actionsPlans{
+    margin-top: 2%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.actionViewPlan{
   background-color: rgba(107, 107, 107, 0)!important;
   color: #E54161!important;
   padding: 0px 0px !important;
@@ -63,8 +72,9 @@
   margin-top: 2%;
 }
 
-.action:hover {
-    color: #E54161 !important;
+.actionViewPlan:hover {
+    color: white !important;
+    text-decoration: none;
 }
 
 .addPlan{

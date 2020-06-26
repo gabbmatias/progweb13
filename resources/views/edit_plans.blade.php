@@ -12,7 +12,7 @@
             <input required type="text" name="price" id="price" value="{{ $plan->price }}">
             <textarea required type="text" name="description" id="Description"
                 style="height:100px">{{ $plan->description }}</textarea>
-            <input type="submit" value="Atualizar Plano">
+            <input type="submit" class="atualizarPlano" value="Atualizar Plano">
         <form>
 
     @endforeach

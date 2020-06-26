@@ -29,13 +29,13 @@
                     <form method="POST" action="{{ route('subscription.edit') }}">
                         @csrf
                         <input hidden name="subscription_id" value="{{ $subscription->subscription_id }}">
-                        <input class="action" type="submit" value="Editar"> 
+                        <input class="actionViewSubscription" type="submit" value="Editar"> 
                     </form>
 
                     <form method="POST" action="{{ route('subscription.destroy')}}">
                         @csrf
                         <input hidden name="subscription_id" value="{{ $subscription->subscription_id }}">
-                        <input class="action" type="submit" onclick="confirmation()" value="Deletar"> 
+                        <input class="actionViewSubscription" type="submit" onclick="confirmation()" value="Deletar"> 
                     </form>
                                  
                 </div>
