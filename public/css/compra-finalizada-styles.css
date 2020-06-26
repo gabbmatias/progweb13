@@ -20,6 +20,36 @@
     align-items: center;
     font-family: Cookie;
     margin-bottom: 2px;
-    margin-top: 10%;
     font-size: 780%;
+}
+
+.confirmationTitle h5 {
+    font-size: 40px;
+}
+
+.confirmationTitle h6 {
+    font-size: 45px;
+}
+
+.compraFinalizdaBody a {
+    font-size: 40px;
+    margin-top: 2%;
+    background-color: #E54161;
+    border: 3px solid #E54161;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 2px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.compraFinalizdaBody a:hover {
+    background-color: #fff;
+    color: #E54161;
+    text-decoration: none;
+}
+
+.compraFinalizdaBody p {
+    font-size: 80px;
+    margin-top: 2%;
+    font-family: Cookie;
 }
