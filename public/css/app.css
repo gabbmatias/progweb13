@@ -1279,6 +1279,11 @@ pre code {
         max-width: 100%
     }
 
+    .col-md-12 a:hover {
+        text-decoration: none;
+        color: #e54161;
+    }
+
     .order-md-first {
         order: -1
     }

@@ -99,9 +99,6 @@
     justify-content: center;
 }
 
-
-
-
 .subscriptionForm{
     width: 30vw;
     text-align: center;
@@ -125,12 +122,61 @@
     margin-right: 20%;
 }
 
+.upgradeDowngrade {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.upgradeDowngrade:hover{
+    color: #e54161!important;
+    background-color: #fff !important;
+}
+
+.editarCartao {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.editarCartao:hover {
+    color: #e54161!important;
+    background-color: #fff !important;
+}
+
+.actionsAddress {
+    margin-top: 30%!important;
+}
+
+.editarEndereco {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+}
+
+.editarEndereco:hover {
+    color: #e54161!important;
+    background-color: #fff !important;
+    text-decoration: none;
+}
+
 .cancelar {
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
     padding: 8px 20px;
-    border: none;
     border-radius: 20px;
     cursor: pointer;
     font-size: 120%;
@@ -141,8 +187,6 @@
     color: #e54161!important;
     background-color: #fff !important;
 }
-
-
 
 @media screen and (max-width: 600px){
     .plansBoxes{
