@@ -40,6 +40,22 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="birthDate" class="col-md-4 col-form-label text-md-left">{{ __('Data de Nascimento') }}</label>
+
+                            <div class="col-md-12">
+                                <input id="birthDate" type="text" class="form-control" name="birth_date" value="{{ Auth::user()->birth_date }}" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="phoneNumber" class="col-md-4 col-form-label text-md-left">{{ __('Telefone') }}</label>
+
+                            <div class="col-md-12">
+                                <input id="phoneNumber" type="text" class="form-control" name="phone_number" value="{{ Auth::user()->phone_number }}" disabled>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <div class="col-md-12">
                                 <a href="{{ route('profile.password') }}">Alterar senha</a>
                             </div>
