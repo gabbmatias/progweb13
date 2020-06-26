@@ -80,6 +80,11 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+Route::get("subscriptio/edit/address", function()
+{
+    return view('edit_subscription_address');
+})->name("edit.subscription.address");
+
 
 
 

@@ -34,8 +34,13 @@
                         strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) ?></a>
                 </div>
 
+<<<<<<< HEAD
                 <div class="actionsEditSubscriptions">
                     <a href="{{ route('address.edit') }}" class="editarEnderecoPlano">Editar</a>
+=======
+                <div class="actionsAddress">
+                    <a href="{{ route('edit.subscription.address')}}" class="editarEndereco">Editar</a>
+>>>>>>> fda3736770017449648994c44b37955ba0732e53
                 </div>
             </div>
             <div class="boxEditSubscription">

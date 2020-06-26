@@ -3,11 +3,11 @@
 @section('content')
 
 <script>
-    function confirmation(){
-        if(confirm('Tem certeza que deseja deletar sua conta? Não será possível recupera-la'))
-        return true; 
-        else 
-        event.preventDefault()
+    function confirmation() {
+        if (confirm('Tem certeza que deseja deletar sua conta? Não será possível recupera-la'))
+            return true;
+        else
+            event.preventDefault()
         return false
     }
 </script>
@@ -20,9 +20,9 @@
                 <div class="card-header">Perfil</div>
 
                 <div class="card-body">
-                <form method="POST" action="{{ route('profile.edit.update') }}">
-                    @csrf
-                    <div class="col-md-12">
+                    <form method="POST" action="{{ route('profile.edit.update') }}">
+                        @csrf
+                        <div class="col-md-12">
 
                             <div class="form-group row">
                                 <label for="name" class="col-md-4 col-form-label text-md-left">{{ __('Nome') }}</label>
@@ -49,13 +49,29 @@
                             </div>
 
                             <div class="form-group row">
+                                <label for="birthDate" class="col-md-4 col-form-label text-md-left">{{ __('Data de Nascimento') }}</label>
+
+                                <div class="col-md-12">
+                                    <input id="birthDate" type="text" class="form-control" name="birth_date" value="{{ Auth::user()->birth_date }}" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="phoneNumber" class="col-md-4 col-form-label text-md-left">{{ __('Telefone') }}</label>
+
+                                <div class="col-md-12">
+                                    <input id="phoneNumber" type="text" class="form-control" name="phone_number" value="{{ Auth::user()->phone_number }}" disabled>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
 
                                 <div class="col-md-12">
                                     <a href="{{ route('profileemail') }}">Alterar e-mail</a>
                                 </div>
 
                             </div>
-                            
+
                             <div class="form-group row">
 
                                 <div class="col-md-12">
@@ -70,19 +86,19 @@
                                         {{ __('Salvar perfil') }}
                                     </button>
                                 </div>
-                        </form>
+                    </form>
 
-                        <div class="col-sm-auto">
-                            <a href="{{ route('profile') }}" class="btn btn-outline-secondary">
-                                {{ __('Cancelar') }}
-                            </a>
-                        </div>
+                    <div class="col-sm-auto">
+                        <a href="{{ route('profile') }}" class="btn btn-outline-secondary">
+                            {{ __('Cancelar') }}
+                        </a>
                     </div>
-
                 </div>
+
             </div>
         </div>
     </div>
+</div>
 </div>
 </div>
 
