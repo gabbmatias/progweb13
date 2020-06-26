@@ -70,7 +70,7 @@
                             <label for="phoneNumber" class="col-md-4 col-form-label text-md-right">{{ __('Telefone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="phoneNumber" type="phone" class="form-control @error('phone') is-invalid @enderror" name="phone_number" value="{{ old('phone') }}" required autocomplete="phone">
+                                <input id="phoneNumber" type="phoneNumber" class="form-control @error('phone') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required autocomplete="phoneNumber">
 
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
@@ -84,7 +84,7 @@
                             <label for="birthDate" class="col-md-4 col-form-label text-md-right">{{ __('Data de Nascimento') }}</label>
 
                             <div class="col-md-6">
-                                <input id="birthDate" type="birth" class="form-control @error('birth') is-invalid @enderror" name="birth_date" value="{{ old('birth') }}" required autocomplete="birth">
+                                <input id="birthDate" type="birthDate" class="form-control @error('birth') is-invalid @enderror" name="birth_date" value="{{ old('birth_date') }}" required autocomplete="birthDate">
 
                                 @error('birth')
                                     <span class="invalid-feedback" role="alert">
