@@ -52,12 +52,12 @@
 
 .btn-signUp {
     border-radius: 20px;
-    color: #ffffff;
+    color: #fff;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-    font-size: 140%;
+    font-size: 25px;
     background-color: #e54161;
-    text-decoration: none;
+    border: 3px solid #e54161;
     display: inline-block;
     cursor: pointer;
     text-align: center;

@@ -3003,13 +3003,13 @@ fieldset:disabled a.btn {
 .btn-outline-primary {
     color: #fff;
     background-color: #e54161;
-    border-color: #e54161
+    border: 3px solid #e54161;
+    border-radius: 20px;
 }
 
 .btn-outline-primary:hover {
     color: #e54161;
     background-color: #fff;
-    border-color: #e54161
 }
 
 .btn-outline-primary.focus,
@@ -3040,7 +3040,8 @@ fieldset:disabled a.btn {
 .btn-outline-secondary {
     color: #fff;
     background-color: #e54161;
-    border-color: #e54161;
+    border: 3px solid #e54161;
+    border-radius: 20px;
 }
 
 .btn-outline-secondary:hover {
@@ -3077,7 +3078,8 @@ fieldset:disabled a.btn {
 .btn-outline-success {
     color: #fff;
     background-color: #38c172;
-    border-color: #38c172
+    border: 3px solid #38c172 ;
+    border-radius: 20px;
 }
 
 .btn-outline-success:hover {
@@ -4954,7 +4956,7 @@ input[type=submit].btn-block {
 .card-body {
     flex: 1 1 auto;
     min-height: 1px;
-    background-color: #e54162b2;
+    background-color: #e9577496;
     color: #fff;
     padding: 1.25rem
 }
@@ -4983,7 +4985,7 @@ input[type=submit].btn-block {
 .card-header {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
-    background-color: #e54161;
+    background-color: rgba(22, 22, 22, 0.9);
     color: #fff;
     font-size: 20px;
     border-bottom: 1px solid rgba(0, 0, 0, .125)
