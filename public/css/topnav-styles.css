@@ -25,7 +25,7 @@
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -33,7 +33,7 @@
 }
 
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: #fff;
     color: #e54161;
     height: 56px !important;
 }
@@ -53,10 +53,12 @@
 
 .top-nav-dropdown-content a {
     text-align: left;
+    cursor: pointer;
 }
 
 .top-nav-dropdown-content a:hover {
     width: 100%;
+    cursor: pointer;
     height: 53px !important;
 }
 

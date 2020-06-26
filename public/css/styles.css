@@ -23,7 +23,7 @@ body {
 
 .top-nav-dropbtn {
     background-color: transparent;
-    color: white;
+    color: #fff;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -48,7 +48,8 @@ body {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-    color: white !important;
+    cursor: pointer;
+    color: #fff !important;
 }
 
 .top-nav-dropdown-content a:hover {
