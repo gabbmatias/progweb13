@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="actionsAddress">
-                    <a href="#" class="editarEndereco">Editar</a>
+                    <a href="{{ route('edit.subscription.address')}}" class="editarEndereco">Editar</a>
                 </div>
             </div>
         </div>
