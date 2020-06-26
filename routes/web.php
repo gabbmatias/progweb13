@@ -46,6 +46,8 @@ Route::resource('address', 'AddressController', ['except' => ['destroy', 'update
 
 
 Route::post('subscription/address/update', 'SubscriptionController@updateAddress')->name('subscription.address.update');
+Route::post('subscription/payment/charge', 'ChargeController@indexCharge')->name('subscription.edit.payment.charge');
+Route::post('subscription/payment/credit_card', 'Credit_cardController@indexCredit_card')->name('subscription.edit.payment.credit_card');
 Route::post('subscription/edit/address', 'AddressController@editAddress')->name("subscription.edit.address");
 Route::post('subscription/edit/plan', 'PlansPageController@editPlan')->name('subscription.edit.plan');
 Route::post('subscription/edit/update', 'SubscriptionController@updatePlan')->name('subscription.plan.update');
