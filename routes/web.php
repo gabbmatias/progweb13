@@ -82,6 +82,16 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+Route::get("/subscription/edit/payment/credit_card", function()
+{
+    return view('edit_subscription_payment_credit_card');
+})->name("edit.credit_card");
+
+Route::get("/subscription/edit/payment/charge", function()
+{
+    return view('edit_subscription_payment_charge');
+})->name("edit.charge");
+
 
 Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
 
