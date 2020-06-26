@@ -54,3 +54,19 @@
     margin-top: 2%;
     font-family: Cookie;
 }
+
+@media screen and (max-width: 600px){
+    .compraFinalizdaBody p{
+        margin-top: 13%;
+        font-size: 350%;
+    }
+
+    .confirmationTitle h5{
+        font-size: 25%;
+    }
+
+    .confirmationTitle h6{
+        font-size: 20%;
+    }
+
+}
