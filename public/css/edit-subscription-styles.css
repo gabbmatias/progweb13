@@ -137,6 +137,23 @@
     background-color: #fff !important;
 }
 
+.editarEndereco {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.editarEndereco:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
+}
+
 .editarCartao {
     background-color: #e54161 !important;
     color: #fff;
