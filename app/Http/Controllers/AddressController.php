@@ -140,6 +140,16 @@ class AddressController extends Controller
         return redirect()->route('login');
     }
 
+    public function editAddress(Request $request)
+    {
+        if (Auth::check()) {
+            $addresses = Address::where('client_id', Auth::user()->id)->get();
+            $data = $request->all();            
+            return view('edit_subscription_address')->with(['subscription_id' => $data['subscription_id'], 'addresses' => $addresses]);   
+        }
+        return redirect()->route('login');
+    }
+
     /**
      * Remove the specified resource from storage.
      *

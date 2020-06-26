@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<?php $i = 0;?>
 <div class="selectPlansBody">
     <a class="selectPlansTitle">Selecione um plano</a>
     @if (isset($error)!= null)
@@ -22,7 +23,7 @@
 
             <div class="actionsAddress">
 
-                <form class="plansForm" onsubmit="confirmation()" method="POST" action="{{ route('subscription.plan.update') }}">
+                <form class="plansForm" onsubmit="confirmation{{ $i }}()" method="POST" action="{{ route('subscription.plan.update') }}">
                     @csrf
                     <div class="navegacao">
                         <input hidden type="text" name="plan_id" value="{{ $plan->plan_id }}">
@@ -34,7 +35,7 @@
         </div>
 
         <script>
-            function confirmation(){
+            function confirmation{{ $i++ }}(){
                 if(confirm('Você tem certeza que deseja alterar seu plano para {{ $plan->plan_name }}?'))
                 return true; 
                 else 

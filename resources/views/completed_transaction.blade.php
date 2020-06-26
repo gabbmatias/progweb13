@@ -15,5 +15,6 @@
             </div>
         @endif
     </div>
+    <a href="#" class="retornarHome">Me leve à pagina príncipal</a>
 </div>
 @endsection

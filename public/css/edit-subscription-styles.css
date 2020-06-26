@@ -6,10 +6,11 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    overflow: auto!important;
 }
 
 .selectSubscriptionTitle{
-    padding-top: 4%;
+    padding-top: 6%;
     padding-bottom: 3%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: normal;
@@ -18,49 +19,39 @@
     font-weight: 600;
     color: #E54161!important;
     text-align: center;
-    margin-right: 4%;
+    
 }
 
-.rowBoxes{
+.editSubscriptionBoxes{
+    margin-top: 3%;
+    width: 70vw;
     display: flex;
     flex-direction: row;
     align-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
 
-.subscriptionBoxes{
-    width: 23vw;
-    height: 35vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-content: flex-start;
-    justify-content: space-between;
-}
-
-.boxSubscriptionPlan{
-    width: 75%;
+.boxEditSubscription{
+    width: 26%;
     height: 31vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-content: space-around;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-.box-subscription-titulo-plan{
-    margin-top: 15%;
-    color: #E54161!important;
-    font-size: 22px;
-}
-
-.box-subscription-text-plan{
-    margin-top: 3%;
-    width: 100%;
-    color: rgba(22, 22, 22, 0.9);
-    line-height: 175%;
+.box-subscription-content{
+    height: 90%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .box-subscription-titulo{
@@ -72,31 +63,6 @@
 .box-subscription-text{
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
-}
-
-
-.boxSubscriptionEndereco{
-    width: 75%;
-    height: 31vh;
-    text-align: center;
-    background: rgba(107, 107, 107, 0.15);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
-.boxSubscriptionCard{
-    width: 100%;
-    height: 31vh;
-    text-align: center;
-    background: rgba(107, 107, 107, 0.15);
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .subscriptionForm{
@@ -112,14 +78,9 @@
     
 }
 
-.navegacaoSuncription {
-    width: 100%;
-    padding-top: 7vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-right: 20%;
+.navegacaoSubscription {
+    padding-top: 5vh;
+
 }
 
 .upgradeDowngrade {
@@ -129,7 +90,7 @@
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 120%;
+    font-size: 100%;
 }
 
 .upgradeDowngrade:hover{
@@ -137,23 +98,35 @@
     background-color: #fff !important;
 }
 
-.editarCartao {
+.editarCartaoPlano {
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
     padding: 8px 15px;
     border-radius: 20px;
     cursor: pointer;
-    font-size: 120%;
+    font-size: 100%;
 }
 
-.editarCartao:hover {
+.editarCartaoPlano:hover {
     color: #e54161!important;
     background-color: #fff !important;
 }
 
-.actionsAddress {
-    margin-top: 30%!important;
+.editarEnderecoPlano {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.editarEnderecoPlano:hover {
+    color: #e54161!important;
+    background-color: #fff !important;
+    text-decoration: none;
 }
 
 .cancelar {
@@ -173,19 +146,17 @@
 }
 
 @media screen and (max-width: 600px){
-    .plansBoxes{
+    .editSubscriptionBoxes{
+        margin-top: 5%;
         width: 98vw;
-        height: 60vh;
-    }
-    .boxPlano{
-        width: 49%;
-        height: 48%;
-    }
-    .plansForm{
-        width: 80vw;
-    }
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
 
-    .navegacao{
-        padding-top: 1vh;
+    }
+    .boxEditSubscription{
+        margin-top: 4%;
+        width: 85%;
+        height: 30vh;
     }
 }

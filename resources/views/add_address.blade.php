@@ -9,7 +9,7 @@
             <input required type="text" name="client_id" id="client_id" value="{{ Auth::user()->id }}" hidden>
             <input required type="text" name="street" id="street" placeholder="Rua">
             <input required type="text" name="street_number" id="street_number" placeholder="Número">
-            <input required type="text" name="complement" id="complement" placeholder="Complemento">
+            <input type="text" name="complement" id="complement" placeholder="Complemento">
             <input required type="text" name="neighborhood" id="neighborhood" placeholder="Bairro">
             <input required type="text" name="cep" id="cep" placeholder="CEP">
             <input required type="text" name="city" id="city" placeholder="Cidade">
