@@ -38,7 +38,11 @@
                 </div>
 
                 <div class="actionsAddress">
-                    <a href="{{ route('edit.subscription.address')}}" class="editarEndereco">Editar</a>
+                    <form method="POST" action="{{ route('subscription.edit.address')}}">
+                        @csrf
+                        <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
+                        <input type="submit" class="editarEndereco" value="Editar">
+                    </form>
                 </div>
             </div>
         </div>

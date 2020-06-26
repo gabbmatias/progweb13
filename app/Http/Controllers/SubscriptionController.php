@@ -220,17 +220,20 @@ class SubscriptionController extends Controller
         return redirect()->route('login');
     }
 
-
     public function updateAddress(Request $request)
     {
         if (Auth::check()) {
+            $data = $request->all();
+            if($this->checkAddress($data['address_id'])){
+                $addresses = Address::where('client_id', Auth::user()->id)->get();
+                return view('edit_subscription_address')->with(['error' => 'Você selecionou o mesmo endereço. Por favor, selecione outro.', 
+                'subscription_id' => $data['subscription_id'], 'addresses' => $addresses]); 
+           }
+            $address = Subscription::where('subscription_id', $data['subscription_id'])->update(['address_id' => $data['address_id']]);
 
-                $data = $request->all();
-                $plan = Subscription::where('subscription_id', $data['subscription_id'])->update(['address_id' => $data['address_id']]);
-
-                return redirect()->route('subscription.index');
-        }
-        return redirect()->route('login');
+            return redirect()->route('subscription.index');
+    }
+    return redirect()->route('login');
     }
 
 
@@ -256,6 +259,16 @@ class SubscriptionController extends Controller
        
        foreach ($check as $subs)
         if($subs->plan_id == $plan_id)
+            return true;
+        return false;
+    }
+
+    public function checkAddress($address_id)
+    {
+       $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->where('subscriptions.client_id', '=', Auth::user()->id)->get();
+       
+       foreach ($check as $subs)
+        if($subs->address_id == $address_id)
             return true;
         return false;
     }
