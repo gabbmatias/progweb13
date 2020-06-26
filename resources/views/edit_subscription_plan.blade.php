@@ -3,7 +3,7 @@
 @section('content')
 <div class="selectPlansBody">
     <a class="selectPlansTitle">Selecione um plano</a>
-    @if ($error != null)
+    @if (isset($error)!= null)
         <a>{{ $error }}</a>
     @endif
 
