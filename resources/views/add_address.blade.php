@@ -16,7 +16,7 @@
             <input required type="text" name="state" id="state" placeholder="Estado">
             <input required type="text" name="country" id="country" placeholder="País">
 
-            <input type="submit" value="Cadastrar Endereço">
+            <input type="submit" class="atualizarEndereco" value="Cadastrar Endereço">
         </form>
     <img class="generic-background" src="/img/generic-background.png">
 </div>
