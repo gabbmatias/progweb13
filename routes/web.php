@@ -94,6 +94,11 @@ Route::get("/subscription/edit/payment/charge", function()
     return view('edit_subscription_payment_charge');
 })->name("edit.charge");
 
+Route::get("/subscription/edit/payment/charge/code", function()
+{
+    return view('edit_subscription_charge_code');
+})->name("edit.charge.code");
+
 
 Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
 
