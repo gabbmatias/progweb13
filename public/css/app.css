@@ -7496,7 +7496,8 @@ button.bg-dark:hover {
 }
 
 .justify-content-center {
-    justify-content: center !important
+    justify-content: center !important;
+    margin-top: -3%;
 }
 
 .justify-content-between {
