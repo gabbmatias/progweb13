@@ -2688,7 +2688,8 @@ fieldset:disabled a.btn {
 .btn-primary {
     color: #fff;
     background-color: #e54161;
-    border-color: #e54161
+    border: 3px solid #e54161;
+    border-radius: 20px;
 }
 
 .btn-primary.focus,
@@ -3300,12 +3301,12 @@ fieldset:disabled a.btn {
 
 .btn-link {
     font-weight: 400;
-    color: #3490dc;
-    text-decoration: none
+    color: #fff;
 }
 
 .btn-link:hover {
-    color: #1d68a7
+    color: #e54161;
+    text-decoration: none !important;
 }
 
 .btn-link.focus,
