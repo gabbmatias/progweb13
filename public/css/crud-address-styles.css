@@ -40,6 +40,41 @@
     margin-bottom: 2px;
 }
 
+.atualizarEndereco{
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.atualizarEndereco:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
+}
+
+.voltarEditarEndereco{
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 100%;
+    margin-top: 2%;
+}
+
+.voltarEditarEndereco:hover{
+    color: #e54161!important;
+    background-color: #fff !important;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 600px) {
     .addressFormTitle {
         padding-top: 10%;

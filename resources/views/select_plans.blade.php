@@ -22,16 +22,16 @@
                     <a> {{ $plan->description }} <br><strong>Apenas {{ $plan->price}}!</strong></a>
                 </div>
 
-                <div class="actionsAddress">
-                    <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="selecionar">Selecionar</a>                
+                <div class="actionSelectPlans">
+                    <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="selecionarPlano">Selecionar</a>                
                 </div>
             </div>
         @endforeach
         
     </div>
-    <form class="plansForm" action="/">
-        <div class="navegacao">
-            <input type=submit class="cancelar" value="Cancelar">
+    <form class="selectPlansForm" action="/">
+        <div class="navegacaoSelecionarPlano">
+            <input type=submit class="cancelarPlano" value="Cancelar">
         </div>
     </form>
 </div>

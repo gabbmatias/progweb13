@@ -80,7 +80,7 @@ textarea {
     margin-bottom: 5px;
 }
 
-input[type="submit"] {
+.enviar {
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
@@ -92,7 +92,7 @@ input[type="submit"] {
     margin-top: 2%;
 }
 
-input[type="submit"]:hover {
+.enviar:hover {
     color: #e54161 !important;
     background-color: #fff !important;
 }

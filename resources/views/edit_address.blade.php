@@ -17,13 +17,13 @@
         <input type="text" name="city" id="city" value="{{ $address->city }}">
         <input type="text" name="state" id="state" value="{{ $address->state }}">
         <input type="text" name="country" id="country" value="{{ $address->country }}">
-        <input type="submit" value="Atualizar Endereço">
+        <input type="submit" class="atualizarEndereco" value="Atualizar Endereço">
     </form>
 
     @if (session('back_url'))
     <form>
         <div class="navegacao">
-            <input type=submit class="voltar" value="Voltar"
+            <input type=submit class="voltarEditarEndereco" value="Voltar"
         formaction="{{ session('back_url') }}">
         </div>
     </form>

@@ -69,13 +69,6 @@
     
 }
 
-
-.voltar {
-    background-color: #fce4f0!important;
-    border: 1px solid #e54161!important;
-    color: #e54161!important;
-}
-
 .enderecosBoxesExample{
     margin-top: 12%;
     width: 70vw;
@@ -100,7 +93,7 @@
     
 }
 
-.actionsAddress{
+.actionsSelectAddress{
     margin-top: 10%;
     width: 90%;
     display: flex;
@@ -108,32 +101,29 @@
     justify-content: space-around;
 }
 
-.actionsAddress a{
-    color: #E54161!important;
-    text-decoration: none;
+.actionsSelectAddress input{
+    background-color: rgba(107, 107, 107, 0);
+    color: #e54161;
+    border: none!important;
+    cursor: pointer;
+    font-size: 130%;
+    margin-top: 2%;
 }
 
-.actionsAddress a:hover{
+.actionsSelectAddress input:hover{
     color: white!important;
-}
-
-.actionsAddress input:hover{
-    color: white!important;
-}
-
-.selecionar{
-    font-size: 140%;
 }
 
 .voltarAddress{
-    background-color: #e54161!important;
-    border: 1px solid #e54161!important;
-    color: #fce4f0!important;
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
     padding: 8px 20px;
-    border-radius: 10px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 120%;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .voltarAddress:hover{

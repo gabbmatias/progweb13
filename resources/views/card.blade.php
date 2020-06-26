@@ -94,8 +94,8 @@ $("form").on("click", "#doit", function () {
                     @endif
                     <input hidden name="plan_id" value="{{ $plan_id }}">
                     <input hidden name="address_id" value="{{ $address_id }}">
-                    <div class="navegacao">
-                        <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
+                    <div class="navegacaoCartao">
+                        <input type=submit class="voltarCartao" value="Voltar" formaction="{{ route('payment.select') }}">
                         @if ( $credit_cards != null )
                             <input type=submit name="submit" id="doit" value="Finalizar Pagamento" onclick="confirmation()" formaction="{{ route('subscription.store') }}">
                         @endif

@@ -39,12 +39,12 @@
     height: 12vh;
     max-height: 400px;
     background: #E54161;
-    border: 1px solid #E54161 !important;
-    border-radius: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
     text-decoration: none;
-
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    border-radius: 20px;
+    font-size: 120%;
 }
 
 .selectPayment:hover{
@@ -95,6 +95,34 @@
     float: right;
     font-size: 35px; 
 }
+
+.navegacaoSelectPayment{
+    width: 100%;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.voltarSelectPayment{
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.voltarSelectPayment:hover{
+    color: #e54161!important;
+    background-color: #fff !important;
+    text-decoration: none;
+}
+
 @media screen and (max-width: 600px){
     .paymentTitle{
         padding-top: 10%;

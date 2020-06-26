@@ -55,7 +55,7 @@
     color: rgba(22, 22, 22, 0.9);
 }
 
-.plansForm{
+.selectPlansForm{
     width: 30vw;
     text-align: center;
     display: flex;
@@ -68,7 +68,29 @@
     
 }
 
-.navegacao {
+.actionSelectPlans{
+    margin-top: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.selecionarPlano{
+    color: #E54161!important;
+    text-decoration: none;
+    font-size: 140%;
+}
+
+.selecionarPlano:hover{
+    color: white!important;
+    text-decoration: none;
+}
+
+
+
+
+.navegacaoSelecionarPlano {
     width: 100%;
     padding-top: 5vh;
     display: flex;
@@ -78,15 +100,21 @@
     
 }
 
-.navegacao input:hover{
+.navegacaoSelecionarPlano input:hover{
     color: #e54161!important;
-    background-color: #fce4f0!important;
+    background-color: #fff!important;
 }
 
-.cancelar {
-    background-color: #e54161!important;
-    border: 1px solid #e54161!important;
-    color: #fce4f0!important;
+.cancelarPlano {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
 }
 
 @media screen and (max-width: 600px){

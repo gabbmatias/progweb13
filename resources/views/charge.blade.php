@@ -24,7 +24,7 @@
         <div class="actionsBoleto">
             
             <form action="#" method="POST">
-                <input type=submit class="voltar" value="Voltar" formaction="{{ route('payment.select') }}">
+                <input type=submit class="voltarBoleto" value="Voltar" formaction="{{ route('payment.select') }}">
             </form>  
             
             <div class="backPayment">

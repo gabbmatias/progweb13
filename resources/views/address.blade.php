@@ -23,23 +23,18 @@
                     strtoupper($address->complement) ."<br>". strtoupper($address->city) . ', ' .  strtoupper($address->state) .  "<br>" .
                     strtoupper($address->country) ."<br>".  strtoupper($address->cep) ?></a>
                 </div>
-                <div class="actionsAddress">
-                    <div class="left-button">
-                        <form action="{{ route('address.edit') }}" method="POST">
-                            @csrf
-                            <input hidden name="address_id" value="{{ $address->address_id }}">
-                            <input type="submit" class="action" name="submit" value="Editar">
-                        </form>
-                    </div>
-
-                    <div class="right-button">
-                        <form action="{{ route('payment.select') }}" method="POST">
-                            @csrf
-                            <input hidden name="address_id" value="{{ $address->address_id }}">
-                            <input hidden name="plan_id" value="<?= $flag ?>">
-                            <input type="submit" class="action" name="submit" value="Selecionar">
-                        </form>  
-                    </div>              
+                <div class="actionsSelectAddress">
+                    <form action="{{ route('address.edit') }}" method="POST">
+                        @csrf
+                        <input hidden name="address_id" value="{{ $address->address_id }}">
+                        <input type="submit" class="editarEndereco" name="submit" value="Editar">
+                    </form>
+                    <form action="{{ route('payment.select') }}" method="POST">
+                        @csrf
+                        <input hidden name="address_id" value="{{ $address->address_id }}">
+                        <input hidden name="plan_id" value="<?= $flag ?>">
+                        <input type="submit" class="selecionarEndereco" name="submit" value="Selecionar">
+                    </form>               
                 </div>
             </div>
             @endforeach

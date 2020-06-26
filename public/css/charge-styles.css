@@ -87,9 +87,23 @@
     
 }
 
-.voltar:hover{
-    color: #fff!important;
+.voltarBoleto{
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
 }
+    
+.voltarBoleto:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
+}
+
 
 .backPayment{
     display: flex;
@@ -106,19 +120,20 @@
 }
 
 .finalizarPagamento{
-    background-color: #e54161;
-    color: #fce4f0;
-    border: 1px solid #e54161 !important;
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
     padding: 8px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 120%;
     margin-top: 2%;
-}
+}   
 
-.finalizarPagamento:hover{
-    background-color: #fff!important;
+.finalizarPagamento:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
 }
 
 @media screen and (max-width: 600px){
@@ -136,6 +151,15 @@
 
     .boletoFields{
         width: 80vw;
+    }
+
+    .actionsBoleto{
+        flex-direction: column-reverse;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+
     }
     
 }

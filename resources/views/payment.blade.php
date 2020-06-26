@@ -30,11 +30,10 @@
                 </div>
             </button>
 
-            <!-- <input type=button class="selectPayment" value="Cartão >" formaction="#lula"> -->
         </form>
         <form method="GET">
-            <div class="navegacao">
-                <input type=submit class="voltar" value="Voltar" 
+            <div class="navegacaoSelectPayment">
+                <input type=submit class="voltarSelectPayment" value="Voltar" 
                     formaction="{{ route('address.select', ['plan' =>  $plan_id]) }}">
             </div>
         </form>
