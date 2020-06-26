@@ -54,3 +54,14 @@
     margin-top: 2%;
     font-family: Cookie;
 }
+
+.retornarHome {
+    margin-top: -2%;
+    font-size: 15px;
+    color: #e54161;
+}
+
+.retornarHome:hover {
+    text-decoration: none;
+    color: #f66d9b;
+}
