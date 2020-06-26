@@ -2,6 +2,17 @@
 
 @section('content')
 
+<script>
+    function confirmation(){
+        if(confirm('Tem certeza que deseja deletar sua conta? Não será possível recupera-la'))
+        return true; 
+        else 
+        event.preventDefault()
+        return false
+    }
+</script>
+
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -44,6 +55,14 @@
                                 </div>
 
                             </div>
+                            
+                            <div class="form-group row">
+
+                                <div class="col-md-12">
+                                    <a onclick="confirmation()" href="{{ route('profile.destroy') }}">Excluir conta</a>
+                                </div>
+
+                            </div>
 
                             <div class="form-group row">
                                 <div class="col-sm-auto">
@@ -66,4 +85,6 @@
     </div>
 </div>
 </div>
+
+
 @endsection

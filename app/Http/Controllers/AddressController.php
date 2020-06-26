@@ -86,7 +86,7 @@ class AddressController extends Controller
     {
         if($this->checkPlan($id)){
             $plan = Plan::all();
-            $error = 'Olá, você ja possui este plano. Por favor, selecione outro.';
+            $error = 'Você ja possui este plano. Por favor, selecione outro.';
             return view('select_plans')->with(['error' => $error, 'plans' => $plan]);
         }
 

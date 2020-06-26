@@ -24,7 +24,10 @@
         <div class="actionsBoleto">
             
             <form action="#" method="POST">
+                @csrf
                 <input type=submit class="voltarBoleto" value="Voltar" formaction="{{ route('payment.select') }}">
+                <input hidden name="plan_id" value="{{ $plan->plan_id }}">
+                <input hidden name="address_id" value="{{ $address_id }}">
             </form>  
             
             <div class="backPayment">

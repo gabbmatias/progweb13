@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Plan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class PlansPageController extends Controller
 {
@@ -47,7 +48,7 @@ class PlansPageController extends Controller
     {
         if (Auth::check()) {
             $plans = Plan::all();
-            $data = $request->all();
+            $data = $request->all();            
             return view('edit_subscription_plan')->with(['subscription_id' => $data['subscription_id'], 'plans' => $plans]);   
         }
         return redirect()->route('login');

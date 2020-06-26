@@ -3,6 +3,9 @@
 @section('content')
 <div class="selectPlansBody">
     <a class="selectPlansTitle">Selecione um plano</a>
+    @if ($error != null)
+        <a>{{ $error }}</a>
+    @endif
 
     <div class="plansBoxes">
         

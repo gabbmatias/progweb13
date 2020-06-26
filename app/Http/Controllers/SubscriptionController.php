@@ -208,7 +208,25 @@ class SubscriptionController extends Controller
         if (Auth::check()) {
 
                 $data = $request->all();
+               if($this->checkPlan($data['plan_id'])){
+                    $plans = Plan::all();
+                    return view('edit_subscription_plan')->with(['error' => 'Você ja possui este plano. Por favor, selecione outro.', 
+                    'subscription_id' => $data['subscription_id'], 'plans' => $plans]); 
+               }
                 $plan = Subscription::where('subscription_id', $data['subscription_id'])->update(['plan_id' => $data['plan_id']]);
+
+                return redirect()->route('subscription.index');
+        }
+        return redirect()->route('login');
+    }
+
+
+    public function updateAddress(Request $request)
+    {
+        if (Auth::check()) {
+
+                $data = $request->all();
+                $plan = Subscription::where('subscription_id', $data['subscription_id'])->update(['address_id' => $data['address_id']]);
 
                 return redirect()->route('subscription.index');
         }
@@ -231,5 +249,14 @@ class SubscriptionController extends Controller
             return redirect()->route('subscription.index');
         }
         return redirect()->route('login');
+    }
+    public function checkPlan($plan_id)
+    {
+       $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
+       
+       foreach ($check as $subs)
+        if($subs->plan_id == $plan_id)
+            return true;
+        return false;
     }
 }
