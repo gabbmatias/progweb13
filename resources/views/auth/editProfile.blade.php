@@ -12,6 +12,13 @@
     }
 </script>
 
+<script type="text/javascript">
+    $("#birthDate").mask("00/00/0000");
+</script>
+
+<script type="text/javascript">
+    $("#phoneNumber").mask("(00) 0 0000-0000");
+</script>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -52,7 +59,7 @@
                                 <label for="birthDate" class="col-md-4 col-form-label text-md-left">{{ __('Data de Nascimento') }}</label>
 
                                 <div class="col-md-12">
-                                    <input id="birthDate" type="text" class="form-control" name="birth_date" value="{{ Auth::user()->birth_date }}" disabled>
+                                    <input id="birthDate" type="text" class="form-control" name="birth_date" value="<?php $date = explode("-", Auth::user()->birth_date); echo $date[2].$date[1].$date[0] ?>">
                                 </div>
                             </div>
 
@@ -60,7 +67,7 @@
                                 <label for="phoneNumber" class="col-md-4 col-form-label text-md-left">{{ __('Telefone') }}</label>
 
                                 <div class="col-md-12">
-                                    <input id="phoneNumber" type="text" class="form-control" name="phone_number" value="{{ Auth::user()->phone_number }}" disabled>
+                                    <input id="phoneNumber" type="text" class="form-control" name="phone_number" value="{{ Auth::user()->phone_number }}">
                                 </div>
                             </div>
 

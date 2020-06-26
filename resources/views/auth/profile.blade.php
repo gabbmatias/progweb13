@@ -43,7 +43,7 @@
                             <label for="birthDate" class="col-md-4 col-form-label text-md-left">{{ __('Data de Nascimento') }}</label>
 
                             <div class="col-md-12">
-                                <input id="birthDate" type="text" class="form-control" name="birth_date" value="<?php $date = explode("-", Auth::user()->birth_date); echo $date[2]."/".$date[1]."/".$date[0] ?>" readonly>
+                                <input id="birthDate" type="text" class="form-control" name="birth_date" value="<?php $date = explode("-", Auth::user()->birth_date); echo $date[2]."/".$date[1]."/".$date[0] ?>" disabled>
                             </div>
                         </div>
 

@@ -44,8 +44,13 @@ class ProfileController extends Controller
     {
         $data = $request->all();
 
+        $date = explode("/", $data['birth_date']);
+        $date = $date[2] . "-" . $date[1] . "-" . $date[0];
+
         $user = Auth::user();
         $user->name = $data['name'];
+        $user->phone_number = $data['phone_number'];
+        $user->birth_date = $date;
         $user->save();
 
         $success[0] = 'O perfil foi atualizado com sucesso!';
