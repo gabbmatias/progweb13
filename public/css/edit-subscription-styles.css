@@ -156,22 +156,6 @@
     margin-top: 30%!important;
 }
 
-.editarEndereco {
-    background-color: #e54161 !important;
-    color: #fff;
-    border: 3px solid #e54161 !important;
-    padding: 8px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 120%;
-}
-
-.editarEndereco:hover {
-    color: #e54161!important;
-    background-color: #fff !important;
-    text-decoration: none;
-}
-
 .cancelar {
     background-color: #e54161 !important;
     color: #fff;
