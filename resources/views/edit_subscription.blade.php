@@ -6,18 +6,17 @@
     <a class="selectSubscriptionTitle">Edite sua assinatura!</a>
     @foreach ($subscriptions as $subscription)
 
-    <div class="rowBoxes">
-        <div class="subscriptionBoxes">
-            <div class="boxSubscriptionPlan">
-                <div class="box-subscription-titulo-plan">
+        <div class="editSubscriptionBoxes">
+            <div class="boxEditSubscription">
+                <div class="box-subscription-titulo">
                     <a>{{ $subscription->plan_name }}</a>
                 </div>
-                <div class="box-subscription-text-plan">
+                <div class="box-subscription-text">
                     <a>{{ $subscription->description}}
                         <br><strong>Apenas R$ {{ $subscription->price}}!</strong></a>
                 </div>
 
-                <div class="actionsAddress">
+                <div class="actionsEditSubscriptions">
                     <form method="POST" action="{{ route('subscription.edit.plan')}}">
                         @csrf
                         <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
@@ -25,9 +24,7 @@
                     </form>
                 </div>
             </div>
-        </div>
-        <div class="subscriptionBoxes">
-            <div class="boxSubscriptionEndereco">
+            <div class="boxEditSubscription">
                 <div class="box-subscription-titulo">
                     <a>Endereco</a>
                 </div>
@@ -37,24 +34,21 @@
                         strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) ?></a>
                 </div>
 
-                <div class="actionsAddress">
-                    <a href="#" class="editarEndereco">Editar</a>
+                <div class="actionsEditSubscriptions">
+                    <a href="{{ route('address.edit') }}" class="editarEnderecoPlano">Editar</a>
                 </div>
             </div>
-        </div>
-
-        <div class="subscriptionBoxes">
-            <div class="boxSubscriptionCard">
+            <div class="boxEditSubscription">
                 @if ($subscription->type == 'boleto')
-                <div class="box-card-icone">
+                <div class="box-subscription-icone">
                     <i class="fa fa-barcode" aria-hidden="true"></i>
                 </div>
                 @else
-                <div class="box-card-icone">
+                <div class="box-subscription-icone">
                     <i class="fa fa-cc-visa" aria-hidden="true"></i>
                 </div>
                 @endif
-                <div class="box-card-text">
+                <div class="box-subscription-text">
                     @if ($subscription->type == 'boleto')
                     <a>Boleto Bancário <br>{{ $subscription->payer_name }}</a>
                     @else
@@ -63,18 +57,17 @@
                         <?= date('m', strtotime($subscription->expires_date)). '/'. date('y', strtotime($subscription->expires_date)) ?></a>
                     @endif
                 </div>
-                <div class="actionsAddress">
+                <div class="actionsEditSubscriptions">
                     <form method="POST" action="{{ route('subscription.edit.plan')}}">
                         <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
-                        <input type="submit" class="editarCartao" value="Editar">
+                        <input type="submit" class="editarCartaoPlano" value="Editar">
                     </form>
                 </div>
             </div>
         </div>
-    </div>
 
     <form class="subscriptionForm">
-        <div class="navegacaoSuncription">
+        <div class="navegacaoSubscription">
         <input type=submit class="cancelar" formaction="{{ route('subscription.index') }}"" value="Cancelar">
         </div>
     </form>
