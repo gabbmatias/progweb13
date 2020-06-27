@@ -86,6 +86,8 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+
+
 Route::get("/subscription/edit/payment/credit_card", function()
 {
     return view('edit_subscription_payment_credit_card');
@@ -100,6 +102,20 @@ Route::get("/subscription/edit/payment/charge/code", function()
 {
     return view('edit_subscription_charge_code');
 })->name("edit.charge.code");
+
+
+
+Route::get("/histoy/log", function()
+{
+    return view('logs_history');
+})->name("log.history");
+
+Route::get("/histoy/payments", function()
+{
+    return view('payments_history');
+})->name("payment.history");
+
+
 
 
 Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
