@@ -246,7 +246,7 @@ class SubscriptionController extends Controller
                 'expires_date' => $date,
                 'security_number' => $data['security_number']
             ]);
-             return view('edit_subscription_charge_code')->with(['subscription_id' => $data['subscription_id']]);
+             return view('edit_subscription_finished')->with(['subscription_id' => $data['subscription_id']]);
         }
         return redirect()->route('login');
     }
@@ -270,7 +270,7 @@ class SubscriptionController extends Controller
                 'charge_code' => $charge_code,
                 'payer_name' => Auth::user()->name
             ]);
-             return view('edit_subscription_charge_code')->with(['charge_code' => $charge_code, 'subscription_id' => $data['subscription_id']]);
+             return view('edit_subscription_finished')->with(['charge_code' => $charge_code, 'subscription_id' => $data['subscription_id']]);
         }
         return redirect()->route('login');
     }
