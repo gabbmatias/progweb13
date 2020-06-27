@@ -86,6 +86,11 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+Route::get("/user/upgrade", function()
+{
+    return view('upgrade_user');
+})->name("user.upgrade");
+
 Route::get("/history/log", function()
 {
     return view('logs_history');
