@@ -18,6 +18,27 @@
 
             <input type="submit" class="atualizarEndereco" value="Cadastrar Endereço">
         </form>
+
+        @if (session('back_url'))
+        <form>
+            <div class="navegacao">
+                <input type=submit class="voltarEditarEndereco" value="Voltar"
+            formaction="{{ session('back_url') }}">
+            </div>
+        </form>
+
+        @else 
+        <form>
+            <div class="navegacao">
+                <input type=submit class="voltarEditarEndereco" value="Voltar"
+            formaction="{{ route('address.index') }}">
+            </div>
+        </form>
+    @endif
+
+
+    
+
     <img class="generic-background" src="/img/generic-background.png">
 </div>
 @endsection
