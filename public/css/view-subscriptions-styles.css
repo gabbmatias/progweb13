@@ -43,9 +43,10 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 .box-subscriptions-title{
-    margin-top: 8%;
+    margin-top: 6%;
     color: #E54161!important;
     font-size: 22px;
 }
@@ -63,6 +64,7 @@
     justify-content: space-between;
     margin-top: 5%;
     align-items: baseline;
+    margin-bottom: 3%;
 }
 
 .actionViewSubscription {
