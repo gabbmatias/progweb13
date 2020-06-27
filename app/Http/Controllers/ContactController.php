@@ -106,7 +106,8 @@ class ContactController extends Controller
             Contact::where('contact_id', $data['contact_id'])->delete();
 
             Log::create([
-                'client_id' => Auth::user()->id,
+                'name' => Auth::user()->name,
+                'email' => Auth::user()->email,
                 'action' => 1,
                 'message' => 'E-mail: ' . $data['email'] . "\n" . "Mensagem removida: " . $data['message'],
             ]);

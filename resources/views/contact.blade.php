@@ -10,7 +10,7 @@
             </div>
             <div class="container">
 
-            <form method="POST" action="{{ route('contact.store') }}">
+            <form method="POST" onsubmit="alert('Sua mensagem foi enviada com sucesso!')" action="{{ route('contact.store') }}">
                 @csrf
                     <input type="text" id="email" name="email" placeholder="Seu E-mail">
                     <textarea id="subject" name="message" placeholder="Sua Mensagem" style="height:100px"></textarea>
@@ -29,5 +29,6 @@
         </div>
         
     </div>
+
 </div>
 @endsection
