@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="viewContactBody">
-    <a class="contactViewTitle">Mensagens</a>
+    <a class="title10">Mensagens</a>
 
     
     <div class="contactBoxes">        

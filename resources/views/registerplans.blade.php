@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="body1">
-    <a class="registerPlansFormTitle">Novo Plano</a>
+    <a class="title10">Novo Plano</a>
 
 <form class="registerPlansForm" method="POST" action="{{ route('plan.store') }}" >
     @csrf

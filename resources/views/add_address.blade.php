@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="body1">
-    <a class="addressFormTitle">Novo Endereço</a>
+    <a class="title10">Novo Endereço</a>
 
         <form class="addressForm" method="POST" action="{{ route('address.store') }}">
             @csrf

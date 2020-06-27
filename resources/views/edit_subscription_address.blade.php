@@ -5,7 +5,7 @@
 <div class="body1">
     
     <div class="addressFields">
-        <a class="selectPlansTitle">Endereço</a>
+        <a class="title10">Endereço</a>
 
 
         {{-- MENSAGEM DE ERRO PARA SELEÇÃO DO MESMO ENDEREÇO --}}

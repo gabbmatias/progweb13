@@ -77,12 +77,10 @@ body {
 .title10 {
     padding-top: 4%;
     padding-bottom: 3%;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    font-family: Cookie;
     font-style: normal;
-    font-size: 42px;
+    font-size: 500%;
     line-height: 22px;
-    font-weight: 600;
     color: #e54161 !important;
     text-align: center;
 }
@@ -97,6 +95,19 @@ body {
     line-height: 22px;
     color: #e54161 !important;
     text-align: center;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e54161;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 5px;
+    color: #e54161;
 }
 
 .generic-background {

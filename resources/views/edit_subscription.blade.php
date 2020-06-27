@@ -3,7 +3,7 @@
 @section('content')
 <div class="body1">
 
-    <a class="selectSubscriptionTitle">Edite sua assinatura!</a>
+    <a class="title10">Edite sua assinatura!</a>
     @foreach ($subscriptions as $subscription)
 
         <div class="editSubscriptionBoxes">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="logsBody">
-    <a class="logsTitle">Histórico de Pagamentos</a>
+    <a class="title10">Histórico de Pagamentos</a>
 
     
     <div class="logsBoxes">        

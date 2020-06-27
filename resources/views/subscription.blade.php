@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="subscriptionBody">
-    <a class="subscriptionFormTitle">Nova Assinatura</a>
+    <a class="title10">Nova Assinatura</a>
 
     <form class="subscriptionForm" action="">
         <input type="text" name="client_id" id="client_id" value="1" hidden>

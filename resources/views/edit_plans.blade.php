@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="body1">
-    <a class="editPlansFormTitle">Editar Plano</a>
+    <a class="title10">Editar Plano</a>
 
     @foreach ($plans as $plan)
         <form class="editPlansForm" method="POST" action="{{ route('plan.update') }}">
