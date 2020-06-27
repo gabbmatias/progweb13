@@ -315,7 +315,9 @@ input[type=radio] {
 
 textarea {
     overflow: auto;
-    resize: vertical
+    resize: vertical;
+    color: #fff;
+    background-color: #e9577496;
 }
 
 fieldset {
@@ -1825,6 +1827,7 @@ pre code {
     margin-bottom: 1rem;
     color: #212529
 }
+
 
 .table td,
 .table th {

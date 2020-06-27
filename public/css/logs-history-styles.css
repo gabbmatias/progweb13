@@ -36,7 +36,8 @@
 .boxLogs{
     margin-top: 1%;
     width: 80%;
-    height: 55vh;
+    height: auto;
+    padding: 1% 1% 1% 1%;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
     
@@ -64,8 +65,6 @@
 .links{
     margin-top: 2%;
 }
-
-
 
 
 @media screen and (max-width: 600px){
