@@ -279,7 +279,7 @@ class SubscriptionController extends Controller
     {
         if (Auth::check()) {
             $data = $request->all();
-            if($this->checkAddress($data['address_id'])){
+            if($this->checkAddress($data['address_id'], $data['subscription_id'])){
                 $addresses = Address::where('client_id', Auth::user()->id)->get();
                 return view('edit_subscription_address')->with(['error' => 'Você selecionou o mesmo endereço. Por favor, selecione outro.', 
                 'subscription_id' => $data['subscription_id'], 'addresses' => $addresses]); 
@@ -318,9 +318,10 @@ class SubscriptionController extends Controller
         return false;
     }
 
-    public function checkAddress($address_id)
+    public function checkAddress($address_id, $subscription_id)
     {
-       $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->where('subscriptions.client_id', '=', Auth::user()->id)->get();
+       $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->where('subscriptions.client_id', '=', Auth::user()->id)
+      ->where('subscriptions.subscription_id', '=', $subscription_id)->get();
        
        foreach ($check as $subs)
         if($subs->address_id == $address_id)
