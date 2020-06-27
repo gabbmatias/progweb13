@@ -35,7 +35,7 @@
 
 .boxLogs{
     margin-top: 1%;
-    width: 50%;
+    width: 80%;
     height: 55vh;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -58,11 +58,12 @@
 }
 
 .box-logs-text td {
-    width: 35%;
     height: 3vh;
 }
 
-
+.links{
+    margin-top: 2%;
+}
 
 
 

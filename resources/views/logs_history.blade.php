@@ -12,9 +12,9 @@
             <div class="box-logs-text">
                 <table>
                     <tr>
-                        <th>Nome</th>
+                        <th id="name">Nome</th>
                         <th>Email</th>
-                        <th>Ação</th>
+                        <th id="action">Ação</th>
                         <th>Mensagem</th>
                         <th>Hora</th>
                     </tr>
@@ -35,7 +35,9 @@
             </div>
             
         </div>
-        {!! $logs->links() !!}
+        <div class="links">
+            {!! $logs->links() !!}
+        </div>
     </div>
 </div>
 @endsection
