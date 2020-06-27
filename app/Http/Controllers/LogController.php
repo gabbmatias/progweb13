@@ -14,7 +14,7 @@ class LogController extends Controller
         {
             if(Auth::user()->groupid == 2)
             {
-                $logs = DB::table('users')->join('logs', 'client_id', '=', 'id')->paginate(7);
+                $logs = DB::table('users')->join('logs', 'client_id', '=', 'id')->paginate(5);
 
                 return view('logs_history')->with(['logs' => $logs]);
             }

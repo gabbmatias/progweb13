@@ -23,10 +23,10 @@
                     
                     <tr>
                         <td>{{ $log->name }}</td>
-                        <td><textarea disabled>{{ $log->message }}</textarea></td>
-                        <td>{{ $log->action }}</td>
                         <td>{{ $log->email }}</td>
+                        <td>{{ $log->action }}</td>
                         <td>{{ $log->created_at }}</td>
+                        <td><textarea rows="4" disabled>{{ $log->message }}</textarea></td>
                     </tr>   
                     @endforeach
 
