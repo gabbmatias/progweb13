@@ -24,7 +24,7 @@ Route::get('charge/create', 'ChargeController@create')->name('charge.create');
 Route::get('subscription/charge/signed', 'SubscriptionController@indexSignedCharge')->name('completed_transaction');
 Route::get('subscription/card/signed', 'SubscriptionController@indexSignedCard')->name('completed_transaction');
 
-
+Route::get('logs', 'LogController@index')->name('log.index');
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
@@ -86,31 +86,12 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
-
-
-Route::get("/subscription/edit/payment/credit_card", function()
-{
-    return view('edit_subscription_payment_credit_card');
-})->name("edit.credit_card");
-
-Route::get("/subscription/edit/payment/charge", function()
-{
-    return view('edit_subscription_payment_charge');
-})->name("edit.charge");
-
-Route::get("/subscription/edit/payment/charge/code", function()
-{
-    return view('edit_subscription_charge_code');
-})->name("edit.charge.code");
-
-
-
-Route::get("/histoy/log", function()
+Route::get("/history/log", function()
 {
     return view('logs_history');
 })->name("log.history");
 
-Route::get("/histoy/payments", function()
+Route::get("/history/payments", function()
 {
     return view('payments_history');
 })->name("payment.history");

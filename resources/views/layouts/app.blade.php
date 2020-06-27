@@ -85,6 +85,11 @@
                         <a href="{{ route('subscription.index') }}">
                             {{ __('Minhas Assinaturas') }}
                         </a>
+                        @if (Auth::user()->groupid == 2)
+                            <a href="{{ route('log.index') }}">
+                                {{ __('Logs de alterações') }}
+                            </a>
+                        @endif
                         <a href="{{ route('logout') }}" onclick="event.preventDefault();
                                                         document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}

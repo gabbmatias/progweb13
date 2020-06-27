@@ -24,6 +24,7 @@
                 <form id="update-form" action="{{ route('plan.destroy') }}" method="POST">
                     @csrf
                     <input hidden name="plan_id" value="{{ $plan->plan_id }}">
+                    <input hidden name="plan_name" value="{{ $plan->plan_name }}">
                     <input type="submit" class="actionViewPlan" name="submit" value="Remover">
                 </form>
             </div>

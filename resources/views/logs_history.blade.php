@@ -11,20 +11,31 @@
 
             <div class="box-logs-text">
                 <table>
-                    <hr>
                     <tr>
-                        <td>Nome</td>
-                        <td>Email</td>
-                        <td>Hora</td>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Ação</th>
+                        <th>Mensagem</th>
+                        <th>Hora</th>
+                    </tr>
+                    
+                    @foreach ($logs as $log)
+                    
+                    <tr>
+                        <td>{{ $log->name }}</td>
+                        <td><textarea disabled>{{ $log->message }}</textarea></td>
+                        <td>{{ $log->action }}</td>
+                        <td>{{ $log->email }}</td>
+                        <td>{{ $log->created_at }}</td>
                     </tr>   
-                
+                    @endforeach
+
                 </table>
-                <hr>
                 
             </div>
             
         </div>
-    
+        {!! $logs->links() !!}
     </div>
 </div>
 @endsection

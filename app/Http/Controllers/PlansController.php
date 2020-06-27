@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Plan;
+use App\Models\Log;
 use Illuminate\Support\Facades\Auth;
 
 class PlansController extends Controller
@@ -111,7 +112,20 @@ class PlansController extends Controller
         if (Auth::check()) {
             if (Auth::user()->groupid == 2) {
                 $data = $request->all();
+                $oldPlans = Plan::where('plan_id', $data['plan_id'])->get();
+
+                foreach ($oldPlans as $plan){
+                $oldName = $plan->plan_name;
+                $oldPrice = $plan->price;
+                $oldDescription = $plan->description;
+            }
                 $plan = Plan::where('plan_id', $data['plan_id'])->update(['plan_name' => $data['plan_name'], 'price' => $data['price'], 'description' => $data['description']]);
+
+                Log::create([
+                    'client_id' => Auth::user()->id,
+                    'action' => 2,
+                    'message' => $oldName . ' -> ' . $data['plan_name'] . "\n R$ " . $oldPrice . ' -> R$ ' . $data['price'] . "\n" . $oldDescription . ' -> ' . $data['description'],
+                ]);
 
                 return redirect()->route('plan.index');
             } else {
@@ -134,6 +148,12 @@ class PlansController extends Controller
                 $data = $request->all();
 
                 Plan::where('plan_id', $data['plan_id'])->delete();
+                Log::create([
+                    'client_id' => Auth::user()->id,
+                    'action' => 1,
+                    'message' => 'O plano ' . $data['plan_name'] . ' foi removido',
+                ]);
+
 
                 return redirect()->route('plan.index');
             } else {

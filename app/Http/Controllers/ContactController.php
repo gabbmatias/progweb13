@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Contact;
+use App\Models\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -103,6 +104,13 @@ class ContactController extends Controller
         if (Auth::check()) {
             $data = $request->all();
             Contact::where('contact_id', $data['contact_id'])->delete();
+
+            Log::create([
+                'client_id' => Auth::user()->id,
+                'action' => 1,
+                'message' => 'E-mail: ' . $data['email'] . "\n" . "Mensagem removida: " . $data['message'],
+            ]);
+
             return redirect()->route('contact.index');
         }
         return redirect()->route('login');
