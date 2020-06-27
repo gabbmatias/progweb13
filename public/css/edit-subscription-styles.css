@@ -65,6 +65,10 @@
     color: rgba(22, 22, 22, 0.9);
 }
 
+.box-subscription-icone{
+    font-size: 40px;
+}
+
 .subscriptionForm{
     width: 30vw;
     text-align: center;
