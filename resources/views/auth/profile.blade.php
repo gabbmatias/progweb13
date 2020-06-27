@@ -54,14 +54,13 @@
                                 <input id="phoneNumber" type="text" class="form-control" name="phone_number" value="{{ Auth::user()->phone_number }}" disabled>
                             </div>
                         </div>
-
+                        @if(Auth::user()->groupid == 2)
                         <div class="form-group row">
                             <div class="col-md-12">
                                 <a href="{{ route('user.index') }}">Promover usuário</a>
                             </div>
                         </div>
 
-                        @if(Auth::user()->groupid == 2)
                         <div class="form-group row">
 
                             <div class="col-md-12">

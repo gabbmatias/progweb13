@@ -5,7 +5,8 @@
     <a class="title2">Promover Usuário</a>
     <div class="viewUpgradeUsers">
         <div class="blurred-box-upgrade">
-            <form method="POST" action="{{ route('user.upgrade') }}">
+            <form method="POST" action="{{ route('user.update') }}">
+                @csrf
                 <label for="user_id">Usuário:</label>
                 <select required name="user_id" id="user_id">
                     <option value="" requi selected disabled>Selecione um usuário...</option>
@@ -14,10 +15,10 @@
                     @endforeach
                 </select>
             <br>
-                <label for="type">Selecione o cargo do usuário:</label>
-                <select required name="type" id="type">
-                    <option value="volvo">Usuário comum</option>
-                    <option value="saab">Administrador</option>
+                <label for="position">Selecione o cargo do usuário:</label>
+                <select required name="position" id="position">
+                    <option value="1">Usuário comum</option>
+                    <option value="2">Administrador</option>
                 </select>
 
         </div>

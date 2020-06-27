@@ -17,6 +17,7 @@ Route::get('/', 'HomeController@index')->name("home");
 
 Route::get('/profile', 'ProfileController@index')->name("profile");
 
+
 Route::post('payment/select', 'PaymentController@index')->name('payment.select');
 Route::post('charge/select', 'ChargeController@selectCharge')->name('charge.select');
 Route::get('charge/create', 'ChargeController@create')->name('charge.create');
@@ -26,7 +27,6 @@ Route::get('subscription/card/signed', 'SubscriptionController@indexSignedCard')
 
 Route::get('logs', 'LogController@index')->name('log.index');
 
-Route::get('upgrade/user', 'UserController@index')->name('user.index');
 
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
@@ -81,7 +81,11 @@ Route::get('/profile/edit', 'ProfileController@indexEditProfile')->name("profile
 
 Route::post('/profile/password/update', 'ProfileController@changePassword')->name("profile.pass.update");
 
+Route::post('/user/update', 'UserController@update')->name('user.update');
+Route::resource('user', 'UserController', ['except' => ['update']]);
+
 Auth::routes();
+
 
 Route::get("/about", function()
 {
