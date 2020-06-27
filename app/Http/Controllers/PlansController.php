@@ -122,7 +122,8 @@ class PlansController extends Controller
                 $plan = Plan::where('plan_id', $data['plan_id'])->update(['plan_name' => $data['plan_name'], 'price' => $data['price'], 'description' => $data['description']]);
 
                 Log::create([
-                    'client_id' => Auth::user()->id,
+                    'name' => Auth::user()->name,
+                    'email' => Auth::user()->email,
                     'action' => 2,
                     'message' => $oldName . ' -> ' . $data['plan_name'] . "\n R$ " . $oldPrice . ' -> R$ ' . $data['price'] . "\n" . $oldDescription . ' -> ' . $data['description'],
                 ]);
@@ -149,7 +150,8 @@ class PlansController extends Controller
 
                 Plan::where('plan_id', $data['plan_id'])->delete();
                 Log::create([
-                    'client_id' => Auth::user()->id,
+                    'name' => Auth::user()->name,
+                    'email' => Auth::user()->email,
                     'action' => 1,
                     'message' => 'O plano ' . $data['plan_name'] . ' foi removido',
                 ]);

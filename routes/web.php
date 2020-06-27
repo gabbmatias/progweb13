@@ -86,18 +86,6 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
-Route::get("/history/log", function()
-{
-    return view('logs_history');
-})->name("log.history");
-
-Route::get("/history/payments", function()
-{
-    return view('payments_history');
-})->name("payment.history");
-
-
-
 
 Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
 
