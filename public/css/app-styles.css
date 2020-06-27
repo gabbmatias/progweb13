@@ -97,6 +97,19 @@ body {
     text-align: center;
 }
 
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e54161;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-top: 1%;
+    margin-bottom: 5px;
+    color: #e54161;
+}
+
 .generic-background {
     max-height: 400px;
     margin-top: -5%;
