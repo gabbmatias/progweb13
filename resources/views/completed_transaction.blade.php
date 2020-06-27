@@ -15,6 +15,6 @@
             </div>
         @endif
     </div>
-    <a href="#" class="retornarHome">Me leve à pagina príncipal</a>
+    <a href="{{ route('home') }}" class="retornarHome">Me leve à pagina príncipal</a>
 </div>
 @endsection
