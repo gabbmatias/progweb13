@@ -45,6 +45,7 @@ body {
 
 .generic-background {
     max-height: 400px;
+    margin-top: -5%;
     margin-right: 10%;
     align-self: flex-end !important;
 }
