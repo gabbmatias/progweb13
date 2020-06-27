@@ -35,8 +35,8 @@
         @endforeach
     </div>
     <div class="addAddressView">
-        <a href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+        <a title="Mais" href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
     </div>
-    <img class= "generic-background" src="/img/generic-background.png">
+    <img class= "generic-background" src="/img/generic-background.png" alt="Uma mão segurando uma camisinha embalada.">
 </div>
 @endsection

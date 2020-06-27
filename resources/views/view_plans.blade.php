@@ -31,9 +31,9 @@
         @endforeach
     </div>
     <div class="addPlan">
-        <a href="{{ route('plan.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+        <a title="Mais" href="{{ route('plan.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
         <!-- <a href="{{ route('plan.create') }}">assd</a> -->
     </div>
-    <img class="generic-background" src="/img/generic-background.png">
+    <img class="generic-background" src="/img/generic-background.png" alt="Uma mão segurando um camisinha emblada.">
 </div>
 @endsection
