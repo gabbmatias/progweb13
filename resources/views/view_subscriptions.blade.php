@@ -3,8 +3,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="viewSubscriptionsBody">
-    <a class="viewSubscriptionsTitle">Assinaturas</a>
+<div class="body10">
+    <a class="title10">Assinaturas</a>
 
     <div class="viewSubscriptionsBoxes">
         @foreach ($subscriptions as $subscription)

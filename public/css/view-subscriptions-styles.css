@@ -1,38 +1,13 @@
-.viewSubscriptionsBody{
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
-.viewSubscriptionsTitle{
-    padding-top: 4%;
-    padding-bottom: 3%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: normal;
-    font-size: 42px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #E54161!important;
-    text-align: center;
-    
-}
-
-.viewSubscriptionsBoxes{
+.viewSubscriptionsBoxes {
     width: 80vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
     justify-content: space-around;
-
-
 }
 
-.boxViewSubscriptions{
+.boxViewSubscriptions {
     margin-top: 2%;
     width: 26%;
     height: 50vh;
@@ -45,19 +20,20 @@
     align-items: center;
     justify-content: space-between;
 }
-.box-subscriptions-title{
+
+.box-subscriptions-title {
     margin-top: 6%;
-    color: #E54161!important;
+    color: #e54161 !important;
     font-size: 22px;
 }
 
-.box-subscriptions-text{
+.box-subscriptions-text {
     margin-top: 2%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
 }
 
-.actionsSubscription{
+.actionsSubscription {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -70,23 +46,22 @@
 .actionViewSubscription {
     background-color: rgba(107, 107, 107, 0);
     color: #e54161;
-    border: none!important;
+    border: none !important;
     cursor: pointer;
     font-size: 130%;
     margin-top: 2%;
 }
 
-.actionViewSubscription:hover{
-    color: white!important;
+.actionViewSubscription:hover {
+    color: white !important;
 }
 
-
-@media screen and (max-width: 600px){
-    .viewSubscriptionsBoxes{
+@media screen and (max-width: 600px) {
+    .viewSubscriptionsBoxes {
         width: 98vw;
         height: 80vh;
     }
-    .boxViewSubscriptions{
+    .boxViewSubscriptions {
         width: 80%;
         height: 62%;
     }
