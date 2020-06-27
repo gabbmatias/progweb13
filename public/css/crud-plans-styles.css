@@ -1,13 +1,5 @@
-.editPlansBody {
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    align-content: center;
-    
-}
+/* registerplans-styles */
+/* select-plans-styles */
 .editPlansFormTitle{
     padding-top: 4%;
     padding-bottom: 4%;
@@ -16,8 +8,46 @@
     font-size: 42px;
     line-height: 22px;
     font-weight: 600;
+    color: #E54161 !important;   
+}
+
+.registerPlansForm{
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+}
+
+.cadastrarPlano {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.cadastrarPlano:hover {
+    color: #e54161 !important;
+    background-color: #fff !important;
+}
+
+.registerPlansFormTitle{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
     color: #E54161 !important;
-        
 }
 
 .editPlansForm{
@@ -48,6 +78,110 @@
     background-color: #fff !important;
 }
 
+.selectPlansTitle{
+    padding-top: 4%;
+    padding-bottom: 3%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #E54161!important;
+    text-align: center;
+    
+}
+
+.plansBoxes{
+    width: 50vw;
+    height: 35vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+
+.boxPlano{
+    margin-top: 2%;
+    width: 32%;
+    height: 70%;
+    text-align: center;
+    background: rgba(107, 107, 107, 0.15);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+.box-plano-titulo{
+    color: #E54161!important;
+    font-size: 22px;
+}
+
+.box-plano-text{
+    width: 100%;
+    color: rgba(22, 22, 22, 0.9);
+}
+
+.selectPlansForm{
+    width: 30vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+    margin-bottom: 2px;
+    
+}
+
+.actionSelectPlans{
+    margin-top: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.selecionarPlano{
+    color: #E54161!important;
+    text-decoration: none;
+    font-size: 140%;
+}
+
+.selecionarPlano:hover{
+    color: white!important;
+    text-decoration: none;
+}
+
+.navegacaoSelecionarPlano {
+    width: 100%;
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.navegacaoSelecionarPlano input:hover{
+    color: #e54161!important;
+    background-color: #fff!important;
+}
+
+.cancelarPlano {
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
 @media screen and (max-width: 600px){
     .editPlansFormTitle{
         padding-top: 10%;
@@ -55,5 +189,28 @@
     }
     .editPlansForm{
         width: 80%;
+    }
+
+    .registerPlansFormTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .registerPlansForm{
+        width: 80%;
+    }
+    .plansBoxes{
+        width: 98vw;
+        height: 60vh;
+    }
+    .boxPlano{
+        width: 49%;
+        height: 48%;
+    }
+    .plansForm{
+        width: 80vw;
+    }
+
+    .navegacao{
+        padding-top: 1vh;
     }
 }

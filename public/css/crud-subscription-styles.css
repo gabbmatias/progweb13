@@ -1,12 +1,32 @@
-.selectSubscriptionBody{
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
+/* subscription-styles */
+/* edt-subscription-styles */
+.subscriptionFormTitle{
+    padding-top: 4%;
+    padding-bottom: 4%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    font-size: 42px;
+    line-height: 22px;
+    font-weight: 600;
+    color: #E54161 !important;
+        
+}
+
+.subscriptionForm{
+    width: 40%;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    overflow: auto!important;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif !important;
+    margin-bottom: 2px;
+    
+}
+
+label{
+    font-size: 24px;
 }
 
 .selectSubscriptionTitle{
@@ -166,5 +186,12 @@
         margin-top: 4%;
         width: 85%;
         height: 30vh;
+    }
+    .subscriptionFormTitle{
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .subscriptionForm{
+        width: 80%;
     }
 }

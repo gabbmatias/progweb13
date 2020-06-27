@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="viewAddressBody">
-    <a class="addressViewTitle">Endereços</a>
+<div class="body10">
+    <a class="title10">Endereços</a>
 
     <div class="enderecosBoxesView">
         @foreach ($addresses as $address)
