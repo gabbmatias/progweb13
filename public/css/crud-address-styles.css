@@ -12,7 +12,7 @@
     padding-bottom: 4%;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
         sans-serif;
-    font-style: normal;atualizarEndereco
+    font-style: normal;
     font-size: 42px;
     line-height: 22px;
     font-weight: 600;
@@ -31,16 +31,18 @@
     margin-bottom: 2px;
 }
 
+.actions {
+    margin-top: 10%;
+}
+
 .atualizarEndereco {
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
     padding: 8px 20px;
-    border: none;
     border-radius: 20px;
     cursor: pointer;
     font-size: 100%;
-    margin-top: 2%;
 }
 
 .atualizarEndereco:hover {
@@ -237,5 +239,13 @@
     .imagemFluxo img {
         width: 100%;
         height: auto;
+    }
+
+    .atualizarEndereco {
+        font-size: 100%;
+    }
+
+    .actions {
+        margin-top: 0;
     }
 }
