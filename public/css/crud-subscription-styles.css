@@ -1,27 +1,5 @@
 /* subscription-styles */
 /* edt-subscription-styles */
-
-.selectSubscriptionBody{
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-    overflow: auto!important;
-}
-
-.subscriptionBody {
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    align-content: center;
-}
-
 .subscriptionFormTitle{
     padding-top: 4%;
     padding-bottom: 4%;

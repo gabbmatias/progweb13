@@ -20,7 +20,7 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="cardBody">
+<div class="body1">
     
     <a class="cardFormTitle">Qual cartão usará para compra?</a>
 
