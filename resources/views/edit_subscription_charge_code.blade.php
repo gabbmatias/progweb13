@@ -3,7 +3,7 @@
 @section('content')
 <div class="compraFinalizdaBody">
     
-    <p>Assinatura Realizada!</p>
+    <p>Pagamento Alterado!</p>
     <div class="confirmationTitle">
         
         <h5>Código de barras:</h5>
@@ -13,6 +13,6 @@
             </div>
        
     </div>
-    <a href="#" class="retornarHome">Me leve à pagina príncipal</a>
+    <a href="#" class="retornarHome">Ir para minhas assinaturas</a>
 </div>
 @endsection
