@@ -26,6 +26,8 @@ Route::get('subscription/card/signed', 'SubscriptionController@indexSignedCard')
 
 Route::get('logs', 'LogController@index')->name('log.index');
 
+Route::get('upgrade/user', 'UserController@index')->name('user.index');
+
 Route::post('/plan/delete', 'PlansController@destroy')->name('plan.destroy');
 Route::post('/plan/edit', 'PlansController@edit')->name('plan.edit');
 Route::post('/plan/update', 'PlansController@update')->name('plan.update');

@@ -57,7 +57,7 @@
 
                         <div class="form-group row">
                             <div class="col-md-12">
-                                <a href="{{ route('profile.password') }}">Alterar senha</a>
+                                <a href="{{ route('user.index') }}">Promover usuário</a>
                             </div>
                         </div>
 

@@ -5,28 +5,23 @@
     <a class="title2">Promover Usuário</a>
     <div class="viewUpgradeUsers">
         <div class="blurred-box-upgrade">
-            <form action="/action_page.php">
-                <label for="cars">Choose a car:</label>
-                <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+            <form method="POST" action="{{ route('user.upgrade') }}">
+                <label for="user_id">Usuário:</label>
+                <select required name="user_id" id="user_id">
+                    <option value="" requi selected disabled>Selecione um usuário...</option>
+                    @foreach ($users as $user)
+                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                    @endforeach
                 </select>
-            </form>
             <br>
-            <form action="/action_page.php">
-                <label for="cars">Choose a car:</label>
-                <select name="cars" id="cars">
-                    <option value="volvo">Volvo</option>
-                    <option value="saab">Saab</option>
-                    <option value="opel">Opel</option>
-                    <option value="audi">Audi</option>
+                <label for="type">Selecione o cargo do usuário:</label>
+                <select required name="type" id="type">
+                    <option value="volvo">Usuário comum</option>
+                    <option value="saab">Administrador</option>
                 </select>
-            </form>
+
         </div>
     </div>
-    <form id="upgrade-user" action="" method="POST">
         <input type="submit" class="btn-input" name="submit" value="Confirmar">
     </form>
 </div>

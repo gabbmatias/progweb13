@@ -72,6 +72,12 @@
                             </div>
 
                             <div class="form-group row">
+                                <div class="col-md-12">
+                                    <a href="{{ route('profile.password') }}">Alterar senha</a>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group row">
 
                                 <div class="col-md-12">
                                     <a href="{{ route('profileemail') }}">Alterar e-mail</a>

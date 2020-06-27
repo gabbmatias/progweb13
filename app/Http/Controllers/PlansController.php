@@ -125,7 +125,7 @@ class PlansController extends Controller
                     'name' => Auth::user()->name,
                     'email' => Auth::user()->email,
                     'action' => 2,
-                    'message' => $oldName . ' -> ' . $data['plan_name'] . "\n R$ " . $oldPrice . ' -> R$ ' . $data['price'] . "\n" . $oldDescription . ' -> ' . $data['description'],
+                    'message' => $oldName . ' -> ' . $data['plan_name'] . "\nR$ " . $oldPrice . ' -> R$ ' . $data['price'] . "\n" . $oldDescription . ' -> ' . $data['description'],
                 ]);
 
                 return redirect()->route('plan.index');
