@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="body10">
+<div class="body2">
     <a class="title10">Endereços</a>
 
     <div class="enderecosBoxesView">
