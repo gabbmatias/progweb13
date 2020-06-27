@@ -19,14 +19,14 @@
                 <form action="{{ route('address.edit') }}" method="POST">
                     @csrf
                     <input hidden name="address_id" value="{{ $address->address_id }}">
-                    <input type="submit" class="action" name="submit" value="Editar">
+                    <input type="submit" class="atualizarEndereco" name="submit" value="Editar">
                 </form>
                 
                 
                 <form action="{{ route('address.destroy') }}" method="POST">
                     @csrf
                     <input hidden name="address_id" value="{{ $address->address_id }}">
-                    <input type="submit" class="action" name="submit" value="Deletar">
+                    <input type="submit" class="atualizarEndereco" name="submit" value="Deletar">
                 </form>
 
             </div>
