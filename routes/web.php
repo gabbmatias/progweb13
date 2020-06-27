@@ -44,7 +44,7 @@ Route::post('/address/edit', 'AddressController@edit')->name('address.edit');
 Route::post('/address/update', 'AddressController@update')->name('address.update');
 Route::resource('address', 'AddressController', ['except' => ['destroy', 'update', 'edit']]);
 
-Route::post('subscription/charge/update', 'SubscriptionController@updatePaymentCharge')->name('subscription.payment.charge.update');
+
 Route::post('subscription/address/update', 'SubscriptionController@updateAddress')->name('subscription.address.update');
 Route::post('subscription/payment/charge', 'ChargeController@indexCharge')->name('subscription.edit.payment.charge');
 Route::post('subscription/payment/credit_card', 'Credit_cardController@indexCredit_card')->name('subscription.edit.payment.credit_card');
@@ -87,6 +87,11 @@ Route::get("/about", function()
 Route::get("/subscription/edit/payment/credit_card", function()
 {
     return view('edit_subscription_payment_credit_card');
+})->name("edit.credit_card");
+
+Route::get("/subscription/edit/payment/add/credit_card", function()
+{
+    return view('edit_subscription_payment_add_credit_card');
 })->name("edit.credit_card");
 
 Route::get("/subscription/edit/payment/charge", function()
