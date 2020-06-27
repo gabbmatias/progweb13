@@ -5,7 +5,7 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
     </div>
-    <a class="paymentTitle">Qual a forma de pagamento?</a>
+    <a class="title10">Qual a forma de pagamento?</a>
     <div class="paymentFields">
         <form method="POST">
             @csrf

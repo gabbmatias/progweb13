@@ -5,7 +5,7 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-plans.png">
     </div>
-    <a class="selectPlansTitle">Selecione um plano</a>
+    <a class="title10">Selecione um plano</a>
 
     @if ($error != null)
         <a>{{ $error }}</a>

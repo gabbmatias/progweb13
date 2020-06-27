@@ -8,7 +8,7 @@
 
 
 <div class="body1">
-    <a class="addressFormTitle">Editar Endereço</a>
+    <a class="title10">Editar Endereço</a>
 
     @foreach ($addresses as $address)
 

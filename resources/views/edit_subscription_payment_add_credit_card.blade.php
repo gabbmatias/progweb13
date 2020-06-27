@@ -22,7 +22,7 @@ $(document).ready(function () {
 
 <div class="body1">
     
-    <a class="cardFormTitle">Qual cartão usará para compra?</a>
+    <a class="title10">Qual cartão usará para compra?</a>
 
     <form class="cardForm" method="POST" action="{{ route('subscription.payment.credit_card.update') }}">
        @csrf
