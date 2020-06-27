@@ -48,7 +48,7 @@
             </div>    
     </div> 
     <div class="cardFields">
-        <form method="POST" action="{{ route('credit_card.create') }}">
+        <form method="POST" action="{{ route('subscription.edit.add.credit_card') }}">
             @csrf
             <div class="addCard">
                 <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
@@ -59,7 +59,7 @@
         @else 
         <div class="cardFields">
 
-            <form method="POST" action="{{ route('credit_card.create') }}">
+            <form method="POST" action="{{ route('subscription.edit.add.credit_card') }}">
                 @csrf
                 <div class="addCard">
                     <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
@@ -73,7 +73,6 @@
         <form name="confirm_form" id="confirm_form" class="cardForm" method="POST">
             @csrf                
                 @if ( $credit_cards != null )
-                    <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
                     <input hidden type="text" name="card_number" id="card_number" value="{{ $credit_cards->card_number }}">
                     <input hidden type="text" name="security_number" id="security_number" value="{{ $credit_cards->security_number }}">
                     <input hidden type="text" name="expires_date" id="expires_date" value="<?= date('m', strtotime($credit_cards->expires_date)). '/'. date('y', strtotime($credit_cards->expires_date)) ?>">
@@ -85,6 +84,7 @@
                 <span id="error_cvv">{{ session('error') }}</span>
 
                 @endif
+                <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
                 <div class="navegacaoCartao">
                     <input type=submit class="voltarCartao" value="Voltar" formaction="{{ route('subscription.edit') }}">
                     @if ( $credit_cards != null )

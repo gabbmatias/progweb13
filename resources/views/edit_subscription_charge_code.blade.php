@@ -6,13 +6,19 @@
     <p>Pagamento Alterado!</p>
     <div class="confirmationTitle">
         
-        <h5>Código de barras:</h5>
-            <h6>Código do Boleto</h6>
+        @if (isset($charge_code))
+            <h5>Código de barras:</h5>
+            <h6>{{ $charge_code }}</h6>
             <div class="downloadBoleto">
-                <a href="#">Download Boleto</a>
+                <a href="{{ route('charge.create') }}">Download Boleto</a>
             </div>
+        @endif
        
     </div>
-    <a href="#" class="retornarHome">Ir para minhas assinaturas</a>
+      <form method="POST">
+            @csrf
+            <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
+         <input type=submit class="voltarBoleto" value="Voltar para inscrições" formaction="{{ route('subscription.edit') }}">
+      </form>  
 </div>
 @endsection

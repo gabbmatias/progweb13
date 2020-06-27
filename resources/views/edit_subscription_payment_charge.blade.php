@@ -23,7 +23,7 @@
             
             <form method="POST">
                 @csrf
-                <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
+                <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
                 <input type=submit class="voltarBoleto" value="Voltar" formaction="{{ route('subscription.edit') }}">
             </form>  
             

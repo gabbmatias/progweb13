@@ -220,6 +220,37 @@ class SubscriptionController extends Controller
         return redirect()->route('login');
     }
 
+    public function updatePaymentCredit_card(Request $request)
+    {
+        
+        if(Auth::check())
+        {
+            $data = $request->all();
+
+            $date = $data['expires_date'];
+            $date = explode('/', $date);
+            $date = '20' . $date['1'] .'-'. $date['0'] . '-01';
+
+            $payment = Payment::where('subscription_id', $data['subscription_id'])->delete();
+
+
+            Payment::create([
+                'subscription_id' => $data['subscription_id'],
+                'type' => $data['type']
+            ]);
+
+            Credit_card::create([
+                'payment_id' => DB::getPdo()->lastInsertId(),
+                'card_number' => $data['card_number'],
+                'card_name' => $data['card_name'],
+                'expires_date' => $date,
+                'security_number' => $data['security_number']
+            ]);
+             return view('edit_subscription_charge_code')->with(['subscription_id' => $data['subscription_id']]);
+        }
+        return redirect()->route('login');
+    }
+
     public function updatePaymentCharge(Request $request)
     {
         if(Auth::check())
@@ -239,8 +270,7 @@ class SubscriptionController extends Controller
                 'charge_code' => $charge_code,
                 'payer_name' => Auth::user()->name
             ]);
-            echo 'deu certo!';
-                return; 
+             return view('edit_subscription_charge_code')->with(['charge_code' => $charge_code, 'subscription_id' => $data['subscription_id']]);
         }
         return redirect()->route('login');
     }

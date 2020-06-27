@@ -34,8 +34,12 @@ class Credit_cardController extends Controller
      */
     public function create(Request $request)
     {
-        $data = $request->all();
-        return view('add_card')->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]);
+        if(Auth::check()){
+            $data = $request->all();
+            return view('add_card')->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]);
+        }
+        return redirect()->route('login');
+
     }
 
     /**
@@ -63,6 +67,15 @@ class Credit_cardController extends Controller
             ->where('subscriptions.client_id', '=', Auth::user()->id)->latest('credit_cards.created_at')->first();
 
             return view('edit_subscription_payment_credit_card')-> with(['subscription_id' => $data['subscription_id'], 'credit_cards' => $credit_cards]);  
+        }
+        return redirect()->route('login');
+    }
+
+    public function indexEditAddCredit_card(Request $request)
+    {
+        if(Auth::check()){
+            $data = $request->all();
+            return view('edit_subscription_payment_add_credit_card')->with(["subscription_id" => $data["subscription_id"]]);
         }
         return redirect()->route('login');
     }
