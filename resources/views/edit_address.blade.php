@@ -1,6 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script type="text/javascript">
+    $("#cep").mask("00.000-000");
+</script>
+
+
 <div class="body1">
     <a class="addressFormTitle">Editar Endereço</a>
 

@@ -1,26 +1,3 @@
-.viewPlansBody {
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
-.viewPlansTitle {
-    padding-top: 4%;
-    padding-bottom: 3%;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
-    font-style: normal;
-    font-size: 42px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #e54161 !important;
-    text-align: center;
-}
-
 .viewPlansBoxes {
     width: 50vw;
     height: 40vh;
@@ -43,6 +20,7 @@
     align-content: center;
     align-items: center;
 }
+
 .box-plano-titulo {
     margin-top: 3%;
     color: #e54161 !important;

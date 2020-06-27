@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="selectSubscriptionBody">
+<div class="body1">
 
     <a class="selectSubscriptionTitle">Edite sua assinatura!</a>
     @foreach ($subscriptions as $subscription)
