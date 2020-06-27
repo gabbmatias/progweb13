@@ -88,7 +88,7 @@
                 <div class="navegacaoCartao">
                     <input type=submit class="voltarCartao" value="Voltar" formaction="{{ route('subscription.edit') }}">
                     @if ( $credit_cards != null )
-                        <input type=submit name="submit" class="finalizarPagamento" id="doit" value="Finalizar Pagamento" onclick="confirmation()" formaction="{{ route('subscription.store') }}">
+                        <input type=submit name="submit" class="finalizarPagamento" id="doit" value="Finalizar Pagamento" onclick="confirmation()" formaction="{{ route('subscription.payment.credit_card.update') }}">
                     @endif
                 </div>
             
