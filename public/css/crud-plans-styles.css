@@ -1,16 +1,5 @@
 /* registerplans-styles */
 /* select-plans-styles */
-
-.editPlansBody {
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    align-content: center;
-}
-
 .editPlansFormTitle{
     padding-top: 4%;
     padding-bottom: 4%;
@@ -20,17 +9,6 @@
     line-height: 22px;
     font-weight: 600;
     color: #E54161 !important;   
-}
-
-.registerPlansBody {
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    align-content: center;
-    
 }
 
 .registerPlansForm{
@@ -98,16 +76,6 @@
 .atualizarPlano:hover {
     color: #e54161 !important;
     background-color: #fff !important;
-}
-
-.selectPlansBody{
-    flex: 1 1 auto;
-    width: 100%;
-    background-color: #fce4f0;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
 }
 
 .selectPlansTitle{

@@ -2,7 +2,7 @@
 
 @section('content')
 <?php $i = 0;?>
-<div class="addressBody">
+<div class="body10">
     
     <div class="addressFields">
         <a class="selectPlansTitle">Endereço</a>

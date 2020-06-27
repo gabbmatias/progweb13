@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="registerPlansBody">
+<div class="body10">
     <a class="registerPlansFormTitle">Novo Plano</a>
 
 <form class="registerPlansForm" method="POST" action="{{ route('plan.store') }}" >

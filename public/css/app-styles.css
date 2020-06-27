@@ -7,6 +7,29 @@ body {
     overflow: hidden;
 }
 
+/*body de 
+app-completed-transaction-styles.css
+app-payment-styles.css
+crud-address-styles.css
+crud-card-styles.css
+crud-plan-styles.css
+crud-subscription-styles.css*/
+.body10{
+    width: 100%;
+    flex: 1 1 auto;
+    background-color: #FCE4F0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: normal;
+    color: #E54161!important;
+}
+
+
+
+
 .generic-background {
     max-height: 400px;
     margin-right: 10%;
