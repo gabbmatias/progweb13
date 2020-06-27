@@ -41,7 +41,7 @@
     flex-direction: column;
     align-content: space-around;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .box-subscription-content{
@@ -147,6 +147,10 @@
 .cancelar:hover{
     color: #e54161!important;
     background-color: #fff !important;
+}
+
+.actionsEditSubscriptions{
+    margin-bottom: 4%;
 }
 
 @media screen and (max-width: 600px){
