@@ -86,6 +86,23 @@ Route::get("/about", function()
     return view('about');
 })->name("about");
 
+Route::get("/user/upgrade", function()
+{
+    return view('upgrade_user');
+})->name("user.upgrade");
+
+Route::get("/history/log", function()
+{
+    return view('logs_history');
+})->name("log.history");
+
+Route::get("/history/payments", function()
+{
+    return view('payments_history');
+})->name("payment.history");
+
+
+
 
 Route::get('plans/select', 'PlansPageController@indexPlans')->name('plan.select');
 

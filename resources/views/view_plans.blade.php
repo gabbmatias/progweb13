@@ -3,7 +3,7 @@
 @section('content')
 <div class="body2">
     <a class="title10">Planos</a>
-    <div class="viewPlansBoxes">
+    <div class="viewUpgradeUsers">
         @foreach ($plans as $plan)
 
         <div class="boxViewPlano">
