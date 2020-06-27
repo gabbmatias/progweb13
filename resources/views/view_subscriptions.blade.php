@@ -14,8 +14,8 @@
                 </div>
                 <div class="box-subscriptions-text">
                     <a><strong>Preço:</strong><br>{{ $subscription->price }}<br>
-                        <strong>Endereço:</strong><?= "<br>" .strtoupper( $subscription->street). ", " . strtoupper($subscription->street_number) . "<br>" .
-                        strtoupper($subscription->complement) ."<br>". strtoupper($subscription->city) . ', ' .  strtoupper($subscription->state) .  "<br>" .
+                        <strong>Endereço:</strong><?= "<br>" . strtoupper( $subscription->street). ", " . strtoupper($subscription->street_number) ?>
+                        @if(isset($subscription->complement)) <br> {{ strtoupper($subscription->complement) }} @endif <?="<br>". strtoupper($subscription->city) . ', ' .  strtoupper($subscription->state) .  "<br>" .
                         strtoupper($subscription->country) ."<br>".  strtoupper($subscription->cep) . '<br><strong> Pagamento:</strong><br>'?> 
                         @if ($subscription->type == 'cartao_credito')
                         <?php $cnumber = explode(" ",$subscription->card_number); echo "XXXX XXXX XXXX " . end($cnumber) . "<br><br>Pagamento será todo dia <strong>" . $subscription->created_at . "</strong>"?></a>

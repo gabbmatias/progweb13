@@ -10,8 +10,9 @@
         
         <div class="boxEnderecoView">
             <div class="box-endereco-text-view">
-                <a>{{ $address->street }}<br>{{ $address->street_number }}<br>{{ $address->complement }}<br>{{ $address->neighborhood }}<br>
-                    {{ $address->city}}<br>{{ $address->state }}<br>{{ $address->country }}<br>{{ $address->cep }}</a>
+                <a><?=strtoupper( $address->street). ", " . strtoupper($address->street_number) ?>
+                    @if(isset($address->complement)) <br> {{ strtoupper($address->complement) }} @endif <?="<br>". strtoupper($address->city) . ', ' .  strtoupper($address->state) .  "<br>" .
+                    strtoupper($address->country) ."<br>".  strtoupper($address->cep) ?></a>
             </div>
             <div class="actions">
                 

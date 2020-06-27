@@ -19,8 +19,8 @@
 
             <div class="boxEnderecoExample">
                 <div class="box-endereco-textExample">
-                <a><?=strtoupper( $address->street). ", " . strtoupper($address->street_number) . "<br>" .
-                    strtoupper($address->complement) ."<br>". strtoupper($address->city) . ', ' .  strtoupper($address->state) .  "<br>" .
+                <a><?=strtoupper( $address->street). ", " . strtoupper($address->street_number) ?>
+                    @if(isset($address->complement)) <br> {{ strtoupper($address->complement) }} @endif <?="<br>". strtoupper($address->city) . ', ' .  strtoupper($address->state) .  "<br>" .
                     strtoupper($address->country) ."<br>".  strtoupper($address->cep) ?></a>
                 </div>
                 <div class="actionsSelectAddress">

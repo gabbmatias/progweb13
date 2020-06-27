@@ -220,6 +220,31 @@ class SubscriptionController extends Controller
         return redirect()->route('login');
     }
 
+    public function updatePaymentCharge(Request $request)
+    {
+        if(Auth::check())
+        {
+            $data = $request->all();
+            $payment = Payment::where('subscription_id', $data['subscription_id'])->delete();
+
+            $charge_code = '23790.50400 42000.624231 07008.109204 4 82990000019900';
+
+            Payment::create([
+                'subscription_id' => $data['subscription_id'],
+                'type' => $data['type']
+            ]);
+
+            Charge::create([
+                'payment_id' => DB::getPdo()->lastInsertId(),
+                'charge_code' => $charge_code,
+                'payer_name' => Auth::user()->name
+            ]);
+            echo 'deu certo!';
+                return; 
+        }
+        return redirect()->route('login');
+    }
+
     public function updateAddress(Request $request)
     {
         if (Auth::check()) {

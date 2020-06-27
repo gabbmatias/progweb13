@@ -28,7 +28,7 @@ class ChargeController extends Controller
             $data = $request->all();
             $date = strtotime(date('d-m-Y'));
             $date = date('d/m/Y', strtotime('+ 2 days', $date));
-            return view('edit_subscription_payment_charge')-> with(['payer_name' => Auth::user()->name, 'subscription_id' => $data['subscription_id'] , 'expires_date' => $date ]);  
+            return view('edit_subscription_payment_charge')-> with(['payer_name' => Auth::user()->name,'price' => $data['price'], 'subscription_id' => $data['subscription_id'] , 'expires_date' => $date ]);  
         }
         return redirect()->route('login');
     }
