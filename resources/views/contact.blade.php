@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-body-all">
+<div class="container-body-all" aria-label="Uma mão com camisinha na ponta de dedo se encontrando com outra mão.">
+    
     <div class="boxes">
         <div class="box-blured">
             <div class="box-title">
