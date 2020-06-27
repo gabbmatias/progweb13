@@ -15,10 +15,9 @@
         @endif
        
     </div>
-      <form method="POST">
+      <form method="GET">
             @csrf
-            <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
-         <input type=submit class="voltarBoleto" value="Voltar para inscrições" formaction="{{ route('subscription.edit') }}">
+         <input type=submit class="voltarBoleto" value="Voltar para inscrições" formaction="{{ route('subscription.index') }}">
       </form>  
 </div>
 @endsection
