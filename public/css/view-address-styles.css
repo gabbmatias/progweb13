@@ -42,7 +42,7 @@
 }
 
 .addAddressView{
-    margin-top: 10%;
+    margin-top: 1%;
     width: 100%;
     height: 80%;
     display: flex;
@@ -67,11 +67,11 @@
 
 @media screen and (max-width: 600px){
     .enderecosBoxesView{
+        margin-top: 10%;
         width: 98vw;
-        height: 60vh;
     }
     .boxEnderecoView{
-        width: 49%;
-        height: 45%;
+        width: 70%;
+        height: 23vh;
     }
 }
