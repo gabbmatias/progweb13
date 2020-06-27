@@ -1,12 +1,13 @@
 .imagemFluxo{
-    margin-top: 1%;
     width: auto;
-    text-align: center;  
+    text-align: center;
+    margin-top: 2%;
 }
 
 .imagemFluxo img{
     width: 70%;
     height: auto;
+    margin-bottom: 8%;
 }
 
 .planoSelecionado{
