@@ -1,11 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="compraFinalizdaBody">
-    
-    <p>Pagamento Alterado!</p>
+<div class="body1">
+
     <div class="confirmationTitle">
-        
+    <p>Pagamento Alterado!</p>
         @if (isset($charge_code))
             <h5>Código de barras:</h5>
             <h6>{{ $charge_code }}</h6>
