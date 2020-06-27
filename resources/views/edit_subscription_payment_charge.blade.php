@@ -21,11 +21,10 @@
     
         <div class="actionsBoleto">
             
-            <form action="#" method="POST">
-                
-                <input type=submit class="voltarBoleto" value="Voltar" formaction="#">
-                <input hidden name="plan_id" value="">
-                <input hidden name="address_id" value="">
+            <form method="POST">
+                @csrf
+                <input hidden type="text" name="subscription_id" value="{{ $subscription->subscription_id }}">
+                <input type=submit class="voltarBoleto" value="Voltar" formaction="{{ route('subscription.edit') }}">
             </form>  
             
             <div class="backPayment">

@@ -51,6 +51,22 @@ class Credit_cardController extends Controller
         return redirect()->route('credit_card.index');
     }
 
+    public function indexCredit_card (Request $request)
+    {
+        if(Auth::check())
+        {
+            $data = $request->all();
+            
+            $credit_cards =DB::table('credit_cards')
+            ->join('payments', 'credit_cards.payment_id', '=', 'payments.payment_id')
+            ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
+            ->where('subscriptions.client_id', '=', Auth::user()->id)->latest('credit_cards.created_at')->first();
+
+            return view('edit_subscription_payment_credit_card')-> with(['subscription_id' => $data['subscription_id'], 'credit_cards' => $credit_cards]);  
+        }
+        return redirect()->route('login');
+    }
+
     public function selectCredit_card(Request $request)
     {
         if(Auth::check()){
