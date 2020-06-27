@@ -2,7 +2,7 @@
 
 @section('content')
 <?php $i = 0;?>
-<div class="body10">
+<div class="body1">
     <a class="selectPlansTitle">Selecione um plano</a>
     @if (isset($error)!= null)
         <a>{{ $error }}</a>

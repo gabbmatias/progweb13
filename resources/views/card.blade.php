@@ -35,7 +35,7 @@ $("form").on("click", "#doit", function () {
     }
 </script>
 
-<div class="body10">
+<div class="body1">
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
     </div>

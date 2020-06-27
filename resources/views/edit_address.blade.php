@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="body10">
+<div class="body1">
     <a class="addressFormTitle">Editar Endereço</a>
 
     @foreach ($addresses as $address)

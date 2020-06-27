@@ -21,7 +21,7 @@ $(document).ready(function () {
 
 </script>
 
-<div class="cardBody">
+<div class="body1">
     <div class="imagemFluxo">
         <img src="/img/routeBar-payment.png">
     </div>

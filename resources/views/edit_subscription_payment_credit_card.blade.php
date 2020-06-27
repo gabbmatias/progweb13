@@ -33,7 +33,7 @@
             return false
         }
     </script>
-<div class="body10">
+<div class="body1">
     <div class="cardBoxes">
         @if ( $credit_cards != null )
             <div class="boxCard">

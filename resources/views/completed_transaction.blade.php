@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="body10">
+<div class="body1">
     <div class="imagemFluxo">
         <img src="/img/routeBar-confirmation.png">
     </div>
