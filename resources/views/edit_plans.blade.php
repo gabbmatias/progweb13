@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="editPlansBody">
+<div class="body1">
     <a class="editPlansFormTitle">Editar Plano</a>
 
     @foreach ($plans as $plan)
