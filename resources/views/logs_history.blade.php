@@ -15,8 +15,8 @@
                         <th id="name">Nome</th>
                         <th>Email</th>
                         <th id="action">Ação</th>
+                        <th>Data/Hora</th>
                         <th>Mensagem</th>
-                        <th>Hora</th>
                     </tr>
                     
                     @foreach ($logs as $log)
