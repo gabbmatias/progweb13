@@ -22,7 +22,7 @@
                     <a> {{ $plan->description }} <br><strong>Apenas {{ $plan->price}}!</strong></a>
                 </div>
 
-                <div class="actionViewPlan">
+                <div class="actionSelectPlans">
                     <a href="{{ route('address.select', ['plan' => $plan->plan_id]) }}" class="selecionarPlano">Selecionar</a>                
                 </div>
             </div>
