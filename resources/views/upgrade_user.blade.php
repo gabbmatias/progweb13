@@ -11,7 +11,9 @@
                 <select required name="user_id" id="user_id">
                     <option value="" requi selected disabled>Selecione um usuário...</option>
                     @foreach ($users as $user)
+                    @if ($user->id != Auth::user()->id)
                         <option value="{{ $user->id }}">{{ $user->name }}</option>
+                    @endif
                     @endforeach
                 </select>
             <br>
