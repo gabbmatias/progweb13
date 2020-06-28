@@ -28,7 +28,7 @@
                 </div>
                 <div class="actionsSelectAddress">
                     
-                    <form action="{{ route("subscription.address.update") }}" onsubmit="confirmation{{ $i }}()" method="POST">
+                    <form action="{{ route('subscription.address.update') }}" onsubmit="confirmation{{ $i }}()" method="POST">
                         @csrf
                         <input hidden name="subscription_id" value="{{ $subscription_id }}">
                         <input hidden name="address_id" value="{{ $address->address_id }}">
