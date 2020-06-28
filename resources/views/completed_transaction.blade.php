@@ -5,7 +5,7 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-confirmation.png">
     </div>
-    <div class="confirmationTitle">
+    <div class="title10">
         <p>Assinatura Realizada!</p><br>
         @if ($charge_code != null)
         <h1>Código de barras:</h1>
