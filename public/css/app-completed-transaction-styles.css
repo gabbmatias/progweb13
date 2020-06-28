@@ -1,9 +1,10 @@
 .title10 h1 {
-    font-size: 40px;
+    margin-top: 4vh;
+    font-size: 60px;
 }
 
 .title10 h2 {
-    font-size: 45px;
+    font-size: 65px;
 }
 
 .downloadBoleto a{
@@ -47,11 +48,11 @@
 }
 
 @media screen and (max-width: 600px){
-    .confirmationTitle h5{
+    .title10 h5{
         font-size: 25%;
     }
 
-    .confirmationTitle h6{
+    .title10 h6{
         font-size: 20%;
     }
 
