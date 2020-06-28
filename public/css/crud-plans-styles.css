@@ -145,6 +145,8 @@
 }
 
 .selecionarPlano{
+    border: none;
+    background-color: rgba(107, 107, 107, 0);
     color: #E54161!important;
     text-decoration: none;
     font-size: 140%;
