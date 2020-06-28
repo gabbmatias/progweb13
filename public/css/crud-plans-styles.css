@@ -200,11 +200,10 @@
     }
     .plansBoxes{
         width: 98vw;
-        height: 60vh;
     }
     .boxPlano{
-        width: 49%;
-        height: 48%;
+        width: 75%;
+        height: 30vh;
     }
     .plansForm{
         width: 80vw;
