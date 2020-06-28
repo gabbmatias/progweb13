@@ -55,6 +55,21 @@
    
 }
 
+.atualizarViewEndereco{
+    background-color: rgba(107, 107, 107, 0) !important;
+    color: #e54161 !important;
+    padding: 0px 0px !important;
+    cursor: pointer;
+    border: hidden !important;
+    font-size: 120%;
+    margin-top: 2%;
+}
+
+.atualizarViewEndereco:hover{
+    color: white !important;
+    text-decoration: none;
+}
+
 .addAddressView a{
     color: #e54161;
     font-size: 55px;
