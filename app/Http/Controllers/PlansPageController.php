@@ -34,10 +34,12 @@ class PlansPageController extends Controller
     public function indexPlans()
     {
         session()->put('back_url_plan', "{$_SERVER['REQUEST_URI']}");
+        session()->put('error-msg', "Você precisa estar logado.");
         if(Auth::check())
         {
             $plans = Plan::all();
             session()->forget('back_url_plan');
+            session()->forget('error-msg');
             return view('select_plans')->with(['plans' => $plans, 'error' => null]);
         }
         return redirect()->route("login");
