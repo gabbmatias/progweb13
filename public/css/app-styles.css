@@ -61,11 +61,6 @@ body {
     text-decoration: none;
 }
 
-.notHover:hover {
-    text-decoration: none;
-    color: #fff !important;
-}
-
 .viewUpgradeUsers {
     width: 50vw;
     height: auto;
