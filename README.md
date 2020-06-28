@@ -39,9 +39,16 @@ php artisan migrate:fresh
 <commando 3>
 php artisan serve
 
-* Passo a Passo
- - Primeiro altere o arquivo .env, na parte "DB_DATABASE" coloque o nome do banco, tais como informações de acesso;
- - 
+* Passo a passo do nosso ambiente:
+ - Instale o xampp;
+ - Inicialize o xamppp usando 'sudo /opt/lampp/xampp start';
+ - Acesse localhost/phpmyadmin
+ - Crie um banco de dados;
+ - Crie um arquivo .env usando a mesma estrututa presente no '.env.example'
+ - Altere o arquivo .env, onde estiver "DB_DATABASE" troque pelo nome do banco criado acima, tais como informações de acesso;
+ - Use o comando 'php artisan migrate';
+ - Use o comando 'php artisan serve';
+ - Desfrute do sistema.
 
 * Para fins de teste, o banco de dados utilizado foi o mySQL.
 <commando sugerido>
