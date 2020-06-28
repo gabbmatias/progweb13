@@ -16,7 +16,7 @@ Os planos serão divididos em 3 categorias: básico, premium, exxxtra. Cada plan
 Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 <!--- Estes são alguns exemplos de requisitos. Adicione, duplique e remove como necessário --->
 * Você deve possuir a última versão do PHP, HTML, JavaScript e CSS instalado.
-* Você deve possuir uma máquina Linux e Mac.
+* Você deve possuir uma máquina Linux ou Mac.
 * Você deve ler o https://www.php.net/manual/pt_BR/ dos termos de uso do PHP.
 * Você deve ler o https://dev.w3.org/html5/html-author/ dos termos de uso do HTML 5.
 * Você deve ler o https://www.w3schools.com/cssref/ dos termos de uso do CSS 3.
@@ -29,7 +29,7 @@ Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 
 Para fazer o deploy da aplicação siga os seguintes passos:
 
-Linux/macOS/Windows:
+Linux:
 ```
 * Arquivos de configuração pessoal do projeto(.env)
 <commando 1>
@@ -38,6 +38,10 @@ composer require laravel/ui
 php artisan migrate:fresh
 <commando 3>
 php artisan serve
+
+* Passo a Passo
+ - Primeiro altere o arquivo .env, na parte "DB_DATABASE" coloque o nome do banco, tais como informações de acesso;
+ - 
 
 * Para fins de teste, o banco de dados utilizado foi o mySQL.
 <commando sugerido>

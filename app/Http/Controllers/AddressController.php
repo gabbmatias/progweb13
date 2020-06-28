@@ -74,24 +74,27 @@ class AddressController extends Controller
 
     public function checkPlan($plan_id)
     {
-       $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
-       
-       foreach ($check as $subs)
-        if($subs->plan_id == $plan_id)
-            return true;
-        return false;
+        $check =  DB::table('subscriptions')->join('plans', 'plans.plan_id', '=', 'subscriptions.plan_id')->where('client_id', '=', Auth::user()->id)->get();
+        
+        foreach ($check as $subs)
+            if($subs->plan_id == $plan_id)
+                return true;
+            return false;
+        
+        
     }
 
     public function selectAddress($id)
     {
+        session()->put('back_url_plan', "{$_SERVER['REQUEST_URI']}");
+        session()->put('back_url', "{$_SERVER['REQUEST_URI']}");
+        if(Auth::check()){
         if($this->checkPlan($id)){
             $plan = Plan::all();
             $error = 'Você ja possui este plano. Por favor, selecione outro.';
             return view('select_plans')->with(['error' => $error, 'plans' => $plan]);
         }
 
-        session()->put('back_url', "{$_SERVER['REQUEST_URI']}");
-        if(Auth::check()){
             $addresses = Address::where('client_id', Auth::user()->id)->get();
             $plan = Plan::where('plan_id', $id)->get();
             return view('address')->with(['plans' => $plan, 'addresses' => $addresses]);
@@ -152,12 +155,15 @@ class AddressController extends Controller
 
     public function checkAddress($address_id)
     {
-       $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->get();
-       
-       foreach ($check as $subs)
-        if($subs->address_id == $address_id)
-            return true;
-        return false;
+        if(Auth::check()){
+            $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->get();
+            
+            foreach ($check as $subs)
+                if($subs->address_id == $address_id)
+                    return true;
+                return false;
+        }
+        return redirect()->route('login');
     }
 
 
