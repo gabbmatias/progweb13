@@ -11,7 +11,7 @@
             @csrf
             <button class="selectPayment" formaction="{{ route('charge.select')}} ">
                 <div class="boleto-payment">
-                    <i class="fa fa-file-text-o"></i>
+                    <i class="fa fa-barcode"></i>
                     <input hidden name="plan_id" value="{{ $plan_id }}">
                     <input hidden name="address_id" value="{{ $address_id }}">
                     
