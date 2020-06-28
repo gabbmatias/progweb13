@@ -34,6 +34,5 @@
     <div class="addPlan">
         <a title="Adicionar Plano" href="{{ route('plan.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
     </div>
-    <img class="generic-background" src="/img/generic-background.png" alt="Uma mão segurando um camisinha emblada.">
 </div>
 @endsection
