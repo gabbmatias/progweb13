@@ -131,12 +131,12 @@
 
 .navegacao {
     width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 5vh;
     margin-top: 9%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     
 }
 
