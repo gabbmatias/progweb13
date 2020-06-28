@@ -157,7 +157,7 @@
 
 .navegacaoSelecionarPlano {
     width: 100%;
-    padding-top: 5vh;
+    margin-top: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
