@@ -3,7 +3,7 @@
 @section('content')
 <div class="body1">
 
-    <div class="confirmationTitle">
+    <div class="title10">
     <p>Pagamento Alterado!</p>
         @if (isset($charge_code))
             <h5>Código de barras:</h5>
