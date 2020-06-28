@@ -89,7 +89,7 @@ Auth::routes();
 
 Route::get("/about", function()
 {
-    return view('home-about');
+    return view('home_about');
 })->name("about");
 
 Route::get("/user/upgrade", function()

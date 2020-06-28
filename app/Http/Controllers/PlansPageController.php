@@ -18,7 +18,7 @@ class PlansPageController extends Controller
     {
         $plans = Plan::all();
 
-        return view('home-plans')->with(['plans' => $plans]);
+        return view('home_plans')->with(['plans' => $plans]);
     }
 
     /**
