@@ -57,7 +57,7 @@ class ChargeController extends Controller
             $date = date('d/m/Y', strtotime('+ 2 days', $date));
             $plan = Plan::where('plan_id', $data['plan_id'])->get();
 
-            return view ('charge')-> with(['plans' => $plan, 'address_id' => $data['address_id'],
+            return view ('select-billet')-> with(['plans' => $plan, 'address_id' => $data['address_id'],
             'payer_name' => Auth::user()->name, 'expires_date' => $date ] );  
         }
 

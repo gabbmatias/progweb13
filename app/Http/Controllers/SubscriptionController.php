@@ -102,7 +102,7 @@ class SubscriptionController extends Controller
                     unset($data['submit']);
                     return Redirect::to('subscription/card/signed'); 
                 }
-                return view('completed_transaction')->with(['charge_code' => NULL]); 
+                return view('view-completed-transaction')->with(['charge_code' => NULL]); 
             }
             return redirect()->route('login');   
     }
@@ -135,7 +135,7 @@ class SubscriptionController extends Controller
             unset($data['submit']);
             return Redirect::to('subscription/charge/signed');
         }
-        return view('completed_transaction')->with(['charge_code' => NULL]); 
+        return view('view-completed-transaction')->with(['charge_code' => NULL]); 
     }
     return redirect()->route('login');   
 }
@@ -155,12 +155,12 @@ class SubscriptionController extends Controller
 
     public function indexSignedCharge()
     {
-        return view("completed_transaction")->with(['charge_code' => '23790.50400 42000.624231 07008.109204 4 82990000019900']);;
+        return view("view-completed-transaction")->with(['charge_code' => '23790.50400 42000.624231 07008.109204 4 82990000019900']);;
     }
 
     public function indexSignedCard()
     {
-        return view("completed_transaction")->with(['charge_code' => null]);;
+        return view("view-completed-transaction")->with(['charge_code' => null]);;
     }
     /**
      * Show the form for editing the specified resource.
