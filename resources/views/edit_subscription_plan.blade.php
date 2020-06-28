@@ -28,7 +28,7 @@
                     <div class="navegacao">
                         <input hidden type="text" name="plan_id" value="{{ $plan->plan_id }}">
                         <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
-                        <input type='submit' class="cancelar" value="Selecionar">
+                        <input type='submit' class="actionSelectPlans" value="Selecionar">
                     </div>
                 </form>             
             </div>
@@ -50,7 +50,7 @@
     </div>
     <form class="plansForm" method="POST" action="{{ route('subscription.edit') }}">
         @csrf
-        <div class="navegacao">
+        <div class="navegacaoSubscription">
             <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
             <input type=submit class="cancelar" value="Cancelar">
         </div>
