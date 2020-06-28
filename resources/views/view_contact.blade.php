@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="viewContactBody">
-    <a class="title1">Mensagens</a>
+<div class="body1">
+    <a class="title10">Mensagens</a>
 
     
     <div class="contactBoxes">        
