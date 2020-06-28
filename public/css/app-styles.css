@@ -19,6 +19,7 @@ body {
         sans-serif;
     font-style: normal;
     color: #e54161 !important;
+    overflow: auto!important;
 }
 
 .viewUpgradeUsers {
@@ -89,7 +90,7 @@ body {
     font-family: Cookie;
     font-style: normal;
     font-size: 500%;
-    line-height: 22px;
+    line-height: 50px;
     color: #e54161 !important;
     text-align: center;
 }
