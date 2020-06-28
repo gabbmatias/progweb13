@@ -99,7 +99,7 @@ Route::get("/user/upgrade", function()
 
 Route::get("/history/log", function()
 {
-    return view('logs_history');
+    return view('view_logs');
 })->name("log.history");
 
 Route::get("/history/payments", function()

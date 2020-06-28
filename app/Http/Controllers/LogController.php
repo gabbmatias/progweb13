@@ -16,7 +16,7 @@ class LogController extends Controller
             {
                 $logs = Log::latest()->paginate(5);
 
-                return view('logs_history')->with(['logs' => $logs]);
+                return view('view_logs')->with(['logs' => $logs]);
             }
             return redirect()->route('profile');
         }

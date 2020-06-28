@@ -90,7 +90,7 @@ class Credit_cardController extends Controller
             ->join('payments', 'credit_cards.payment_id', '=', 'payments.payment_id')
             ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
             ->where('subscriptions.client_id', '=', Auth::user()->id)->latest('credit_cards.created_at')->first();
-            return view('select-card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
+            return view('select_card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
         }
 
         return redirect()->route('login');

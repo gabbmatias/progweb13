@@ -17,7 +17,7 @@ class PaymentController extends Controller
     }
 
     public function boleto(){
-        return view("select-billet");
+        return view("select_billet");
     }
 
     public function finalizar(){
