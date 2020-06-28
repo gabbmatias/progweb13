@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="body1">
+<div class="body2">
     <a class="title10">Mensagens</a>
 
     
@@ -24,6 +24,9 @@
             </div>
         </div>
     @endforeach
+    </div>
+    <div class="links">
+        {!! $contacts->links() !!}
     </div>
 </div>
 @endsection

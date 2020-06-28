@@ -18,7 +18,7 @@ class CreateLogsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->enum('action', ['removido', 'atualizado']);
-            $table->string('message');
+            $table->string('message', 800);
             $table->timestamps();
 
         });

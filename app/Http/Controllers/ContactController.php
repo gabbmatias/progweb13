@@ -20,7 +20,7 @@ class ContactController extends Controller
             if (Auth::user()->groupid != 2) {
                 return redirect()->route('profile');
             } else {
-                $contacts = Contact::all();
+                $contacts = Contact::paginate(4);
                 return view('view_contact')->with(['contacts' => $contacts]);
             }
         }

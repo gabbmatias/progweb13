@@ -13,7 +13,7 @@
             <form method="POST" onsubmit="alert('Sua mensagem foi enviada com sucesso!')" action="{{ route('contact.store') }}">
                 @csrf
                     <input type="text" id="email" name="email" placeholder="Seu E-mail" required>
-                    <textarea id="subject" name="message" placeholder="Sua Mensagem" style="height:100px" required></textarea>
+                    <textarea id="subject" maxlength="800" name="message" placeholder="Sua Mensagem" style="height:100px" required></textarea>
                     <input type="submit" class="enviar" value="Enviar">
                 </form>
             </div>
