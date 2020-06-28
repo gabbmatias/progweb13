@@ -36,7 +36,16 @@ $(document).ready(function () {
         <input type="submit" class="finalizarPagamento" name="submit" value="Finalizar compra">
         
 
-    <form>      
+    </form>    
+        
+        <form method="POST">
+            @csrf
+            <div class="voltarPayment">
+                <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
+                <input type=submit class="voltarEditarEndereco" value="Voltar"
+                formaction="{{ route('subscription.edit.payment.credit_card') }}">
+            </div>
+        </form>
 
 </div>
 
