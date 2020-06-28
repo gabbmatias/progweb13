@@ -98,6 +98,7 @@
 }
 
 .addressFields{
+    margin-top: 4%;
     width: 30vw;
     text-align: center;
     display: flex;
