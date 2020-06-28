@@ -25,10 +25,10 @@
 
                 <form class="plansForm" onsubmit="confirmation{{ $i }}()" method="POST" action="{{ route('subscription.plan.update') }}">
                     @csrf
-                    <div class="navegacao">
+                    <div class="actionSelectPlans">
                         <input hidden type="text" name="plan_id" value="{{ $plan->plan_id }}">
                         <input hidden type="text" name="subscription_id" value="{{ $subscription_id }}">
-                        <input type='submit' class="actionSelectPlans" value="Selecionar">
+                        <input type='submit' class="selecionarPlano" value="Selecionar">
                     </div>
                 </form>             
             </div>
