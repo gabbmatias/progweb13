@@ -18,7 +18,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .box-subscriptions-title {
