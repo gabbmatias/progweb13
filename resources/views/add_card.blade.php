@@ -41,6 +41,15 @@ $(document).ready(function () {
 
     <form>      
 
+        <form>
+            <div class="voltarPayment">
+                <input hidden name="plan_id" value="{{ $plan_id }}">
+                <input hidden name="address_id" value="{{ $address_id }}">
+                <input type=submit class="voltarEditarEndereco" value="Voltar"
+                formaction="{{ route('credit_card.select') }}">
+            </div>
+        </form>
+
 </div>
 
 
