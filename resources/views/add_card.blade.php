@@ -27,7 +27,7 @@ $(document).ready(function () {
     </div>
     <a class="title10">Qual cartão usará para compra?</a>
 
-    <form class="cardForm" method="POST" action="{{ route('subscription.store') }}">
+    <form class="cardForm" onsubmit="confirmation()" method="POST" action="{{ route('subscription.store') }}">
         @csrf
         <input required type="text" name="card_number" id="card_number" minlength="19" placeholder="Número do cartão">
         <input required type="text" name="security_number" minlength="3" maxlength="3" id="security_number" placeholder="Codígo de seguraça">
@@ -50,6 +50,16 @@ $(document).ready(function () {
                 formaction="{{ route('credit_card.select') }}">
             </div>
         </form>
+
+        <script>
+            function confirmation(){
+                if(confirm('Tem certeza de que deseja finalizar pagamento?'))
+                return true; 
+                else 
+                event.preventDefault()
+                return false
+            }
+        </script>
 
 </div>
 
