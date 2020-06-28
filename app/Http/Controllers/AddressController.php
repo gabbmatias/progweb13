@@ -97,7 +97,7 @@ class AddressController extends Controller
 
             $addresses = Address::where('client_id', Auth::user()->id)->get();
             $plan = Plan::where('plan_id', $id)->get();
-            return view('address')->with(['plans' => $plan, 'addresses' => $addresses]);
+            return view('select_address')->with(['plans' => $plan, 'addresses' => $addresses]);
         }
         else
             return redirect()->route('login');

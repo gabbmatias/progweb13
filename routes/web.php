@@ -89,17 +89,17 @@ Auth::routes();
 
 Route::get("/about", function()
 {
-    return view('about');
+    return view('home_about');
 })->name("about");
 
 Route::get("/user/upgrade", function()
 {
-    return view('upgrade_user');
+    return view('edit_role');
 })->name("user.upgrade");
 
 Route::get("/history/log", function()
 {
-    return view('logs_history');
+    return view('view_logs');
 })->name("log.history");
 
 Route::get("/history/payments", function()

@@ -20,7 +20,7 @@ class UserController extends Controller
         {
             if(Auth::user()->groupid == 2){
                 $users = User::all();
-                return view('upgrade_user')->with(['users' => $users]);
+                return view('edit_role')->with(['users' => $users]);
             }
             return redirect()->route('profile');
         }

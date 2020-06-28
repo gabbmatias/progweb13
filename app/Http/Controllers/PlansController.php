@@ -38,7 +38,7 @@ class PlansController extends Controller
             if (Auth::user()->groupid != 2) {
                 return redirect()->route('profile');
             } else {
-                return view('registerplans');
+                return view('add_plan');
             }
         }
         return redirect()->route('login');

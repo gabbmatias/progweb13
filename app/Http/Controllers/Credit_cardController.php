@@ -90,7 +90,7 @@ class Credit_cardController extends Controller
             ->join('payments', 'credit_cards.payment_id', '=', 'payments.payment_id')
             ->join ('subscriptions', 'subscriptions.subscription_id', '=', 'payments.subscription_id')
             ->where('subscriptions.client_id', '=', Auth::user()->id)->latest('credit_cards.created_at')->first();
-            return view('card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
+            return view('select_card')->with(['credit_cards' => $credit_cards, 'plan_id' => $plan_id, 'address_id' => $address_id]);
         }
 
         return redirect()->route('login');
@@ -131,16 +131,16 @@ class Credit_cardController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $data = $request->all();
-        Credit_card::where('card_number', $data['card_number'])->delete();
-        return redirect()->route('credit_card.index');
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //     $data = $request->all();
+    //     Credit_card::where('card_number', $data['card_number'])->delete();
+    //     return redirect()->route('credit_card.index');
+    // }
 }
