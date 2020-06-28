@@ -1,10 +1,10 @@
 .transaction h1 {
     margin-top: 4vh;
-    font-size: 60px;
+    font-size: 200%!important;
 }
 
 .transaction h2 {
-    font-size: 65px;
+    font-size: 250%px!important;
 }
 
 .downloadBoleto a{
