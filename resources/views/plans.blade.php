@@ -18,10 +18,10 @@
     
     <div class="center-division">
         <div class="plan-detail">
-            - 5 camisinhas de sabor +<br>
-            - 5 camisinhas de textura +<br>
-            - 5 camisinhas regulares <br>
-            <p><strong>Tudo isso por apenas {{ $plan->price }}!</strong></p>
+            5 camisinhas de sabor <br>
+            5 camisinhas de textura <br>
+            5 camisinhas regulares <br>
+            <p><strong>Tudo isso por apenas R${{ $plan->price }}!</strong></p>
         </div>
     </div>  
 
@@ -41,11 +41,11 @@
         
         <div class="center-division">
             <div class="plan-detail">
-                - 5 camisinhas de sabor +<br>
-                - 5 camisinhas de textura +<br>
-                - 5 camisinhas regulares +<br>
-                - 5 camisinhas especiais
-                <p><strong>Tudo isso por apenas {{ $plan->price }}!</strong></p>
+                5 camisinhas de sabor <br>
+                5 camisinhas de textura <br>
+                5 camisinhas regulares <br>
+                5 camisinhas especiais
+                <p><strong>Tudo isso por apenas R${{ $plan->price }}!</strong></p>
             </div>
         </div>
     
@@ -65,9 +65,9 @@
     
     <div class="center-division">
         <div class="plan-detail">
-            - Escolha 20 camisinhas de sua preferência +<br>
-            - Lubrificante
-            <p><strong>Tudo isso por apenas {{ $plan->price }}!</strong></p>
+            Escolha 20 camisinhas de sua preferência <br>
+            Lubrificante
+            <p><strong>Tudo isso por apenas R${{ $plan->price }}!</strong></p>
         </div>
     </div>
 
