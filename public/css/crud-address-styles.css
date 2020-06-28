@@ -36,18 +36,18 @@
 }
 
 .atualizarEndereco {
-    background-color: #e54161 !important;
-    color: #fff;
-    border: 3px solid #e54161 !important;
-    padding: 8px 20px;
-    border-radius: 20px;
+    background-color: rgba(107, 107, 107, 0) !important;
+    color: #e54161 !important;
+    padding: 0px 0px !important;
     cursor: pointer;
-    font-size: 100%;
+    border: hidden !important;
+    font-size: 120%;
+    margin-top: 2%;
 }
 
 .atualizarEndereco:hover {
-    color: #e54161 !important;
-    background-color: #fff !important;
+    color: white !important;
+    text-decoration: none;
 }
 
 .voltarEditarEndereco {
