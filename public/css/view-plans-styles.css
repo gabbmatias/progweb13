@@ -1,6 +1,5 @@
 .viewPlansBoxes {
-    width: 55vw;
-    height: 27vh;
+    width: 70vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

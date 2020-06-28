@@ -6,7 +6,7 @@
     <div class="boxes">
         <div class="box-blured">
             <div class="box-title">
-                <span>Fale Conosco</span>
+                <p class="subTitle">Fale Conosco</p>
             </div>
             <div class="container">
 
@@ -20,7 +20,7 @@
         </div>
         <div class="box-blured">
             <div class="box-title">
-                <span>Contato</span>
+                <p class="subTitle">Contato</p>
             </div>
             <div class="box-message-contact">
                 <a>Telefone:<br><br>0800-SE-PRESERVE<br><br><br>E-mail:<br><br>preserve@preserve.com</a>

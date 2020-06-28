@@ -82,6 +82,11 @@
     background-color: #fff !important;
 }
 
+.subTitle {
+    font-family: Cookie !important;
+    font-size: 160%;
+}
+
 @media screen and (max-width: 600px) {
     div.boxes {
         flex-direction: column;
