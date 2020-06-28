@@ -1,17 +1,4 @@
 /* charge-styles */
-.paymentTitle{
-    padding-top: 4%;
-    padding-bottom: 4%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-style: normal;
-    font-size: 42px;
-    line-height: 22px;
-    font-weight: 600;
-    color: #E54161!important;
-    text-align: center;
-        
-}
-
 .paymentFields{
     display: flex;
     flex-direction: column;
@@ -114,7 +101,7 @@
     margin-top: 1%;
     width: auto;
     text-align: center;  
-    height: 13vh;
+    height: 6vh;
 }
 
 .imagemFluxo img{
@@ -235,12 +222,12 @@
 }
 
 @media screen and (max-width: 600px){
-    .paymentTitle{
-        padding-top: 10%;
-        padding-bottom: 10%;
-        line-height: 90%;
+    .payment{
+        font-size: 300%!important;    
     }
-    .paymentFields{        
+    
+    .paymentFields{ 
+        margin-top: 10%;       
         width: 80vw;
     }
     .selectPayment{
