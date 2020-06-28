@@ -5,12 +5,12 @@
     flex-wrap: wrap;
     flex-direction: row;
     align-content: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .boxViewPlano {
     margin-top: 2%;
-    width: 32%;
+    width: 33%;
     height: 100%;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
@@ -83,7 +83,7 @@
         height: auto;
     }
     .boxViewPlano {
-        width: 75%;
+        width: 80%;
         height: 25vh;
     }
 }

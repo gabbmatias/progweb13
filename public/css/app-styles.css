@@ -4,7 +4,7 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .body1 {
@@ -19,7 +19,6 @@ body {
         sans-serif;
     font-style: normal;
     color: #e54161 !important;
-    overflow: auto!important;
 }
 
 .viewUpgradeUsers {
@@ -31,7 +30,6 @@ body {
     flex-direction: row;
     align-content: flex-start;
     justify-content: space-evenly;
-    overflow: auto!important;
 }
 
 .body2 {
