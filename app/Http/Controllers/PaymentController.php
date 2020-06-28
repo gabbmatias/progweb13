@@ -11,7 +11,7 @@ class PaymentController extends Controller
         
         if (Auth::check()) {
             $data= $request->all();
-            return view("payment")->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]); 
+            return view("select_payment")->with(["plan_id" => $data["plan_id"], "address_id" => $data["address_id"]]); 
         }
         return redirect()->route('login');
     }

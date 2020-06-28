@@ -131,16 +131,16 @@ class Credit_cardController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        $data = $request->all();
-        Credit_card::where('card_number', $data['card_number'])->delete();
-        return redirect()->route('credit_card.index');
-    }
+    // /**
+    //  * Remove the specified resource from storage.
+    //  *
+    //  * @param  int  $id
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function destroy($id)
+    // {
+    //     $data = $request->all();
+    //     Credit_card::where('card_number', $data['card_number'])->delete();
+    //     return redirect()->route('credit_card.index');
+    // }
 }
