@@ -21,6 +21,9 @@
                 <div class="card">
                     <div class="card-header">{{ __('Login') }}</div>
 
+                    @if(session('error-msg'))
+                    {{session('error-msg')}}
+                    @endif
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf

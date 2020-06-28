@@ -39,7 +39,7 @@
 
             <script>
                 function confirmation{{ $i++ }} (){
-                    if(confirm('Você tem certeza que deseja alterar seu plano para {{ $address->street }}?'))
+                    if(confirm('Você tem certeza que deseja alterar seu endereço para {{ $address->street }}?'))
                     return true; 
                     else 
                     event.preventDefault()

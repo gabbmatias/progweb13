@@ -8,7 +8,7 @@
     <div class="addressFields">
         @foreach ($plans as $plan)
             <div>
-                <span class="planoSelecionado">{{$plan->plan_name}}</span>
+                <span class="planoSelecionado">Selecione um endereço para o plano {{$plan->plan_name}}</span>
                 <?php 
                     $flag= $plan->plan_id;
                 ?>
