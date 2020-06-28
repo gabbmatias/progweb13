@@ -118,11 +118,13 @@ Route::get('plans/{plan}', 'PlansPageController@selectPlan')->name('plans.select
 Route::get('/home', function () {
     session()->forget('back_url');
     session()->forget('back_url_plan');
+    session()->forget('error-msg');
     return view('home');
 })->name('home');
 Route::get('/', function () {
     session()->forget('back_url');
     session()->forget('back_url_plan');
+    session()->forget('error-msg');
     return view('home');
 })->name('home');
 
