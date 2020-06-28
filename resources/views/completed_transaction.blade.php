@@ -5,16 +5,15 @@
     <div class="imagemFluxo">
         <img src="/img/routeBar-confirmation.png">
     </div>
-    <div class="confirmationTitle">
-    <p>Assinatura Realizada!</p><br>
+    <a class="title10">Assinatura Realizada!</a>
+    <div class="subscriptionFields">
         @if ($charge_code != null)
-        <h5>Código de barras:</h5>
-            <h6>{{ $charge_code }}</h6>
+        <p>Código de barras:</p>
+            <p>{{ $charge_code }}</p>
             <div class="downloadBoleto">
                 <a href="{{ route('charge.create') }}">Download Boleto</a>
             </div>
         @endif
-    </div>
     <a href="{{ route('home') }}" class="retornarHome">Me leve à pagina príncipal</a>
 </div>
 @endsection

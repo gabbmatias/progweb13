@@ -57,7 +57,7 @@
 
 }
 .retornarHome {
-    margin-top: -2%;
+    margin-top: 2%;
     font-size: 15px;
     color: #e54161;
 }
@@ -65,19 +65,4 @@
 .retornarHome:hover {
     text-decoration: none;
     color: #f66d9b;
-}
-
-@media screen and (max-width: 600px){
-    .title10 h5{
-        font-size: 25%;
-    }
-
-    .title10 h6{
-        font-size: 20%;
-    }
-
-    .retornarHome{
-        margin-top: -10%;
-    }
-
 }
