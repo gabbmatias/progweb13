@@ -31,26 +31,24 @@
     margin-bottom: 2px;
 }
 
-.actions {
-    margin-top: 10%;
-}
-
-.atualizarEndereco {
-    background-color: rgba(107, 107, 107, 0) !important;
-    color: #e54161 !important;
-    padding: 0px 0px !important;
+.atualizarEndereco{
+    background-color: #e54161 !important;
+    color: #fff;
+    border: 3px solid #e54161 !important;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    border: hidden !important;
     font-size: 120%;
     margin-top: 2%;
 }
 
 .atualizarEndereco:hover {
-    color: white !important;
-    text-decoration: none;
+    color: #e54161 !important;
+    background-color: #fff !important;
 }
 
-.voltarEditarEndereco {
+.voltarEditarEndereco{
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
@@ -62,44 +60,44 @@
     margin-top: 2%;
 }
 
-.voltarEditarEndereco:hover {
-    color: #e54161 !important;
+.voltarEditarEndereco:hover{
+    color: #e54161!important;
     background-color: #fff !important;
     text-decoration: none;
 }
 
-.imagemFluxo {
+.imagemFluxo{
     width: auto;
     text-align: center;
     margin-top: 2%;
 }
 
-.imagemFluxo img {
+.imagemFluxo img{
     width: 70%;
     height: auto;
     margin-bottom: 8%;
 }
 
-.planoSelecionado {
+.planoSelecionado{
     margin-top: 10%;
     color: rgba(22, 22, 22, 0.9);
     font-size: 200%;
 }
 
-.addressTitle {
+.addressTitle{
     padding-top: 2%;
     padding-bottom: 2%;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: normal;
     font-size: 42px;
     line-height: 22px;
     font-weight: 600;
-    color: #e54161 !important;
+    color: #E54161!important;
     text-align: center;
+        
 }
 
-.addressFields {
+.addressFields{
     width: 30vw;
     text-align: center;
     display: flex;
@@ -107,11 +105,11 @@
     align-content: center;
     align-items: center;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-        sans-serif;
+    sans-serif;
     margin-bottom: 2px;
 }
 
-.addAddress {
+.addAddress{
     margin-top: 20%;
     width: 100%;
     display: flex;
@@ -121,11 +119,11 @@
     color: #e54161;
 }
 
-.addAddress i {
+.addAddress i{
     font-size: 45px;
 }
 
-.addAddress a:hover {
+.addAddress a:hover{
     color: white;
     text-decoration: none;
 }
@@ -137,18 +135,20 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    
 }
 
-.enderecosBoxesExample {
+.enderecosBoxesExample{
     margin-top: 12%;
     width: 70vw;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: space-around;
+
 }
 
-.boxEnderecoExample {
+.boxEnderecoExample{
     margin-top: 2%;
     width: 24%;
     height: 25vh;
@@ -159,9 +159,10 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    
 }
 
-.actionsSelectAddress {
+.actionsSelectAddress{
     margin-top: 10%;
     width: 90%;
     display: flex;
@@ -169,20 +170,20 @@
     justify-content: space-around;
 }
 
-.actionsSelectAddress input {
+.actionsSelectAddress input{
     background-color: rgba(107, 107, 107, 0);
     color: #e54161;
-    border: none !important;
+    border: none!important;
     cursor: pointer;
     font-size: 130%;
     margin-top: 2%;
 }
 
-.actionsSelectAddress input:hover {
-    color: white !important;
+.actionsSelectAddress input:hover{
+    color: white!important;
 }
 
-.voltarAddress {
+.voltarAddress{
     background-color: #e54161 !important;
     color: #fff;
     border: 3px solid #e54161 !important;
@@ -194,13 +195,13 @@
     margin-top: 2%;
 }
 
-.voltarAddress:hover {
-    color: #e54161 !important;
+.voltarAddress:hover{
+    color: #e54161!important;
     background-color: #fff !important;
     text-decoration: none;
 }
 
-.box-endereco-textExample {
+.box-endereco-textExample{
     margin-top: 9%;
     width: 100%;
     color: rgba(22, 22, 22, 0.9);
@@ -218,34 +219,26 @@
         display: none;
     }
 
-    .addressTitle {
+    .addressTitle{
         padding-top: 10%;
         padding-bottom: 10%;
         line-height: 90%;
     }
-    .addressFields {
+    .addressFields{
         width: 80vw;
     }
-    .enderecosBoxesExample {
+    .enderecosBoxesExample{
         width: 98vw;
         flex-direction: column;
         align-content: center;
         align-items: center;
     }
-    .boxEnderecoExample {
+    .boxEnderecoExample{
         width: 60%;
         height: 26vh;
     }
-    .imagemFluxo img {
+    .imagemFluxo img{
         width: 100%;
         height: auto;
-    }
-
-    .atualizarEndereco {
-        font-size: 100%;
-    }
-
-    .actions {
-        margin-top: 0;
     }
 }
