@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+<script type="text/javascript">
+    $("#cep").mask("00000-000");
+</script>
+
 <div class="body1">
     <a class="title10">Novo Endereço</a>
 
