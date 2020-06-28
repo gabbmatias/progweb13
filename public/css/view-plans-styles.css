@@ -19,6 +19,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .box-plano-titulo {
@@ -59,7 +60,6 @@
 .addPlan {
     margin-top: 2%;
     width: 100%;
-    height: 80%;
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -80,10 +80,10 @@
 @media screen and (max-width: 600px) {
     .viewPlansBoxes {
         width: 98vw;
-        height: 67vh;
+        height: auto;
     }
     .boxViewPlano {
-        width: 49%;
-        height: 48%;
+        width: 75%;
+        height: 25vh;
     }
 }
