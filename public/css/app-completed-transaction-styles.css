@@ -1,10 +1,30 @@
+.subscriptionFields{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.subscriptionFields p{
+    margin-top: 4vh;
+    font-size: 200%;
+    text-align: center;
+
+}
+
 .transaction h1 {
     margin-top: 4vh;
     font-size: 200%!important;
 }
 
 .transaction h2 {
-    font-size: 250%px!important;
+    font-size: 250%!important;
+}
+
+.downloadBoleto{
+    margin-top: 3vh;
+    margin-bottom: 4vh;
 }
 
 .downloadBoleto a{
@@ -15,7 +35,7 @@
     border: none;
     border-radius: 20px!important;
     cursor: pointer;
-    font-size: 30%;
+    font-size: 100%;
     margin-top: 2%;
 }
 

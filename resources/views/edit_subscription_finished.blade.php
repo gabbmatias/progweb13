@@ -3,17 +3,17 @@
 @section('content')
 <div class="body1">
 
-    <div class="title10">
-    <p>Pagamento Alterado!</p>
+    <a class="title10">Pagamento Alterado!</a>
+    <div class="subscriptionFields">
         @if (isset($charge_code))
-            <h5>Código de barras:</h5>
-            <h6>{{ $charge_code }}</h6>
+            <p>Código de barras:</p>
+            <p>{{ $charge_code }}</p>
             <div class="downloadBoleto">
                 <a href="{{ route('charge.create') }}">Download Boleto</a>
             </div>
         @endif
-       
     </div>
+       
       <form method="GET">
             @csrf
          <input type=submit class="voltarBoleto" value="Voltar para inscrições" formaction="{{ route('subscription.index') }}">
