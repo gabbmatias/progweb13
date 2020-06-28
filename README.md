@@ -16,7 +16,7 @@ Os planos serão divididos em 3 categorias: básico, premium, exxxtra. Cada plan
 Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 <!--- Estes são alguns exemplos de requisitos. Adicione, duplique e remove como necessário --->
 * Você deve possuir a última versão do PHP, HTML, JavaScript e CSS instalado.
-* Você deve possuir uma máquina Linux e Mac.
+* Você deve possuir uma máquina Linux ou Mac.
 * Você deve ler o https://www.php.net/manual/pt_BR/ dos termos de uso do PHP.
 * Você deve ler o https://dev.w3.org/html5/html-author/ dos termos de uso do HTML 5.
 * Você deve ler o https://www.w3schools.com/cssref/ dos termos de uso do CSS 3.
@@ -29,7 +29,7 @@ Antes de iniciar, certifique-se de cumprir os seguintes requisitos:
 
 Para fazer o deploy da aplicação siga os seguintes passos:
 
-Linux/macOS/Windows:
+Linux:
 ```
 * Arquivos de configuração pessoal do projeto(.env)
 <commando 1>
@@ -39,6 +39,17 @@ php artisan migrate:fresh
 <commando 3>
 php artisan serve
 
+* Passo a passo do nosso ambiente:
+ - Instale o xampp;
+ - Inicialize o xamppp usando 'sudo /opt/lampp/xampp start';
+ - Acesse localhost/phpmyadmin
+ - Crie um banco de dados;
+ - Crie um arquivo .env usando a mesma estrututa presente no '.env.example'
+ - Altere o arquivo .env, onde estiver "DB_DATABASE" troque pelo nome do banco criado acima, tais como informações de acesso;
+ - Use o comando 'php artisan migrate';
+ - Use o comando 'php artisan serve';
+ - Desfrute do sistema.
+
 * Para fins de teste, o banco de dados utilizado foi o mySQL.
 <commando sugerido>
 * (Feito em ambiente unix - Ubuntu)
@@ -47,7 +58,7 @@ sudo apt-get install php-mysql
 
 ## Usando PreservSign
 
-Para usar o PreservSign, siga os seguintes passos (exemplos):
+Para usar Nome_da_Aplicação, siga os seguintes passos (exemplos):
 * Abra o navegador e digite o seguinte endereço: http://manancial.net/preservsign ou https://localhost .
 * Ao abrir a aplicação você poderá:
   * Navegar pelo conteúdo público
