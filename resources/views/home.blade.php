@@ -14,7 +14,7 @@
   <div class="assine">
     <div class="assine-left">
       <i class="fa fa-cart-plus"></i>
-      <p><strong>ESCOLHA O PLANO DE SUA PREFERÊNICA</strong></p>
+      <p><strong>ESCOLHA O PLANO<br>DE SUA PREFERÊNICA</strong></p>
       <div class="description-icon">Adquira quantas camisinhas <br> você desejar</div>
     </div>
     <div class="assine-right">
