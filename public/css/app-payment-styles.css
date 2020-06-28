@@ -236,15 +236,14 @@
     }
 
     .credit-card-payment{
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .boleto-payment{
-        justify-content: space-between;
+        justify-content: center;
     }
 
     .boleto-payment i{
-       margin-left: 51px;
        font-size: 45px;
        
     }
@@ -254,7 +253,6 @@
     }
 
     .credit-card-payment i{
-        margin-left: 45px;
         font-size: 45px;
      }
      
