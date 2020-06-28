@@ -151,7 +151,7 @@
 .boxEnderecoExample{
     margin-top: 2%;
     width: 24%;
-    height: 25vh;
+    height: 27vh;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
     border-radius: 15px;
@@ -235,7 +235,7 @@
     }
     .boxEnderecoExample{
         width: 60%;
-        height: 26vh;
+        height: 29vh;
     }
     .imagemFluxo img{
         width: 100%;
