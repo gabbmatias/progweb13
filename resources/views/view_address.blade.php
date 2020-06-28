@@ -4,8 +4,14 @@
 <div class="body1">
     <a class="title10">Endereços</a>
 
+    @if(isset($error))
+        
+    <a>{{ $error }}</a>
+@endif
     <div class="enderecosBoxesView">
+
         @foreach ($addresses as $address)
+
             
         
         <div class="boxEnderecoView">

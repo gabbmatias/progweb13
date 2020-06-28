@@ -150,6 +150,17 @@ class AddressController extends Controller
         return redirect()->route('login');
     }
 
+    public function checkAddress($address_id)
+    {
+       $check =  DB::table('subscriptions')->join('addresses', 'addresses.address_id', '=', 'subscriptions.address_id')->get();
+       
+       foreach ($check as $subs)
+        if($subs->address_id == $address_id)
+            return true;
+        return false;
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *
@@ -161,6 +172,11 @@ class AddressController extends Controller
 
         if (Auth::check()) {
             $data = $request->all();
+            if($this->checkAddress($data['address_id'])){
+                $addresses = Address::where('client_id', Auth::user()->id)->get();
+                $error = "Esse endereço está sendo usado em uma assinatura. Altere a assinatura primeiro.";
+                return view('view_address')->with(['error' => $error, 'addresses' => $addresses]);
+            }
             Address::where('address_id', $data['address_id'])->delete();
             return redirect()->route('address.index');
         }

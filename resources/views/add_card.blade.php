@@ -39,9 +39,10 @@ $(document).ready(function () {
         <input hidden name="type" value="2">
         <input type="submit" class="finalizarPagamento" name="submit" value="Finalizar compra">
 
-    <form>      
+    </form>      
 
-        <form>
+        <form method="POST">
+            @csrf
             <div class="voltarPayment">
                 <input hidden name="plan_id" value="{{ $plan_id }}">
                 <input hidden name="address_id" value="{{ $address_id }}">
