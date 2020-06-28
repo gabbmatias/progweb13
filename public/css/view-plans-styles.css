@@ -1,5 +1,5 @@
 .viewPlansBoxes {
-    width: 50vw;
+    width: 55vw;
     height: 27vh;
     display: flex;
     flex-wrap: wrap;
@@ -10,7 +10,7 @@
 
 .boxViewPlano {
     margin-top: 2%;
-    width: 33%;
+    width: 31%;
     height: 100%;
     text-align: center;
     background: rgba(107, 107, 107, 0.15);
