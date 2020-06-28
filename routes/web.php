@@ -94,7 +94,7 @@ Route::get("/about", function()
 
 Route::get("/user/upgrade", function()
 {
-    return view('upgrade_user');
+    return view('edit_role');
 })->name("user.upgrade");
 
 Route::get("/history/log", function()
