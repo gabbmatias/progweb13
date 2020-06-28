@@ -72,6 +72,11 @@
                                 </div>
                             </div>
                         </form>
+                        <div class="link">
+                            <a>Não tem conta ainda?</a>
+                            <a id="canHover" href="{{ route('register') }}">Clique aqui!</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
