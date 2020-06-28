@@ -7,7 +7,7 @@
         <div class="blurred-box-upgrade">
             <form method="POST" action="{{ route('user.update') }}">
                 @csrf
-                <label for="user_id">Usuário:</label>
+                <label for="user_id">Usuário:</label> <br>
                 <select required name="user_id" id="user_id">
                     <option value="" requi selected disabled>Selecione um usuário...</option>
                     @foreach ($users as $user)
@@ -15,7 +15,7 @@
                     @endforeach
                 </select>
             <br>
-                <label for="position">Selecione o cargo do usuário:</label>
+                <label for="position">Selecione o cargo do usuário:</label> <br>
                 <select required name="position" id="position">
                     <option value="1">Usuário comum</option>
                     <option value="2">Administrador</option>
