@@ -3,7 +3,7 @@
 @section('content')
 
 <script type="text/javascript">
-    $("#cep").mask("00.000-000");
+    $("#cep").mask("00000-000");
 </script>
 
 
@@ -31,6 +31,14 @@
         <div class="navegacao">
             <input type=submit class="voltarEditarEndereco" value="Voltar"
         formaction="{{ session('back_url') }}">
+        </div>
+    </form>
+
+    @else 
+    <form>
+        <div class="navegacao">
+            <input type=submit class="voltarEditarEndereco" value="Voltar"
+        formaction="{{ route('address.index') }}">
         </div>
     </form>
     @endif

@@ -23,7 +23,7 @@
                 </form>
                 
                 
-                <form action="{{ route('address.destroy') }}" method="POST">
+                <form onsubmit="confirmation()" action="{{ route('address.destroy') }}" method="POST">
                     @csrf
                     <input hidden name="address_id" value="{{ $address->address_id }}">
                     <input type="submit" class="atualizarViewEndereco" name="submit" value="Deletar">
@@ -38,5 +38,15 @@
         <a title="Adicionar Endereço" href="{{ route('address.create') }}"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
     </div>
     <img class= "generic-background" src="/img/generic-background.png" alt="Uma mão segurando uma camisinha embalada.">
+
+    <script>
+        function confirmation(){
+            if(confirm('Tem certeza de que deseja remover este endereço?'))
+            return true; 
+            else 
+            event.preventDefault()
+            return false
+        }
+    </script>
 </div>
 @endsection
